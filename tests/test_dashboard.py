@@ -2,24 +2,28 @@
 Tests — Dashboard & LLM Context
 Vérifie la construction du contexte LLM et la cohérence des données dashboard.
 """
+
 import json
-import pandas as pd
 import pytest
 
 
 # ── Reproduire build_context() sans dépendre de Streamlit ────────────────────
 
+
 def build_context(topk, shops, scored, rules, ml, cls_stats) -> dict:
     """Réplique la fonction build_context() de 7_LLM_Insights.py."""
-    rf_acc  = ml.get("random_forest", {}).get("accuracy", 0.0)
+    rf_acc = ml.get("random_forest", {}).get("accuracy", 0.0)
     xgb_acc = ml.get("xgboost", {}).get("accuracy", 0.0)
 
     top5p = topk.nlargest(5, "composite_score")[
         ["title", "shop_name", "price", "composite_score"]
     ].to_dict("records")
 
-    cats = scored["category"].value_counts().head(5).to_dict() \
-        if "category" in scored.columns else {}
+    cats = (
+        scored["category"].value_counts().head(5).to_dict()
+        if "category" in scored.columns
+        else {}
+    )
 
     km = cls_stats["kmeans"]
     cd = km["clusters"]
@@ -31,9 +35,7 @@ def build_context(topk, shops, scored, rules, ml, cls_stats) -> dict:
             "n_boutiques": len(shops),
             "prix_median": round(float(scored["price"].median()), 2),
             "pct_disponibles": round(float(scored["available"].mean()) * 100, 1),
-            "pct_en_promo": round(
-                float((scored["discount_pct"] > 10).mean()) * 100, 1
-            ),
+            "pct_en_promo": round(float((scored["discount_pct"] > 10).mean()) * 100, 1),
             "top_categories": cats,
         },
         "classement_boutiques": [
@@ -88,8 +90,11 @@ def build_context(topk, shops, scored, rules, ml, cls_stats) -> dict:
 
 @pytest.fixture
 def full_context(
-    sample_products_df, sample_shop_ranking_df,
-    sample_rules_df, sample_ml_metrics, sample_clustering_stats
+    sample_products_df,
+    sample_shop_ranking_df,
+    sample_rules_df,
+    sample_ml_metrics,
+    sample_clustering_stats,
 ):
     return build_context(
         topk=sample_products_df,
@@ -103,20 +108,29 @@ def full_context(
 
 # ── Tests Structure du Contexte ───────────────────────────────────────────────
 
-class TestContextStructure:
 
+class TestContextStructure:
     def test_required_top_level_keys(self, full_context):
         required = [
-            "catalogue", "classement_boutiques", "top_5_produits",
-            "modeles_ml", "segmentation_kmeans", "regles_association",
+            "catalogue",
+            "classement_boutiques",
+            "top_5_produits",
+            "modeles_ml",
+            "segmentation_kmeans",
+            "regles_association",
         ]
         for key in required:
             assert key in full_context, f"Clé manquante : '{key}'"
 
     def test_catalogue_has_required_fields(self, full_context):
         cat = full_context["catalogue"]
-        for field in ["n_produits", "n_boutiques", "prix_median",
-                      "pct_disponibles", "pct_en_promo"]:
+        for field in [
+            "n_produits",
+            "n_boutiques",
+            "prix_median",
+            "pct_disponibles",
+            "pct_en_promo",
+        ]:
             assert field in cat
 
     def test_n_produits_positive(self, full_context):
@@ -165,8 +179,8 @@ class TestContextStructure:
 
 # ── Tests Isolation LLM (architecture MCP) ───────────────────────────────────
 
-class TestLLMIsolation:
 
+class TestLLMIsolation:
     def test_context_is_json_serializable(self, full_context):
         """Le contexte doit être sérialisable en JSON sans erreur."""
         try:
@@ -181,7 +195,9 @@ class TestLLMIsolation:
         # Les clés de données brutes ne doivent pas apparaître
         forbidden = ["product_id", "review_count", "source_platform"]
         for key in forbidden:
-            assert key not in serialized, f"Clé brute '{key}' trouvée dans le contexte LLM"
+            assert key not in serialized, (
+                f"Clé brute '{key}' trouvée dans le contexte LLM"
+            )
 
     def test_top_5_scores_between_0_and_1(self, full_context):
         for p in full_context["top_5_produits"]:

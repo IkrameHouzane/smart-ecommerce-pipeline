@@ -8,8 +8,9 @@
 # ─────────────────────────────────────────────────────────
 
 from preprocess import preprocess
-from features   import engineer_features
-from scoring    import scoring_topk
+from features import engineer_features
+from scoring import scoring_topk
+
 
 def run():
     print("\n" + "★" * 55)
@@ -32,6 +33,7 @@ def run():
     print(f"  Produits scorés     : {len(df_scored)}")
     print(f"  Top-K sélectionnés  : {len(top_k)}")
     print("★" * 55)
+
 
 if __name__ == "__main__":
     run()

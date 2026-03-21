@@ -22,16 +22,19 @@ from pathlib import Path
 
 # ── Config helpers ────────────────────────────────────────────────────────────
 
+
 def _analytics_dir() -> Path:
     """Return the analytics output directory (relative to this file)."""
     base = Path(__file__).resolve().parent.parent
     return base / "analytics"
+
 
 def _data_dir() -> Path:
     return Path(__file__).resolve().parent.parent / "data"
 
 
 # ── MCP Servers ───────────────────────────────────────────────────────────────
+
 
 class AnalyticsReaderServer:
     """
@@ -73,7 +76,8 @@ class AnalyticsReaderServer:
         if not self._dir.exists():
             return []
         return [
-            f.name for f in self._dir.iterdir()
+            f.name
+            for f in self._dir.iterdir()
             if f.name in self.ALLOWED_FILES and f.is_file()
         ]
 
@@ -99,17 +103,29 @@ class AnalyticsReaderServer:
         """
         try:
             import pandas as pd
+
             path = _data_dir() / "top_k_products.csv"
             if not path.exists():
                 return None
             df = pd.read_csv(path).nlargest(limit, "composite_score")
             # Return only business-relevant columns — no internal IDs
-            cols = [c for c in ["title", "shop_name", "price", "rating_filled",
-                                 "composite_score", "price_tier", "discount_pct"]
-                    if c in df.columns]
+            cols = [
+                c
+                for c in [
+                    "title",
+                    "shop_name",
+                    "price",
+                    "rating_filled",
+                    "composite_score",
+                    "price_tier",
+                    "discount_pct",
+                ]
+                if c in df.columns
+            ]
             result = df[cols].to_json(orient="records", indent=2)
-            _log_access("READ", "top_k_products.csv",
-                        f"Extracted top {limit} products for LLM")
+            _log_access(
+                "READ", "top_k_products.csv", f"Extracted top {limit} products for LLM"
+            )
             return result
         except Exception as e:
             _log_access("ERROR", "top_k_products.csv", str(e)[:100])
@@ -119,6 +135,7 @@ class AnalyticsReaderServer:
         """Return shop ranking as structured JSON for LLM context."""
         try:
             import pandas as pd
+
             path = _analytics_dir() / "shop_ranking.csv"
             if not path.exists():
                 return None
@@ -140,13 +157,20 @@ class SummaryGeneratorServer:
     """
 
     def list_tools(self) -> list[str]:
-        return ["generate_executive_summary", "generate_strategy_report",
-                "generate_product_profile", "chat_with_data"]
+        return [
+            "generate_executive_summary",
+            "generate_strategy_report",
+            "generate_product_profile",
+            "chat_with_data",
+        ]
 
     def generate_executive_summary(self, structured_data: dict) -> str:
         """Generate a 3-5 sentence executive summary from aggregated metrics."""
-        _log_access("GENERATE", "executive_summary",
-                    f"input_keys={list(structured_data.keys())}")
+        _log_access(
+            "GENERATE",
+            "executive_summary",
+            f"input_keys={list(structured_data.keys())}",
+        )
         return _call_gemini_safe(
             f"Tu es un analyste eCommerce. Résume en 3-5 phrases ces données pour un décideur:\n"
             f"{json.dumps(structured_data, indent=2, ensure_ascii=False)[:2000]}"
@@ -154,8 +178,9 @@ class SummaryGeneratorServer:
 
     def generate_strategy_report(self, structured_data: dict) -> str:
         """Generate a Chain-of-Thought strategic report."""
-        _log_access("GENERATE", "strategy_report",
-                    f"input_keys={list(structured_data.keys())}")
+        _log_access(
+            "GENERATE", "strategy_report", f"input_keys={list(structured_data.keys())}"
+        )
         return _call_gemini_safe(
             f"Analyse étape par étape et donne une recommandation stratégique basée sur:\n"
             f"{json.dumps(structured_data, indent=2, ensure_ascii=False)[:2000]}"
@@ -163,27 +188,27 @@ class SummaryGeneratorServer:
 
     def generate_product_profile(self, top_products_json: str) -> str:
         """Generate a competitive profile for the Top-5 products."""
-        _log_access("GENERATE", "product_profile",
-                    f"payload_len={len(top_products_json)}")
+        _log_access(
+            "GENERATE", "product_profile", f"payload_len={len(top_products_json)}"
+        )
         return _call_gemini_safe(
             f"Compare ces top produits et explique pourquoi ils performent bien:\n"
             f"{top_products_json[:2000]}"
         )
 
-    def chat_with_data(self, query: str, context: dict,
-                       history: list[dict]) -> str:
+    def chat_with_data(self, query: str, context: dict, history: list[dict]) -> str:
         """Handle interactive BI chat — context is aggregated metrics only."""
-        _log_access("CHAT", "bi_assistant",
-                    f"query_preview={query[:80]}")
-        history_str = "\n".join([
-            f"{m.get('role','').capitalize()}: {m.get('content','')}"
-            for m in history[-3:]
-        ])
+        _log_access("CHAT", "bi_assistant", f"query_preview={query[:80]}")
+        history_str = "\n".join(
+            [
+                f"{m.get('role', '').capitalize()}: {m.get('content', '')}"
+                for m in history[-3:]
+            ]
+        )
         return _call_gemini_safe(
             f"Contexte analytique:\n{json.dumps(context, indent=2, ensure_ascii=False)[:2000]}\n\n"
             f"Historique:\n{history_str}\n\nQuestion: {query}"
         )
-
 
 
 def _call_gemini_safe(prompt: str) -> str:
@@ -196,6 +221,7 @@ def _call_gemini_safe(prompt: str) -> str:
         return "(LLM disabled — set GEMINI_API_KEY in .env)"
     try:
         from google import genai
+
         client = genai.Client(api_key=api_key)
         for model in ["gemini-2.0-flash-lite", "gemini-2.0-flash"]:
             try:
@@ -214,6 +240,7 @@ def _call_gemini_safe(prompt: str) -> str:
 
 # ── MCP Client ────────────────────────────────────────────────────────────────
 
+
 class MCPClient:
     """
     MCP Client — routes requests from the Host to the appropriate Server.
@@ -224,8 +251,8 @@ class MCPClient:
     """
 
     def __init__(self):
-        self.analytics_server   = AnalyticsReaderServer()
-        self.summary_server     = SummaryGeneratorServer()
+        self.analytics_server = AnalyticsReaderServer()
+        self.summary_server = SummaryGeneratorServer()
         _log_access("INIT", "MCPClient", "Client initialized")
 
     # ── Delegated analytics access ────────────────────────────────────────────
@@ -279,6 +306,7 @@ class MCPClient:
 
 # ── Logging / Permissions ─────────────────────────────────────────────────────
 
+
 def _log_access(action: str, resource: str, detail: str) -> None:
     """
     Append an access log entry for MCP accountability.
@@ -289,9 +317,9 @@ def _log_access(action: str, resource: str, detail: str) -> None:
         log_dir.mkdir(parents=True, exist_ok=True)
         entry = {
             "timestamp": datetime.now(timezone.utc).isoformat(),
-            "action":    action,
-            "resource":  resource,
-            "detail":    detail[:200],
+            "action": action,
+            "resource": resource,
+            "detail": detail[:200],
         }
         log_path = log_dir / "mcp_access_log.jsonl"
         with open(log_path, "a", encoding="utf-8") as f:
@@ -304,23 +332,23 @@ def _log_access(action: str, resource: str, detail: str) -> None:
 
 PERMISSIONS = {
     "AnalyticsReaderServer": {
-        "access":  "read-only",
-        "scope":   "analytics/ (whitelisted files only — 14 files max)",
-        "write":   False,
+        "access": "read-only",
+        "scope": "analytics/ (whitelisted files only — 14 files max)",
+        "write": False,
         "execute": False,
         "raw_data_access": False,
     },
     "SummaryGeneratorServer": {
-        "access":  "read aggregated metrics + call external LLM API",
-        "scope":   "structured aggregates only — no raw product rows",
-        "write":   "append-only logs (mcp_access_log.jsonl, llm_usage_log.jsonl)",
+        "access": "read aggregated metrics + call external LLM API",
+        "scope": "structured aggregates only — no raw product rows",
+        "write": "append-only logs (mcp_access_log.jsonl, llm_usage_log.jsonl)",
         "execute": False,
         "raw_data_access": False,
     },
     "MCPClient": {
-        "access":  "route requests between Host and Servers",
-        "scope":   "full pipeline — but delegated, never direct",
-        "write":   "via SummaryGeneratorServer only",
+        "access": "route requests between Host and Servers",
+        "scope": "full pipeline — but delegated, never direct",
+        "write": "via SummaryGeneratorServer only",
         "execute": False,
         "raw_data_access": False,
     },

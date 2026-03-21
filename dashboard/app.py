@@ -1,11 +1,14 @@
 """Smart eCommerce Intelligence Pipeline — Home"""
+
 import streamlit as st
 import pandas as pd
-import json, os
+import json
+import os
 
 st.set_page_config(
     page_title="Smart eCommerce Intelligence",
-    page_icon="◈", layout="wide",
+    page_icon="◈",
+    layout="wide",
     initial_sidebar_state="expanded",
 )
 
@@ -32,19 +35,24 @@ h1,h2,h3{font-family:"Playfair Display",serif!important;color:#e8d5a3!important;
 .nav-desc{font-size:0.78rem;color:#4a4a6a;}
 </style>"""
 
+
 def kpi(v, lbl, col="#e8d5a3"):
     return f'<div class="kpi-card"><div class="kpi-val" style="color:{col}">{v}</div><div class="kpi-label">{lbl}</div></div>'
+
+
 def ins(lbl, txt, col="#4ecdc4"):
     return f'<div class="ins-card" style="border-left-color:{col}"><div class="ins-lbl" style="color:{col}">{lbl}</div><div class="ins-txt">{txt}</div></div>'
 
+
 st.markdown(CSS, unsafe_allow_html=True)
 
-BASE      = os.path.dirname(os.path.abspath(__file__))
+BASE = os.path.dirname(os.path.abspath(__file__))
 ANALYTICS = os.path.join(BASE, "..", "analytics")
-DATA      = os.path.join(BASE, "..", "data")
+DATA = os.path.join(BASE, "..", "data")
 
 # ── Hero ──────────────────────────────────────────────────────────────────────
-st.markdown("""
+st.markdown(
+    """
 <div style="padding:48px 0 32px 0;border-bottom:1px solid #1a1a28;margin-bottom:36px;">
     <div style="font-family:'DM Mono',monospace;font-size:0.65rem;color:#3a3a5c;
                 text-transform:uppercase;letter-spacing:3px;margin-bottom:16px;">
@@ -60,65 +68,89 @@ st.markdown("""
         orchestration, and real-time analytics across 11 boutiques.
     </div>
 </div>
-""", unsafe_allow_html=True)
+""",
+    unsafe_allow_html=True,
+)
 
 # ── KPIs ──────────────────────────────────────────────────────────────────────
 try:
-    topk   = pd.read_csv(os.path.join(DATA, "top_k_products.csv"))
-    shops  = pd.read_csv(os.path.join(ANALYTICS, "shop_ranking.csv"))
-    rules  = pd.read_csv(os.path.join(ANALYTICS, "association_rules.csv"))
+    topk = pd.read_csv(os.path.join(DATA, "top_k_products.csv"))
+    shops = pd.read_csv(os.path.join(ANALYTICS, "shop_ranking.csv"))
+    rules = pd.read_csv(os.path.join(ANALYTICS, "association_rules.csv"))
     with open(os.path.join(ANALYTICS, "ml_classification.json")) as f:
         ml = json.load(f)
     scored = pd.read_parquet(os.path.join(DATA, "scored_products.parquet"))
     rf_acc = ml.get("random_forest", {}).get("accuracy", ml.get("rf_accuracy", 0.926))
 
     c1, c2, c3, c4, c5 = st.columns(5)
-    c1.markdown(kpi(f"{len(scored):,}", "Produits analysés", "#e8d5a3"), unsafe_allow_html=True)
-    c2.markdown(kpi(f"{len(shops)}",    "Boutiques",          "#4ecdc4"), unsafe_allow_html=True)
-    c3.markdown(kpi(f"{rf_acc*100:.1f}%","RF Accuracy",       "#a8e6cf"), unsafe_allow_html=True)
-    c4.markdown(kpi(f"{len(topk)}",     "Top-K Produits",     "#ffd93d"), unsafe_allow_html=True)
-    c5.markdown(kpi(f"{len(rules):,}",  "Règles Apriori",     "#ff6b6b"), unsafe_allow_html=True)
+    c1.markdown(
+        kpi(f"{len(scored):,}", "Produits analysés", "#e8d5a3"), unsafe_allow_html=True
+    )
+    c2.markdown(kpi(f"{len(shops)}", "Boutiques", "#4ecdc4"), unsafe_allow_html=True)
+    c3.markdown(
+        kpi(f"{rf_acc * 100:.1f}%", "RF Accuracy", "#a8e6cf"), unsafe_allow_html=True
+    )
+    c4.markdown(
+        kpi(f"{len(topk)}", "Top-K Produits", "#ffd93d"), unsafe_allow_html=True
+    )
+    c5.markdown(
+        kpi(f"{len(rules):,}", "Règles Apriori", "#ff6b6b"), unsafe_allow_html=True
+    )
 
-    st.markdown("<div style='margin:28px 0;border-top:1px solid #1a1a28'></div>", unsafe_allow_html=True)
+    st.markdown(
+        "<div style='margin:28px 0;border-top:1px solid #1a1a28'></div>",
+        unsafe_allow_html=True,
+    )
 
-    best_shop  = shops.iloc[0]["shop_name"]
+    best_shop = shops.iloc[0]["shop_name"]
     best_score = shops.iloc[0]["score_moyen"]
-    avg_price  = scored["price"].median()
-    st.markdown(ins(
-        "Pipeline State",
-        f"The catalog is currently led by <strong>{best_shop}</strong> with a composite score of "
-        f"<strong>{best_score:.3f}</strong>. The dataset spans <strong>{len(scored):,} products</strong> "
-        f"across <strong>{len(shops)} shops</strong>, with a median price of <strong>${avg_price:.0f}</strong>. "
-        f"ML models achieve <strong>{rf_acc*100:.1f}% accuracy</strong> on price tier classification."
-    ), unsafe_allow_html=True)
+    avg_price = scored["price"].median()
+    st.markdown(
+        ins(
+            "Pipeline State",
+            f"The catalog is currently led by <strong>{best_shop}</strong> with a composite score of "
+            f"<strong>{best_score:.3f}</strong>. The dataset spans <strong>{len(scored):,} products</strong> "
+            f"across <strong>{len(shops)} shops</strong>, with a median price of <strong>${avg_price:.0f}</strong>. "
+            f"ML models achieve <strong>{rf_acc * 100:.1f}% accuracy</strong> on price tier classification.",
+        ),
+        unsafe_allow_html=True,
+    )
 
 except Exception as e:
     st.error(f"Erreur chargement : {e}")
 
 # ── Navigation ────────────────────────────────────────────────────────────────
-st.markdown("""<div style="font-family:'DM Mono',monospace;font-size:0.62rem;color:#3a3a5c;
+st.markdown(
+    """<div style="font-family:'DM Mono',monospace;font-size:0.62rem;color:#3a3a5c;
     text-transform:uppercase;letter-spacing:3px;margin-bottom:20px;">Navigation</div>""",
-    unsafe_allow_html=True)
+    unsafe_allow_html=True,
+)
 
 pages = [
-    ("📊", "Overview",          "KPIs globaux, distribution des prix, statut Kubeflow"),
-    ("🏆", "Product Rankings",  "Top-K produits scorés, analyse par catégorie"),
-    ("🏪", "Shop Analysis",     "Classement des 11 boutiques, métriques comparatives"),
-    ("🤖", "ML Models",         "RF 92.6% · XGBoost 92.4% · Feature importance"),
-    ("◉",  "Clustering",        "KMeans K=4 · DBSCAN 106 anomalies · PCA 2D"),
-    ("⊗",  "Association Rules", "4 471 règles Apriori · lift max 12.09"),
+    ("📊", "Overview", "KPIs globaux, distribution des prix, statut Kubeflow"),
+    ("🏆", "Product Rankings", "Top-K produits scorés, analyse par catégorie"),
+    ("🏪", "Shop Analysis", "Classement des 11 boutiques, métriques comparatives"),
+    ("🤖", "ML Models", "RF 92.6% · XGBoost 92.4% · Feature importance"),
+    ("◉", "Clustering", "KMeans K=4 · DBSCAN 106 anomalies · PCA 2D"),
+    ("⊗", "Association Rules", "4 471 règles Apriori · lift max 12.09"),
 ]
 c1, c2, c3 = st.columns(3)
 for i, (icon, title, desc) in enumerate(pages):
-    [c1, c2, c3][i % 3].markdown(f"""
+    [c1, c2, c3][i % 3].markdown(
+        f"""
     <div class="nav-card">
         <div style="font-size:1.4rem;margin-bottom:8px">{icon}</div>
         <div class="nav-title">{title}</div>
         <div class="nav-desc">{desc}</div>
-    </div>""", unsafe_allow_html=True)
+    </div>""",
+        unsafe_allow_html=True,
+    )
 
-st.markdown("""<div style="margin-top:48px;padding-top:20px;border-top:1px solid #1a1a28;
+st.markdown(
+    """<div style="margin-top:48px;padding-top:20px;border-top:1px solid #1a1a28;
     font-family:'DM Mono',monospace;font-size:0.62rem;color:#2a2a3a;">
     Kubeflow KFP 2.4.1 &nbsp;·&nbsp; scikit-learn &nbsp;·&nbsp; XGBoost &nbsp;·&nbsp;
     mlxtend &nbsp;·&nbsp; Streamlit &nbsp;·&nbsp; A2A Scraping Architecture
-</div>""", unsafe_allow_html=True)
+</div>""",
+    unsafe_allow_html=True,
+)

@@ -35,17 +35,18 @@ from datetime import datetime
 # en les ENVELOPPANT dans des classes qui héritent de BaseScrapingAgent
 # Ainsi on réutilise tout le code déjà testé et fonctionnel
 
-from base            import BaseScrapingAgent
-from shopify_agent   import scraper_boutique_shopify, sauvegarder_csv
-from woo_agent       import scraper_boutique_woo
-from html_fallback   import HTMLFallbackAgent
-from config          import SHOPIFY_STORES, WOO_STORES, OUTPUT_DIR
+from base import BaseScrapingAgent
+from shopify_agent import scraper_boutique_shopify, sauvegarder_csv
+from woo_agent import scraper_boutique_woo
+from html_fallback import HTMLFallbackAgent
+from config import SHOPIFY_STORES, WOO_STORES, OUTPUT_DIR
 
 
 # ══════════════════════════════════════
 #  AGENT WORKER SHOPIFY
 # ══════════════════════════════════════
 # Encapsule la fonction scraper_boutique_shopify dans une classe.
+
 
 class ShopifyWorker(BaseScrapingAgent):
     """
@@ -56,11 +57,9 @@ class ShopifyWorker(BaseScrapingAgent):
     def is_available(self) -> bool:
         """Vérifie si l'API Shopify répond."""
         import requests
+
         try:
-            r = requests.get(
-                f"{self.url}/products.json?limit=1",
-                timeout=10
-            )
+            r = requests.get(f"{self.url}/products.json?limit=1", timeout=10)
             return r.status_code == 200
         except Exception:
             return False
@@ -78,6 +77,7 @@ class ShopifyWorker(BaseScrapingAgent):
 #  AGENT WORKER WOOCOMMERCE
 # ══════════════════════════════════════
 
+
 class WooWorker(BaseScrapingAgent):
     """
     Worker agent pour les boutiques WooCommerce.
@@ -88,10 +88,10 @@ class WooWorker(BaseScrapingAgent):
     def is_available(self) -> bool:
         """Vérifie si la Store API WooCommerce répond."""
         import requests
+
         try:
             r = requests.get(
-                f"{self.url}/wp-json/wc/store/v1/products?per_page=1",
-                timeout=10
+                f"{self.url}/wp-json/wc/store/v1/products?per_page=1", timeout=10
             )
             return r.status_code == 200
         except Exception:
@@ -109,6 +109,7 @@ class WooWorker(BaseScrapingAgent):
 #  AGENT COORDINATEUR
 # ══════════════════════════════════════
 
+
 class ScrapingCoordinator:
     """
     Coordinateur A2A — orchestre tous les agents workers.
@@ -123,19 +124,19 @@ class ScrapingCoordinator:
 
     def __init__(self):
         # Listes des agents créés
-        self.workers        = []   # tous les agents
-        self.resultats      = {}   # {nom_boutique: [produits]}
-        self.rapport        = []   # log des événements
+        self.workers = []  # tous les agents
+        self.resultats = {}  # {nom_boutique: [produits]}
+        self.rapport = []  # log des événements
 
         # Compteurs pour le rapport final
-        self.nb_reussis     = 0
-        self.nb_echoues     = 0
-        self.nb_fallbacks   = 0    # combien de fois le fallback HTML a été utilisé
+        self.nb_reussis = 0
+        self.nb_echoues = 0
+        self.nb_fallbacks = 0  # combien de fois le fallback HTML a été utilisé
 
     def _log(self, message: str):
         """Enregistre un événement dans le rapport."""
         horodatage = datetime.now().strftime("%H:%M:%S")
-        entree     = f"[{horodatage}] {message}"
+        entree = f"[{horodatage}] {message}"
         self.rapport.append(entree)
         print(entree)
 
@@ -164,11 +165,11 @@ class ScrapingCoordinator:
             self._log(f"Test disponibilité API : {store['name']}...")
             if woo_worker.is_available():
                 # L'API répond → on utilise WooWorker
-                self._log(f"  → API disponible : WooWorker assigné")
+                self._log("  → API disponible : WooWorker assigné")
                 workers.append(woo_worker)
             else:
                 # L'API ne répond pas → on bascule sur HTMLFallbackAgent
-                self._log(f"  → API indisponible : HTMLFallbackAgent assigné")
+                self._log("  → API indisponible : HTMLFallbackAgent assigné")
                 fallback_store = {**store, "catalogue_url": store["url"] + "/shop"}
                 # {**store} = copie du dictionnaire + on ajoute catalogue_url
                 html_worker = HTMLFallbackAgent(fallback_store)
@@ -208,12 +209,12 @@ class ScrapingCoordinator:
                     self._log(f"  ✓ {len(produits)} produits collectés")
                 else:
                     self.nb_echoues += 1
-                    self._log(f"  ✗ Aucun produit")
+                    self._log("  ✗ Aucun produit")
             except Exception as e:
                 self.nb_echoues += 1
                 self._log(f"  ✗ Erreur : {e}")
 
-            time.sleep(2)   # pause entre boutiques
+            time.sleep(2)  # pause entre boutiques
 
         # ── PHASE 2 : Workers WooCommerce ─────────────────
         self._log("\n--- PHASE 2 : Workers WooCommerce ---")
@@ -233,7 +234,7 @@ class ScrapingCoordinator:
                     self._log(f"  ✓ {len(produits)} produits collectés")
                 else:
                     self.nb_echoues += 1
-                    self._log(f"  ✗ Aucun produit")
+                    self._log("  ✗ Aucun produit")
             except Exception as e:
                 self.nb_echoues += 1
                 self._log(f"  ✗ Erreur : {e}")
@@ -274,9 +275,7 @@ class ScrapingCoordinator:
         # Résumé par boutique
         self._log("\nRépartition par boutique :")
         resume = (
-            df.groupby(["source", "shop_name"])
-              .size()
-              .reset_index(name="nb_produits")
+            df.groupby(["source", "shop_name"]).size().reset_index(name="nb_produits")
         )
         print(resume.to_string(index=False))
 

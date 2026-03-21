@@ -2,15 +2,19 @@
 Tests — Scraping Output Validation
 Vérifie la structure et la qualité des données extraites par les agents A2A.
 """
+
 import pandas as pd
-import pytest
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
 REQUIRED_PRODUCT_COLUMNS = [
-    "product_id", "title", "shop_name", "price",
-    "available", "source_platform",
+    "product_id",
+    "title",
+    "shop_name",
+    "price",
+    "available",
+    "source_platform",
 ]
 
 VALID_PLATFORMS = {"shopify", "woocommerce"}
@@ -42,8 +46,8 @@ def validate_prices(df: pd.DataFrame) -> pd.Series:
 
 # ── Tests Schéma ──────────────────────────────────────────────────────────────
 
-class TestProductSchema:
 
+class TestProductSchema:
     def test_required_columns_present(self, sample_products_df):
         errors = validate_product_schema(sample_products_df)
         assert errors == [], f"Erreurs de schéma : {errors}"
@@ -70,15 +74,18 @@ class TestProductSchema:
     def test_availability_is_boolean(self, sample_products_df):
         """Accepte bool Python et numpy.bool_ (pandas retourne numpy.bool_)."""
         import numpy as np
+
         vals = sample_products_df["available"].dropna().unique()
         for v in vals:
-            assert isinstance(v, (bool, int, np.bool_)),                 f"Valeur disponibilité invalide : {v} (type: {type(v)})"
+            assert isinstance(v, (bool, int, np.bool_)), (
+                f"Valeur disponibilité invalide : {v} (type: {type(v)})"
+            )
 
 
 # ── Tests Qualité des Données ─────────────────────────────────────────────────
 
-class TestDataQuality:
 
+class TestDataQuality:
     def test_no_fully_empty_rows(self, sample_products_df):
         """Aucune ligne ne doit être entièrement vide."""
         empty_mask = sample_products_df.isna().all(axis=1)
@@ -117,8 +124,8 @@ class TestDataQuality:
 
 # ── Tests Multi-plateforme ────────────────────────────────────────────────────
 
-class TestMultiPlatform:
 
+class TestMultiPlatform:
     def test_shopify_products_present(self, sample_products_df):
         shopify = sample_products_df[sample_products_df["source_platform"] == "shopify"]
         assert len(shopify) > 0, "Aucun produit Shopify dans le dataset"
@@ -134,5 +141,7 @@ class TestMultiPlatform:
 
     def test_both_platforms_have_titles(self, sample_products_df):
         for platform in ["shopify", "woocommerce"]:
-            subset = sample_products_df[sample_products_df["source_platform"] == platform]
+            subset = sample_products_df[
+                sample_products_df["source_platform"] == platform
+            ]
             assert subset["title"].notna().all(), f"Titres manquants pour {platform}"

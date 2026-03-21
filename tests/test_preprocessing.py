@@ -2,11 +2,12 @@
 Tests — Preprocessing & Feature Engineering
 Vérifie le nettoyage des données, la validation et la construction des features.
 """
+
 import pandas as pd
-import pytest
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
+
 
 def clean_price(series: pd.Series) -> pd.Series:
     """Nettoie et normalise les prix."""
@@ -27,7 +28,9 @@ def compute_discount_pct(price: pd.Series, compare_price: pd.Series) -> pd.Serie
     """Calcule le pourcentage de remise."""
     mask = (compare_price > price) & (compare_price > 0)
     result = pd.Series(0.0, index=price.index)
-    result[mask] = ((compare_price[mask] - price[mask]) / compare_price[mask] * 100).round(2)
+    result[mask] = (
+        (compare_price[mask] - price[mask]) / compare_price[mask] * 100
+    ).round(2)
     return result
 
 
@@ -48,8 +51,8 @@ def normalize_shop_name(series: pd.Series) -> pd.Series:
 
 # ── Tests Nettoyage ───────────────────────────────────────────────────────────
 
-class TestPriceCleaning:
 
+class TestPriceCleaning:
     def test_string_prices_converted(self):
         s = pd.Series(["52.99", "39.0", "invalid", None])
         result = clean_price(s)
@@ -75,7 +78,6 @@ class TestPriceCleaning:
 
 
 class TestRatingCleaning:
-
     def test_ratings_clipped_to_5(self):
         s = pd.Series([6.0, 4.5, 0.0, -1.0])
         result = clean_rating(s)
@@ -96,54 +98,53 @@ class TestRatingCleaning:
 
 
 class TestDiscountCalculation:
-
     def test_basic_discount(self):
-        price   = pd.Series([39.0])
+        price = pd.Series([39.0])
         compare = pd.Series([65.0])
-        result  = compute_discount_pct(price, compare)
+        result = compute_discount_pct(price, compare)
         expected = round((65 - 39) / 65 * 100, 2)
         assert abs(result[0] - expected) < 0.01
 
     def test_no_discount_when_price_equals_compare(self):
-        price   = pd.Series([50.0])
+        price = pd.Series([50.0])
         compare = pd.Series([50.0])
-        result  = compute_discount_pct(price, compare)
+        result = compute_discount_pct(price, compare)
         assert result[0] == 0.0
 
     def test_no_discount_when_compare_lower(self):
-        price   = pd.Series([80.0])
+        price = pd.Series([80.0])
         compare = pd.Series([50.0])
-        result  = compute_discount_pct(price, compare)
+        result = compute_discount_pct(price, compare)
         assert result[0] == 0.0
 
     def test_zero_compare_price_no_crash(self):
-        price   = pd.Series([50.0])
+        price = pd.Series([50.0])
         compare = pd.Series([0.0])
-        result  = compute_discount_pct(price, compare)
+        result = compute_discount_pct(price, compare)
         assert result[0] == 0.0
 
     def test_discount_pct_between_0_and_100(self):
-        price   = pd.Series([10.0, 50.0, 99.0])
+        price = pd.Series([10.0, 50.0, 99.0])
         compare = pd.Series([100.0, 100.0, 100.0])
-        result  = compute_discount_pct(price, compare)
+        result = compute_discount_pct(price, compare)
         assert (result >= 0).all() and (result <= 100).all()
 
 
 class TestAvailability:
-
     def test_true_flagged_correctly(self):
         s = pd.Series([True, False, None, 1, 0])
         result = flag_available(s)
-        assert result[0] == True
-        assert result[1] == False
-        assert result[2] == False
+        assert result[0]
+        assert not result[1]
+        assert not result[2]
 
 
 class TestDeduplication:
-
     def test_removes_exact_duplicates(self, sample_products_df):
-        df_duped = pd.concat([sample_products_df, sample_products_df]).reset_index(drop=True)
-        result   = deduplicate(df_duped, subset=["product_id"])
+        df_duped = pd.concat([sample_products_df, sample_products_df]).reset_index(
+            drop=True
+        )
+        result = deduplicate(df_duped, subset=["product_id"])
         assert len(result) == len(sample_products_df)
 
     def test_preserves_unique_rows(self, sample_products_df):
@@ -151,13 +152,14 @@ class TestDeduplication:
         assert len(result) == len(sample_products_df)
 
     def test_index_reset_after_dedup(self, sample_products_df):
-        df_duped = pd.concat([sample_products_df, sample_products_df]).reset_index(drop=True)
-        result   = deduplicate(df_duped, subset=["product_id"])
+        df_duped = pd.concat([sample_products_df, sample_products_df]).reset_index(
+            drop=True
+        )
+        result = deduplicate(df_duped, subset=["product_id"])
         assert list(result.index) == list(range(len(result)))
 
 
 class TestShopNameNormalization:
-
     def test_lowercase(self):
         s = pd.Series(["AllBirds", "NOBULL", "Born Primitive"])
         result = normalize_shop_name(s)

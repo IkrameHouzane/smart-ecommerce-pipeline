@@ -15,42 +15,42 @@
 SHOPIFY_STORES = [
     {
         "name": "allbirds",
-        "url" : "https://www.allbirds.com",
+        "url": "https://www.allbirds.com",
         # Chaussures running éco — 736 produits confirmés
     },
     {
         "name": "represent",
-        "url" : "https://representclo.com",
+        "url": "https://representclo.com",
         # Vêtements sport lifestyle — 728 produits confirmés
     },
     {
         "name": "born_primitive",
-        "url" : "https://bornprimitive.com",
+        "url": "https://bornprimitive.com",
         # CrossFit et fitness — 1761 produits confirmés
     },
     {
         "name": "nobull",
-        "url" : "https://nobullproject.com",
+        "url": "https://nobullproject.com",
         # Chaussures et vêtements sport intensif
     },
     {
         "name": "goat_tape",
-        "url" : "https://www.goattape.com",
+        "url": "https://www.goattape.com",
         # Accessoires sport (straps, grip)
     },
     {
         "name": "ten_thousand",
-        "url" : "https://www.tenthousand.cc",
+        "url": "https://www.tenthousand.cc",
         # Vêtements entraînement intensif
     },
     {
         "name": "cuts_clothing",
-        "url" : "https://cutsclothing.com",
+        "url": "https://cutsclothing.com",
         # Vêtements sport premium hommes
     },
     {
         "name": "set_active",
-        "url" : "https://setactive.co",
+        "url": "https://setactive.co",
         # Vêtements fitness femme
     },
 ]
@@ -66,20 +66,20 @@ SHOPIFY_STORES = [
 
 WOO_STORES = [
     {
-        "name"     : "nalgene",
-        "url"      : "https://nalgene.com",
+        "name": "nalgene",
+        "url": "https://nalgene.com",
         # Bouteilles sport — 92 produits confirmés
         "geography": "US",
     },
     {
-        "name"     : "nutribullet",
-        "url"      : "https://www.nutribullet.com",
+        "name": "nutribullet",
+        "url": "https://www.nutribullet.com",
         # Blenders nutrition sport — 184 produits confirmés
         "geography": "US",
     },
     {
-        "name"     : "danosseasoning",
-        "url"      : "https://danosseasoning.com",
+        "name": "danosseasoning",
+        "url": "https://danosseasoning.com",
         # Condiments sport/fitness — 125 produits confirmés
         "geography": "US",
     },

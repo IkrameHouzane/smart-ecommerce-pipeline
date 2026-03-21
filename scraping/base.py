@@ -35,10 +35,10 @@ class BaseScrapingAgent(ABC):
         Paramètre : store = dictionnaire avec les infos de la boutique
         """
         # self = l'instance de l'agent (comme "moi" en Python)
-        self.store    = store
-        self.name     = store.get("name", "unknown")
-        self.url      = store.get("url", "")
-        self.products = []   # liste qui stockera les produits collectés
+        self.store = store
+        self.name = store.get("name", "unknown")
+        self.url = store.get("url", "")
+        self.products = []  # liste qui stockera les produits collectés
 
     # ── Méthode abstraite 1 ───────────────────────────────
     @abstractmethod
@@ -48,7 +48,7 @@ class BaseScrapingAgent(ABC):
         DOIT être implémentée par chaque agent enfant.
         Retourne : liste de dictionnaires produit
         """
-        pass   # "pass" = le corps sera défini dans la classe enfant
+        pass  # "pass" = le corps sera défini dans la classe enfant
 
     # ── Méthode abstraite 2 ───────────────────────────────
     @abstractmethod

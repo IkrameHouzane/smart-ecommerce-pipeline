@@ -16,14 +16,11 @@
 # ─────────────────────────────────────────────────────────
 
 import requests
-from bs4 import BeautifulSoup   # parser HTML
-import pandas as pd
+from bs4 import BeautifulSoup  # parser HTML
 import time
 import re
-import os
 
 from base import BaseScrapingAgent
-from config import OUTPUT_DIR
 
 
 # ══════════════════════════════════════
@@ -101,10 +98,7 @@ class HTMLFallbackAgent(BaseScrapingAgent):
         # super().__init__ appelle le constructeur de la classe parente
         super().__init__(store)
         # URL du catalogue produits (ex: /shop ou /collections/all)
-        self.catalogue_url = store.get(
-            "catalogue_url",
-            store.get("url", "") + "/shop"
-        )
+        self.catalogue_url = store.get("catalogue_url", store.get("url", "") + "/shop")
 
     # ── Implémentation de is_available() ─────────────────
     def is_available(self) -> bool:
@@ -112,11 +106,7 @@ class HTMLFallbackAgent(BaseScrapingAgent):
         Vérifie si le site répond avec HTTP 200.
         """
         try:
-            r = requests.get(
-                self.catalogue_url,
-                headers=HEADERS,
-                timeout=10
-            )
+            r = requests.get(self.catalogue_url, headers=HEADERS, timeout=10)
             return r.status_code == 200
         except Exception:
             return False
@@ -134,19 +124,14 @@ class HTMLFallbackAgent(BaseScrapingAgent):
         self.log(f"URL catalogue : {self.catalogue_url}")
 
         tous_produits = []
-        url_courante  = self.catalogue_url
-        numero_page   = 1
-        max_pages     = 20  # limite de sécurité
+        url_courante = self.catalogue_url
+        numero_page = 1
+        max_pages = 20  # limite de sécurité
 
         while url_courante and numero_page <= max_pages:
-
             try:
                 # ── Téléchargement de la page ─────────────
-                reponse = requests.get(
-                    url_courante,
-                    headers=HEADERS,
-                    timeout=15
-                )
+                reponse = requests.get(url_courante, headers=HEADERS, timeout=15)
 
                 if reponse.status_code != 200:
                     self.log(f"HTTP {reponse.status_code} — arrêt")
@@ -166,7 +151,9 @@ class HTMLFallbackAgent(BaseScrapingAgent):
                         break
 
                 if not items:
-                    self.log("Aucun produit trouvé — sélecteur incompatible avec ce site")
+                    self.log(
+                        "Aucun produit trouvé — sélecteur incompatible avec ce site"
+                    )
                     break
 
                 self.log(f"Page {numero_page} : {len(items)} produits trouvés")
@@ -180,7 +167,7 @@ class HTMLFallbackAgent(BaseScrapingAgent):
                 # ── Pagination ────────────────────────────
                 url_courante = self._trouver_page_suivante(soupe, url_courante)
                 numero_page += 1
-                time.sleep(1.5)   # pause respectueuse
+                time.sleep(1.5)  # pause respectueuse
 
             except requests.exceptions.ConnectionError:
                 self.log(f"Connexion impossible à {url_courante}")
@@ -213,7 +200,7 @@ class HTMLFallbackAgent(BaseScrapingAgent):
                 break
 
         if not titre:
-            return None   # produit sans titre = on ignore
+            return None  # produit sans titre = on ignore
 
         # ── Prix ──────────────────────────────────────────
         prix_texte = ""
@@ -256,31 +243,31 @@ class HTMLFallbackAgent(BaseScrapingAgent):
                 break
 
         return {
-            "source"       : "html_fallback",
-            "shop_name"    : self.name,
-            "shop_url"     : self.url,
-            "geography"    : self.store.get("geography", ""),
-            "product_id"   : lien.split("/")[-1] if lien else titre[:30],
-            "product_url"  : lien,
-            "title"        : titre,
-            "product_type" : "woocommerce_html",
-            "vendor"       : self.name,
-            "categories"   : "",
-            "tags"         : "",
-            "price"        : prix,
-            "price_min"    : prix,
-            "price_max"    : prix,
+            "source": "html_fallback",
+            "shop_name": self.name,
+            "shop_url": self.url,
+            "geography": self.store.get("geography", ""),
+            "product_id": lien.split("/")[-1] if lien else titre[:30],
+            "product_url": lien,
+            "title": titre,
+            "product_type": "woocommerce_html",
+            "vendor": self.name,
+            "categories": "",
+            "tags": "",
+            "price": prix,
+            "price_min": prix,
+            "price_max": prix,
             "compare_price": "",
-            "on_sale"      : False,
-            "available"    : True,   # on suppose disponible
-            "nb_variants"  : 1,
-            "rating"       : note,
-            "nb_reviews"   : 0,
-            "description"  : "",
-            "has_image"    : bool(item.select_one("img")),
-            "nb_images"    : len(item.select("img")),
-            "created_at"   : "",
-            "updated_at"   : "",
+            "on_sale": False,
+            "available": True,  # on suppose disponible
+            "nb_variants": 1,
+            "rating": note,
+            "nb_reviews": 0,
+            "description": "",
+            "has_image": bool(item.select_one("img")),
+            "nb_images": len(item.select("img")),
+            "created_at": "",
+            "updated_at": "",
         }
 
     # ── Méthode privée : trouver la page suivante ─────────
@@ -298,7 +285,7 @@ class HTMLFallbackAgent(BaseScrapingAgent):
                         return href
                     base = "/".join(url_courante.split("/")[:3])
                     return base + href
-        return None   # plus de page suivante
+        return None  # plus de page suivante
 
     # ── Méthode privée : nettoyer un prix ─────────────────
     def _nettoyer_prix(self, texte: str) -> str:

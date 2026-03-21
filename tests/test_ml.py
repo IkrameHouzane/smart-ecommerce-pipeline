@@ -2,14 +2,12 @@
 Tests — Machine Learning & Data Mining
 Vérifie les métriques ML, le clustering et les règles d'association.
 """
-import pandas as pd
-import pytest
 
 
 # ── Tests Métriques ML ────────────────────────────────────────────────────────
 
-class TestMLMetrics:
 
+class TestMLMetrics:
     def test_rf_accuracy_above_threshold(self, sample_ml_metrics):
         acc = sample_ml_metrics["random_forest"]["accuracy"]
         assert acc >= 0.85, f"RF accuracy {acc:.3f} inférieure au seuil de 0.85"
@@ -54,8 +52,8 @@ class TestMLMetrics:
 
 # ── Tests Clustering ──────────────────────────────────────────────────────────
 
-class TestClustering:
 
+class TestClustering:
     def test_silhouette_score_positive(self, sample_clustering_stats):
         score = sample_clustering_stats["kmeans"]["silhouette_score"]
         assert score > 0, f"Silhouette score {score} doit être positif"
@@ -86,7 +84,9 @@ class TestClustering:
 
     def test_total_products_consistent(self, sample_clustering_stats):
         """La somme des produits par cluster doit être raisonnable."""
-        total = sum(c["nb_produits"] for c in sample_clustering_stats["kmeans"]["clusters"])
+        total = sum(
+            c["nb_produits"] for c in sample_clustering_stats["kmeans"]["clusters"]
+        )
         assert total > 0
 
     def test_cluster_notes_between_0_and_5(self, sample_clustering_stats):
@@ -96,8 +96,8 @@ class TestClustering:
 
 # ── Tests Règles d'Association ────────────────────────────────────────────────
 
-class TestAssociationRules:
 
+class TestAssociationRules:
     def test_rules_not_empty(self, sample_rules_df):
         assert len(sample_rules_df) > 0
 

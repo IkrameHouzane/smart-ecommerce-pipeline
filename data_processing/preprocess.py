@@ -23,16 +23,14 @@
 #   Tu ne mets pas des carottes avec la terre dans ta soupe.
 # ─────────────────────────────────────────────────────────
 
-import pandas as pd      # manipulation de tableaux de données
-import numpy as np       # calculs numériques (NaN, inf, etc.)
+import pandas as pd  # manipulation de tableaux de données
+import numpy as np  # calculs numériques (NaN, inf, etc.)
 import os
-import re
-from datetime import datetime
 
 # ── Chemins des fichiers ──────────────────────────────────
 # On remonte d'un niveau depuis data_processing/ vers smart_ecommerce/
 # puis on va dans data/ pour lire le fichier final du scraping
-INPUT_PATH  = "../data/FINAL_sport_fitness_products.csv"
+INPUT_PATH = "../data/FINAL_sport_fitness_products.csv"
 OUTPUT_PATH = "../data/clean_products.parquet"
 # Parquet = format de fichier optimisé pour les données volumineuses.
 # Plus rapide que CSV, préserve les types (un nombre reste un nombre).
@@ -42,6 +40,7 @@ OUTPUT_PATH = "../data/clean_products.parquet"
 # ══════════════════════════════════════
 #  FONCTION PRINCIPALE
 # ══════════════════════════════════════
+
 
 def preprocess(input_path=INPUT_PATH, output_path=OUTPUT_PATH):
     """
@@ -63,7 +62,6 @@ def preprocess(input_path=INPUT_PATH, output_path=OUTPUT_PATH):
     print(f"  → {len(df)} lignes, {len(df.columns)} colonnes chargées")
     print(f"  → Sources : {df['source'].value_counts().to_dict()}")
 
-
     # ── 2. SUPPRESSION DES DOUBLONS ───────────────────────
     print("\n[2/6] Suppression des doublons...")
 
@@ -74,7 +72,6 @@ def preprocess(input_path=INPUT_PATH, output_path=OUTPUT_PATH):
     apres = len(df)
 
     print(f"  → {avant - apres} doublons supprimés ({apres} lignes restantes)")
-
 
     # ── 3. NETTOYAGE DES PRIX ─────────────────────────────
     print("\n[3/6] Nettoyage des prix...")
@@ -106,7 +103,6 @@ def preprocess(input_path=INPUT_PATH, output_path=OUTPUT_PATH):
     df["price_mean"] = df["price_mean"].fillna(df["price"])
     # fillna() = remplace les NaN par une valeur de remplacement
 
-
     # ── 4. NETTOYAGE DES NOTES ET AVIS ───────────────────
     print("\n[4/6] Nettoyage des notes et avis...")
 
@@ -128,9 +124,10 @@ def preprocess(input_path=INPUT_PATH, output_path=OUTPUT_PATH):
     # on garde NaN — on ne DEVINE pas une note.
     # On les traitera dans le feature engineering.
     nb_sans_note = df["rating"].isna().sum()
-    print(f"  → {nb_sans_note} produits sans note ({nb_sans_note/len(df)*100:.1f}%)")
+    print(
+        f"  → {nb_sans_note} produits sans note ({nb_sans_note / len(df) * 100:.1f}%)"
+    )
     print(f"  → Note moyenne globale : {df['rating'].mean():.2f}/5")
-
 
     # ── 5. NETTOYAGE DES TEXTES ───────────────────────────
     print("\n[5/6] Nettoyage des textes...")
@@ -138,8 +135,8 @@ def preprocess(input_path=INPUT_PATH, output_path=OUTPUT_PATH):
     # Nettoyer les titres
     df["title"] = (
         df["title"]
-        .fillna("")           # remplace NaN par chaîne vide
-        .str.strip()          # enlève espaces début/fin
+        .fillna("")  # remplace NaN par chaîne vide
+        .str.strip()  # enlève espaces début/fin
         .str.replace(r"\s+", " ", regex=True)  # espaces multiples → un seul
     )
 
@@ -172,29 +169,26 @@ def preprocess(input_path=INPUT_PATH, output_path=OUTPUT_PATH):
         .str.replace(r"[^a-z0-9\s\-]", "", regex=True)
     )
 
-
     # ── 6. COLONNES DÉRIVÉES DE BASE ─────────────────────
     print("\n[6/6] Création des colonnes dérivées de base...")
 
     # Colonne "a_une_promo" : True si le produit a un prix barré
     # et que ce prix barré est supérieur au prix actuel
-    df["a_une_promo"] = (
-        df["compare_price"].notna() &
-        (df["compare_price"] > df["price"])
+    df["a_une_promo"] = df["compare_price"].notna() & (
+        df["compare_price"] > df["price"]
     )
     # .notna() = True si la valeur n'est PAS NaN
 
     # Colonne "nb_variants" nettoyée
-    df["nb_variants"] = pd.to_numeric(
-        df["nb_variants"], errors="coerce"
-    ).fillna(1).astype(int)
+    df["nb_variants"] = (
+        pd.to_numeric(df["nb_variants"], errors="coerce").fillna(1).astype(int)
+    )
     # Un produit a au minimum 1 variante
 
     # Colonne "nb_images" nettoyée
-    df["nb_images"] = pd.to_numeric(
-        df["nb_images"], errors="coerce"
-    ).fillna(0).astype(int)
-
+    df["nb_images"] = (
+        pd.to_numeric(df["nb_images"], errors="coerce").fillna(0).astype(int)
+    )
 
     # ── RAPPORT QUALITÉ ───────────────────────────────────
     print("\n" + "─" * 40)
@@ -204,14 +198,24 @@ def preprocess(input_path=INPUT_PATH, output_path=OUTPUT_PATH):
     print(f"  Colonnes             : {len(df.columns)}")
     print(f"  Prix moyen           : ${df['price'].mean():.2f}")
     print(f"  Prix médian          : ${df['price'].median():.2f}")
-    print(f"  Produits disponibles : {df['available'].sum()} ({df['available'].mean()*100:.1f}%)")
-    print(f"  Produits en promo    : {df['a_une_promo'].sum()} ({df['a_une_promo'].mean()*100:.1f}%)")
-    print(f"  Avec note            : {df['rating'].notna().sum()} ({df['rating'].notna().mean()*100:.1f}%)")
+    print(
+        f"  Produits disponibles : {df['available'].sum()} ({df['available'].mean() * 100:.1f}%)"
+    )
+    print(
+        f"  Produits en promo    : {df['a_une_promo'].sum()} ({df['a_une_promo'].mean() * 100:.1f}%)"
+    )
+    print(
+        f"  Avec note            : {df['rating'].notna().sum()} ({df['rating'].notna().mean() * 100:.1f}%)"
+    )
 
     # Par source
     print("\n  Répartition par plateforme :")
-    print(df.groupby("source")["price"].agg(["count","mean","median"]).round(2).to_string())
-
+    print(
+        df.groupby("source")["price"]
+        .agg(["count", "mean", "median"])
+        .round(2)
+        .to_string()
+    )
 
     # ── SAUVEGARDE ────────────────────────────────────────
     os.makedirs(os.path.dirname(output_path), exist_ok=True)

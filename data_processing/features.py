@@ -18,7 +18,7 @@ import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 import os
 
-INPUT_PATH  = "../data/clean_products.parquet"
+INPUT_PATH = "../data/clean_products.parquet"
 OUTPUT_PATH = "../data/featured_products.parquet"
 
 
@@ -31,7 +31,6 @@ def engineer_features(input_path=INPUT_PATH, output_path=OUTPUT_PATH):
     df = pd.read_parquet(input_path)
     print(f"\n  Données chargées : {len(df)} produits")
 
-
     # ── FEATURE 1 : Pourcentage de remise ─────────────────
     # Formule : (prix_barré - prix_actuel) / prix_barré × 100
     # Exemple : prix barré 60$, prix actuel 40$ → remise 33.3%
@@ -43,12 +42,11 @@ def engineer_features(input_path=INPUT_PATH, output_path=OUTPUT_PATH):
         # Si vrai → calcule la remise
         ((df["compare_price"] - df["price"]) / df["compare_price"] * 100).round(1),
         # Si faux → pas de remise
-        0.0
+        0.0,
     )
 
     print(f"  → Remise moyenne       : {df['discount_pct'].mean():.1f}%")
     print(f"  → Produits avec remise : {(df['discount_pct'] > 0).sum()}")
-
 
     # ── FEATURE 2 : Niveau de prix ────────────────────────
     # Divise les produits en 3 segments selon leur prix.
@@ -57,13 +55,9 @@ def engineer_features(input_path=INPUT_PATH, output_path=OUTPUT_PATH):
     print("\n[2/8] Calcul du niveau de prix (price_tier)...")
 
     df["price_tier"] = pd.qcut(
-        df["price"],
-        q=3,
-        labels=["budget", "mid_range", "premium"],
-        duplicates="drop"
+        df["price"], q=3, labels=["budget", "mid_range", "premium"], duplicates="drop"
     )
     print(df["price_tier"].value_counts().to_string())
-
 
     # ── FEATURE 3 : Gestion des notes ────────────────────
     # CONTEXTE :
@@ -100,23 +94,20 @@ def engineer_features(input_path=INPUT_PATH, output_path=OUTPUT_PATH):
     # Imputation par groupe (price_tier) :
     # chaque tier reçoit la médiane des vraies notes de ce tier.
     # Si un tier n'a aucune vraie note → médiane globale.
-    df["rating_filled"] = df.groupby(
-        "price_tier", observed=True
-    )["rating"].transform(
-        lambda x: x.fillna(
-            x.median() if x.notna().any() else note_mediane_globale
-        )
+    df["rating_filled"] = df.groupby("price_tier", observed=True)["rating"].transform(
+        lambda x: x.fillna(x.median() if x.notna().any() else note_mediane_globale)
     )
     # Remplacement final pour les cas non couverts
     df["rating_filled"] = df["rating_filled"].fillna(note_mediane_globale)
 
     print(f"  → Note moyenne après imputation : {df['rating_filled'].mean():.2f}/5")
-    print(f"  → Répartition par tier :")
+    print("  → Répartition par tier :")
     print(
         df.groupby("price_tier", observed=True)["rating_filled"]
-        .mean().round(2).to_string()
+        .mean()
+        .round(2)
+        .to_string()
     )
-
 
     # ── FEATURE 4 : Score de popularité ──────────────────
     # PROBLÈME : nb_reviews = 0 pour tous les produits Shopify
@@ -133,12 +124,8 @@ def engineer_features(input_path=INPUT_PATH, output_path=OUTPUT_PATH):
     #   e-commerce analytics (Nielsen, 2022).
     print("\n[4/8] Calcul du score de popularité...")
 
-    df["nb_reviews"]  = pd.to_numeric(
-        df["nb_reviews"],  errors="coerce"
-    ).fillna(0)
-    df["nb_variants"] = pd.to_numeric(
-        df["nb_variants"], errors="coerce"
-    ).fillna(1)
+    df["nb_reviews"] = pd.to_numeric(df["nb_reviews"], errors="coerce").fillna(0)
+    df["nb_variants"] = pd.to_numeric(df["nb_variants"], errors="coerce").fillna(1)
 
     # Signal avis réels : log(nb_reviews + 1)
     # log() réduit l'effet des très grands nombres :
@@ -155,20 +142,17 @@ def engineer_features(input_path=INPUT_PATH, output_path=OUTPUT_PATH):
     a_des_avis = (df["nb_reviews"] > 0).astype(float)
 
     signal_popularite = (
-        a_des_avis * (signal_avis * 0.7 + signal_variantes * 0.3) +
-        (1 - a_des_avis) * signal_variantes
+        a_des_avis * (signal_avis * 0.7 + signal_variantes * 0.3)
+        + (1 - a_des_avis) * signal_variantes
     )
 
     # Score final = note imputée × signal de popularité
-    df["popularity_score"] = (
-        df["rating_filled"] * signal_popularite
-    ).round(4)
+    df["popularity_score"] = (df["rating_filled"] * signal_popularite).round(4)
 
     print(f"  → Popularité max               : {df['popularity_score'].max():.2f}")
     print(f"  → Popularité moyenne           : {df['popularity_score'].mean():.2f}")
     print(f"  → Produits avec vrais avis     : {(df['nb_reviews'] > 0).sum()}")
     print(f"  → Produits avec signal variant : {(df['nb_variants'] > 1).sum()}")
-
 
     # ── FEATURE 5 : Fraîcheur ─────────────────────────────
     # Calcule le nombre de jours depuis la création et la MAJ.
@@ -189,11 +173,11 @@ def engineer_features(input_path=INPUT_PATH, output_path=OUTPUT_PATH):
         except Exception:
             return np.nan
 
-    df["days_since_update"]  = df["updated_at"].apply(calculer_jours)
+    df["days_since_update"] = df["updated_at"].apply(calculer_jours)
     df["days_since_created"] = df["created_at"].apply(calculer_jours)
 
     # Remplace les manquants par la médiane
-    df["days_since_update"]  = df["days_since_update"].fillna(
+    df["days_since_update"] = df["days_since_update"].fillna(
         df["days_since_update"].median()
     )
     df["days_since_created"] = df["days_since_created"].fillna(
@@ -203,7 +187,6 @@ def engineer_features(input_path=INPUT_PATH, output_path=OUTPUT_PATH):
     print(f"  → Âge moyen des produits : {df['days_since_created'].mean():.0f} jours")
     print(f"  → MAJ moyenne            : {df['days_since_update'].mean():.0f} jours")
 
-
     # ── FEATURE 6 : Richesse catalogue ───────────────────
     # Combine nb_variants et nb_images en un score unique.
     # Un produit bien présenté (beaucoup de variantes et d'images)
@@ -211,15 +194,14 @@ def engineer_features(input_path=INPUT_PATH, output_path=OUTPUT_PATH):
     print("\n[6/8] Calcul de la richesse catalogue...")
 
     df["variants_norm"] = df["nb_variants"].clip(upper=20) / 20
-    df["images_norm"]   = df["nb_images"].clip(upper=10)   / 10
+    df["images_norm"] = df["nb_images"].clip(upper=10) / 10
 
     df["catalogue_richness"] = (
-        df["variants_norm"] * 0.6 +   # variantes : 60% du score
-        df["images_norm"]   * 0.4     # images    : 40% du score
+        df["variants_norm"] * 0.6  # variantes : 60% du score
+        + df["images_norm"] * 0.4  # images    : 40% du score
     ).round(4)
 
     print(f"  → Richesse moyenne : {df['catalogue_richness'].mean():.3f}")
-
 
     # ── FEATURE 7 : Catégorie harmonisée ─────────────────
     # Les catégories sont incohérentes entre Shopify et WooCommerce.
@@ -241,7 +223,6 @@ def engineer_features(input_path=INPUT_PATH, output_path=OUTPUT_PATH):
     print(f"  → {df['category_clean'].nunique()} catégories distinctes")
     print(f"  → Top 5 : {df['category_clean'].value_counts().head(5).to_dict()}")
 
-
     # ── FEATURE 8 : Normalisation MinMax ─────────────────
     # Les algorithmes ML sont sensibles aux échelles.
     # Prix : 10-500$, note : 0-5, remise : 0-100% → échelles très différentes.
@@ -254,22 +235,19 @@ def engineer_features(input_path=INPUT_PATH, output_path=OUTPUT_PATH):
         "discount_pct",
         "popularity_score",
         "catalogue_richness",
-        "nb_reviews"
+        "nb_reviews",
     ]
 
-    scaler    = MinMaxScaler()
+    scaler = MinMaxScaler()
     noms_norm = [f"{c}_norm" for c in colonnes_a_normaliser]
 
-    df[noms_norm] = scaler.fit_transform(
-        df[colonnes_a_normaliser].fillna(0)
-    )
+    df[noms_norm] = scaler.fit_transform(df[colonnes_a_normaliser].fillna(0))
 
     # Normalisation séparée de rating_filled sur l'échelle 0-5
     df["rating_filled_norm"] = (df["rating_filled"] / 5.0).round(4)
 
     print(f"  → {len(noms_norm) + 1} colonnes normalisées")
     print(f"  → Total colonnes dans le dataset : {len(df.columns)}")
-
 
     # ── Sauvegarde ────────────────────────────────────────
     os.makedirs(os.path.dirname(output_path), exist_ok=True)

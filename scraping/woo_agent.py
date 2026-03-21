@@ -36,6 +36,7 @@ HEADERS = {
 #  FONCTIONS UTILITAIRES
 # ══════════════════════════════════════
 
+
 def nettoyer_html(texte):
     """Enlève les balises HTML avec BeautifulSoup."""
     if not texte:
@@ -44,9 +45,11 @@ def nettoyer_html(texte):
     propre = " ".join(propre.split())
     return propre[:500]
 
+
 def safe(valeur, defaut=""):
     """Retourne defaut si valeur est None."""
     return defaut if valeur is None else valeur
+
 
 def extraire_prix(product):
     """
@@ -54,12 +57,12 @@ def extraire_prix(product):
     Les prix sont en centimes → on divise par 10^currency_minor_unit.
     Exemple : price="999", currency_minor_unit=2 → 9.99$
     """
-    prices    = product.get("prices") or {}
+    prices = product.get("prices") or {}
     try:
         minor_unit = int(prices.get("currency_minor_unit", 2))
     except (TypeError, ValueError):
         minor_unit = 2
-    diviseur = 10 ** minor_unit
+    diviseur = 10**minor_unit
 
     def to_float(v):
         try:
@@ -67,17 +70,18 @@ def extraire_prix(product):
         except (TypeError, ValueError):
             return None
 
-    prix_actuel   = to_float(prices.get("price"))
+    prix_actuel = to_float(prices.get("price"))
     prix_regulier = to_float(prices.get("regular_price"))
-    prix_solde    = to_float(prices.get("sale_price"))
+    prix_solde = to_float(prices.get("sale_price"))
 
-    prix        = prix_actuel or prix_solde or prix_regulier
+    prix = prix_actuel or prix_solde or prix_regulier
     ancien_prix = (
         prix_regulier
         if prix_solde and prix_regulier and prix_solde < prix_regulier
         else None
     )
     return prix, ancien_prix
+
 
 def extraire_categorie(product):
     """Extrait la catégorie : categories → tags → attributes."""
@@ -94,9 +98,10 @@ def extraire_categorie(product):
             return options[0].strip()
     return ""
 
+
 def extraire_note(product):
     """Extrait la note moyenne et le nombre d'avis."""
-    note    = product.get("average_rating") or product.get("rating")
+    note = product.get("average_rating") or product.get("rating")
     nb_avis = product.get("review_count") or product.get("rating_count") or 0
     try:
         note = float(note) if note not in (None, "", "0") else None
@@ -113,6 +118,7 @@ def extraire_note(product):
 #  FONCTION PRINCIPALE
 # ══════════════════════════════════════
 
+
 def scraper_boutique_woo(store):
     """
     Scrape une boutique WooCommerce via la Store API publique.
@@ -127,7 +133,6 @@ def scraper_boutique_woo(store):
     print(f"   URL : {store['url']}")
 
     for numero_page in range(1, WOO_MAX_PAGES + 1):
-
         url = (
             f"{store['url']}/wp-json/wc/store/v1/products"
             f"?per_page={WOO_PER_PAGE}&page={numero_page}"
@@ -137,10 +142,10 @@ def scraper_boutique_woo(store):
             reponse = session.get(url, timeout=15)
 
             if reponse.status_code == 404:
-                print(f"   ⚠️  404 — Store API non disponible")
+                print("   ⚠️  404 — Store API non disponible")
                 break
             if reponse.status_code == 403:
-                print(f"   ⚠️  403 — accès refusé")
+                print("   ⚠️  403 — accès refusé")
                 break
             if reponse.status_code != 200:
                 print(f"   ⚠️  HTTP {reponse.status_code}")
@@ -149,64 +154,59 @@ def scraper_boutique_woo(store):
             try:
                 data = reponse.json()
             except ValueError:
-                print(f"   ⚠️  Réponse invalide")
+                print("   ⚠️  Réponse invalide")
                 break
 
             if not isinstance(data, list) or not data:
-                print(f"   ✅ Fin — plus de produits")
+                print("   ✅ Fin — plus de produits")
                 break
 
             for p in data:
-                product_id  = str(p.get("id") or "")
+                product_id = str(p.get("id") or "")
                 product_url = str(p.get("permalink") or p.get("link") or "")
-                titre       = str(p.get("name") or p.get("title") or "").strip()
+                titre = str(p.get("name") or p.get("title") or "").strip()
 
                 if not product_id or not titre or not product_url:
                     continue
 
                 prix, ancien_prix = extraire_prix(p)
-                categorie         = extraire_categorie(p)
-                note, nb_avis     = extraire_note(p)
-                description       = nettoyer_html(
-                                        p.get("description") or
-                                        p.get("short_description") or ""
-                                    )
-                stock_status = p.get("stock_status") or ""
-                disponible   = (
-                    stock_status == "instock" or
-                    p.get("is_in_stock") is True
+                categorie = extraire_categorie(p)
+                note, nb_avis = extraire_note(p)
+                description = nettoyer_html(
+                    p.get("description") or p.get("short_description") or ""
                 )
+                stock_status = p.get("stock_status") or ""
+                disponible = stock_status == "instock" or p.get("is_in_stock") is True
                 variantes = p.get("variations") or []
 
                 produit = {
-                    "source"        : "woocommerce",
-                    "shop_name"     : store["name"],
-                    "shop_url"      : store["url"],
-                    "geography"     : store.get("geography", "US"),
-                    "product_id"    : product_id,
-                    "product_url"   : product_url,
-                    "title"         : titre,
-                    "product_type"  : "woocommerce",
-                    "vendor"        : store["name"],
-                    "categories"    : categorie,
-                    "tags"          : ", ".join([
-                                        t.get("name", "")
-                                        for t in (p.get("tags") or [])
-                                      ]),
-                    "price"         : prix,
-                    "price_min"     : prix,
-                    "price_max"     : prix,
-                    "compare_price" : ancien_prix,
-                    "on_sale"       : ancien_prix is not None,
-                    "available"     : disponible,
-                    "nb_variants"   : len(variantes),
-                    "rating"        : note,
-                    "nb_reviews"    : nb_avis,
-                    "description"   : description,
-                    "has_image"     : True,
-                    "nb_images"     : 1,
-                    "created_at"    : safe(p.get("date_created")),
-                    "updated_at"    : safe(p.get("date_modified")),
+                    "source": "woocommerce",
+                    "shop_name": store["name"],
+                    "shop_url": store["url"],
+                    "geography": store.get("geography", "US"),
+                    "product_id": product_id,
+                    "product_url": product_url,
+                    "title": titre,
+                    "product_type": "woocommerce",
+                    "vendor": store["name"],
+                    "categories": categorie,
+                    "tags": ", ".join(
+                        [t.get("name", "") for t in (p.get("tags") or [])]
+                    ),
+                    "price": prix,
+                    "price_min": prix,
+                    "price_max": prix,
+                    "compare_price": ancien_prix,
+                    "on_sale": ancien_prix is not None,
+                    "available": disponible,
+                    "nb_variants": len(variantes),
+                    "rating": note,
+                    "nb_reviews": nb_avis,
+                    "description": description,
+                    "has_image": True,
+                    "nb_images": 1,
+                    "created_at": safe(p.get("date_created")),
+                    "updated_at": safe(p.get("date_modified")),
                 }
                 tous_les_produits.append(produit)
 
@@ -217,7 +217,7 @@ def scraper_boutique_woo(store):
             )
 
             if len(data) < WOO_PER_PAGE:
-                print(f"   ✅ Dernière page atteinte")
+                print("   ✅ Dernière page atteinte")
                 break
 
             time.sleep(1.5)
@@ -237,9 +237,10 @@ def scraper_boutique_woo(store):
 #  FONCTION : sauvegarder en CSV
 # ══════════════════════════════════════
 
+
 def sauvegarder_csv(produits, nom_fichier):
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    df     = pd.DataFrame(produits)
+    df = pd.DataFrame(produits)
     chemin = f"{OUTPUT_DIR}/{nom_fichier}_products.csv"
     df.to_csv(chemin, index=False, encoding="utf-8-sig")
     print(f"   💾 Sauvegardé : {chemin}")

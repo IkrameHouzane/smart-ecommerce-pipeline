@@ -2,9 +2,8 @@
 Tests — MCP Architecture (Étape 6)
 Vérifie les permissions, la whitelist et le logging de l'architecture MCP.
 """
+
 import json
-import os
-import tempfile
 from pathlib import Path
 
 import pytest
@@ -53,8 +52,7 @@ class MockAnalyticsReaderServer:
     def list_available_files(self):
         if not self._dir.exists():
             return []
-        return [f.name for f in self._dir.iterdir()
-                if f.name in self.ALLOWED_FILES]
+        return [f.name for f in self._dir.iterdir() if f.name in self.ALLOWED_FILES]
 
     def list_tools(self):
         return ["read_analytics_file", "list_available_files", "get_top_products"]
@@ -62,13 +60,18 @@ class MockAnalyticsReaderServer:
 
 # ── Fixtures ──────────────────────────────────────────────────────────────────
 
+
 @pytest.fixture
 def tmp_analytics_dir(tmp_path):
     """Crée un dossier analytics temporaire avec quelques fichiers de test."""
     # Fichiers autorisés
     (tmp_path / "top_k_products.csv").write_text("title,score\nShoe A,0.92\n")
-    (tmp_path / "shop_ranking.csv").write_text("shop_name,score_moyen\nallbirds,0.879\n")
-    (tmp_path / "ml_classification.json").write_text('{"random_forest": {"accuracy": 0.926}}')
+    (tmp_path / "shop_ranking.csv").write_text(
+        "shop_name,score_moyen\nallbirds,0.879\n"
+    )
+    (tmp_path / "ml_classification.json").write_text(
+        '{"random_forest": {"accuracy": 0.926}}'
+    )
     # Fichier NON autorisé
     (tmp_path / "raw_scraped_data.json").write_text('{"secret": "data"}')
     (tmp_path / "passwords.txt").write_text("admin:1234")
@@ -82,8 +85,8 @@ def server(tmp_analytics_dir):
 
 # ── Tests Whitelist / Permissions ─────────────────────────────────────────────
 
-class TestMCPPermissions:
 
+class TestMCPPermissions:
     def test_allowed_file_readable(self, server):
         content = server.read_analytics_file("top_k_products.csv")
         assert content is not None
@@ -135,11 +138,12 @@ class TestMCPPermissions:
             ".env",
         ]
         for f in forbidden:
-            assert f not in ALLOWED_FILES, f"'{f}' ne devrait pas être dans la whitelist"
+            assert f not in ALLOWED_FILES, (
+                f"'{f}' ne devrait pas être dans la whitelist"
+            )
 
 
 class TestMCPListTools:
-
     def test_list_tools_returns_list(self, server):
         tools = server.list_tools()
         assert isinstance(tools, list)
@@ -163,8 +167,8 @@ class TestMCPListTools:
 
 # ── Tests Logging ─────────────────────────────────────────────────────────────
 
-class TestMCPLogging:
 
+class TestMCPLogging:
     def test_log_entry_has_required_keys(self, server):
         server.read_analytics_file("top_k_products.csv")
         assert len(server._log) > 0
@@ -198,7 +202,7 @@ class TestMCPLogging:
 
         # Relire et vérifier
         with open(log_path, encoding="utf-8") as f:
-            lines = [json.loads(l) for l in f if l.strip()]
+            lines = [json.loads(line) for line in f if line.strip()]
 
         assert len(lines) == 1
         assert lines[0]["source"] == "gemini/gemini-2.0-flash"

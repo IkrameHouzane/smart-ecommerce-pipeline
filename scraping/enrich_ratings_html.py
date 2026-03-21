@@ -25,9 +25,8 @@ import pandas as pd
 import numpy as np
 import time
 import re
-import os
 
-INPUT_CSV  = "../data/FINAL_sport_fitness_products.csv"
+INPUT_CSV = "../data/FINAL_sport_fitness_products.csv"
 OUTPUT_CSV = "../data/FINAL_sport_fitness_products.csv"
 
 HEADERS = {
@@ -44,19 +43,18 @@ RATING_SELECTORS = [
     # Format JSON-LD dans le <head> (le plus fiable)
     # Structure : {"@type":"Product","aggregateRating":{"ratingValue":"4.8"}}
     None,  # traité séparément via json-ld
-
     # Sélecteurs CSS courants
     "[data-rating]",
     ".product-reviews__rating",
-    ".jdgm-prev-badge__stars",          # Judge.me widget
-    ".stamped-badge-starrating",         # Stamped.io widget
-    ".yotpo-stars",                       # Yotpo widget
-    ".spr-starrating",                   # Shopify Product Reviews
+    ".jdgm-prev-badge__stars",  # Judge.me widget
+    ".stamped-badge-starrating",  # Stamped.io widget
+    ".yotpo-stars",  # Yotpo widget
+    ".spr-starrating",  # Shopify Product Reviews
     "[data-star-rating]",
     ".product__rating",
     ".reviews-rating",
     "span.rating",
-    "[itemprop='ratingValue']",          # microdata SEO
+    "[itemprop='ratingValue']",  # microdata SEO
 ]
 
 
@@ -78,8 +76,10 @@ def extraire_note_jsonld(soupe) -> tuple:
                     rating_data = item.get("aggregateRating", {})
                     if rating_data:
                         note = float(rating_data.get("ratingValue", 0))
-                        nb   = int(rating_data.get("reviewCount", 0) or
-                                   rating_data.get("ratingCount", 0))
+                        nb = int(
+                            rating_data.get("reviewCount", 0)
+                            or rating_data.get("ratingCount", 0)
+                        )
                         if 1 <= note <= 5 and nb > 0:
                             return note, nb
         except Exception:
@@ -111,8 +111,13 @@ def extraire_note_html(url: str) -> tuple:
                 continue
 
             # Cherche dans les attributs
-            for attr in ["data-rating", "data-score", "content",
-                          "data-star-rating", "data-average"]:
+            for attr in [
+                "data-rating",
+                "data-score",
+                "content",
+                "data-star-rating",
+                "data-average",
+            ]:
                 val = elem.get(attr)
                 if val:
                     try:
@@ -167,7 +172,7 @@ def enrichir_par_echantillon():
     # On travaille uniquement sur les produits Shopify
     # (WooCommerce a ses propres notes ou vraiment 0)
     shopify_mask = df["source"] == "shopify"
-    df_shopify   = df[shopify_mask].copy()
+    df_shopify = df[shopify_mask].copy()
 
     print(f"  Produits Shopify : {len(df_shopify)}")
 
@@ -186,15 +191,12 @@ def enrichir_par_echantillon():
 
         # Prend un échantillon de 30 produits avec URL
         avec_url = produits_shop[
-            produits_shop["product_url"].notna() &
-            (produits_shop["product_url"].str.len() > 10)
+            produits_shop["product_url"].notna()
+            & (produits_shop["product_url"].str.len() > 10)
         ]
 
         # Échantillon aléatoire — reproductible avec random_state
-        echantillon = avec_url.sample(
-            min(30, len(avec_url)),
-            random_state=42
-        )
+        echantillon = avec_url.sample(min(30, len(avec_url)), random_state=42)
 
         print(f"\n  {shop} ({len(echantillon)} pages à visiter)")
         notes_shop = []
@@ -214,11 +216,12 @@ def enrichir_par_echantillon():
         notes_collectees[shop] = notes_shop
 
         if notes_shop:
-            print(f"  → Médiane {shop}: {np.median(notes_shop):.2f}★ "
-                  f"({len(notes_shop)}/{len(echantillon)} trouvées)")
+            print(
+                f"  → Médiane {shop}: {np.median(notes_shop):.2f}★ "
+                f"({len(notes_shop)}/{len(echantillon)} trouvées)"
+            )
         else:
             print(f"  → Aucune note HTML trouvée pour {shop}")
-
 
     # ── PHASE 2 : Imputation par boutique ─────────────────
     print("\n--- Phase 2 : imputation par similarité ---")
@@ -229,7 +232,7 @@ def enrichir_par_echantillon():
         if notes:
             medianes[shop] = round(np.median(notes), 2)
 
-    print(f"\n  Médianes par boutique :")
+    print("\n  Médianes par boutique :")
     for shop, med in medianes.items():
         print(f"    {shop:<20} → {med}★")
 
@@ -247,13 +250,13 @@ def enrichir_par_echantillon():
     # (on ne peut pas savoir lesquels dans cette approche d'imputation)
 
     # ── Rapport final ─────────────────────────────────────
-    print(f"\n{'─'*40}")
+    print(f"\n{'─' * 40}")
     nb_avec = df["rating"].notna().sum()
-    print(f"  Produits avec note : {nb_avec} ({nb_avec/len(df)*100:.1f}%)")
+    print(f"  Produits avec note : {nb_avec} ({nb_avec / len(df) * 100:.1f}%)")
     print(f"  Note moyenne       : {df['rating'].mean():.2f}/5")
 
     if len(medianes) > 0:
-        print(f"\n  Distribution des notes imputées :")
+        print("\n  Distribution des notes imputées :")
         for shop, med in sorted(medianes.items()):
             nb = (df["shop_name"] == shop).sum()
             print(f"    {shop:<20} {med}★  ({nb} produits)")
@@ -270,11 +273,11 @@ if __name__ == "__main__":
     df, medianes = enrichir_par_echantillon()
 
     if medianes:
-        print(f"\n✅ Enrichissement terminé")
+        print("\n✅ Enrichissement terminé")
         print(f"   Boutiques avec notes réelles : {len(medianes)}")
-        print(f"   Lance ensuite : cd ../data_processing && python run_pipeline.py")
+        print("   Lance ensuite : cd ../data_processing && python run_pipeline.py")
     else:
-        print(f"\n⚠️  Aucune note collectée via HTML")
-        print(f"   Cela signifie que les boutiques n'affichent pas")
-        print(f"   leurs étoiles dans le HTML standard.")
-        print(f"   → La solution finale est l'imputation documentée.")
+        print("\n⚠️  Aucune note collectée via HTML")
+        print("   Cela signifie que les boutiques n'affichent pas")
+        print("   leurs étoiles dans le HTML standard.")
+        print("   → La solution finale est l'imputation documentée.")
