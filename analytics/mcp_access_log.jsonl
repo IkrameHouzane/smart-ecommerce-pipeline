@@ -1,0 +1,5 @@
+{"timestamp": "2026-03-21T16:49:44.399186+00:00", "action": "INIT", "resource": "MCPClient", "detail": "Client initialized"}
+{"timestamp": "2026-03-21T16:52:08.097099+00:00", "action": "INIT", "resource": "MCPClient", "detail": "Client initialized"}
+{"timestamp": "2026-03-21T16:52:42.500743+00:00", "action": "INIT", "resource": "MCPClient", "detail": "Client initialized"}
+{"timestamp": "2026-03-21T16:52:43.424879+00:00", "action": "READ", "resource": "top_k_products.csv", "detail": "Extracted top 10 products for LLM"}
+{"timestamp": "2026-03-21T16:52:43.430881+00:00", "action": "READ", "resource": "shop_ranking.csv", "detail": "Shop ranking for LLM"}

@@ -1,0 +1,52 @@
+{
+  "kmeans": {
+    "k": 4,
+    "inertie": 4804.46,
+    "silhouette_score": 0.3966,
+    "clusters": [
+      {
+        "cluster_kmeans": 0,
+        "nb_produits": 586,
+        "prix_moyen": 50.99,
+        "note_moyenne": 4.71,
+        "score_moyen": 0.59,
+        "remise_moy": 2.29
+      },
+      {
+        "cluster_kmeans": 1,
+        "nb_produits": 427,
+        "prix_moyen": 41.91,
+        "note_moyenne": 4.7,
+        "score_moyen": 0.78,
+        "remise_moy": 40.24
+      },
+      {
+        "cluster_kmeans": 2,
+        "nb_produits": 607,
+        "prix_moyen": 168.85,
+        "note_moyenne": 4.79,
+        "score_moyen": 0.68,
+        "remise_moy": 1.02
+      },
+      {
+        "cluster_kmeans": 3,
+        "nb_produits": 545,
+        "prix_moyen": 64.94,
+        "note_moyenne": 4.4,
+        "score_moyen": 0.73,
+        "remise_moy": 16.4
+      }
+    ]
+  },
+  "dbscan": {
+    "eps": 0.5,
+    "min_samples": 5,
+    "nb_clusters": 21,
+    "nb_anomalies": 106,
+    "pct_anomalies": 4.9
+  },
+  "pca": {
+    "n_components": 2,
+    "variance_expliquee": 0.7061
+  }
+}

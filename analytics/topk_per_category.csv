@@ -1,0 +1,632 @@
+﻿category_clean,rank_global,title,shop_name,source,price,price_tier,rating_filled,composite_score,discount_pct,available,nb_reviews,nb_variants,product_url
+shoes,1,Men's Cruiser - Natural Black (Natural Black Sole),allbirds,shopify,52.0,mid_range,4.4,0.9839,50.5,True,0,14,https://www.allbirds.com/products/mens-cruiser-natural-black
+shoes,2,Women's Wool Cruiser Slip On Fluff - Natural White (Natural White Sole),allbirds,shopify,39.0,budget,4.4,0.9834,62.9,True,0,13,https://www.allbirds.com/products/womens-wool-cruiser-slip-on-fluff
+shoes,3,Men's Wool Runner NZ Fluff - Natural White (Natural White Sole),allbirds,shopify,39.0,budget,4.4,0.9834,67.5,True,0,13,https://www.allbirds.com/products/mens-wool-runner-nz-fluff
+shoes,4,Women's Wool Runner NZ Fluff - Natural White (Natural White Sole),allbirds,shopify,39.0,budget,4.4,0.9834,67.5,True,0,13,https://www.allbirds.com/products/womens-wool-runner-nz-fluff
+shoes,5,Men's Wool Cruiser Slip On Fluff - Natural White (Natural White Sole),allbirds,shopify,39.0,budget,4.4,0.9834,62.9,True,0,13,https://www.allbirds.com/products/mens-wool-cruiser-slip-on-fluff
+shoes,6,Women's Cruiser Corduroy - Dark Tan (Stony Cream Sole),allbirds,shopify,44.0,mid_range,4.4,0.9834,60.0,True,0,13,https://www.allbirds.com/products/womens-cruiser-corduroy-dark-tan
+shoes,7,Women's Cruiser Slip On Corduroy - Stony Cream (Stony Cream Sole),allbirds,shopify,42.0,budget,4.4,0.9834,60.0,True,0,13,https://www.allbirds.com/products/womens-cruiser-slip-on-corduroy-stony-cream
+shoes,8,Men's Cruiser Slip On Corduroy - Stony Cream (Stony Cream Sole),allbirds,shopify,42.0,budget,4.4,0.9834,60.0,True,0,13,https://www.allbirds.com/products/mens-cruiser-slip-on-corduroy-stony-cream
+shoes,9,Women's Runner NZ Corduroy - Stony Cream (Stony Cream Sole),allbirds,shopify,49.0,mid_range,4.4,0.9833,59.2,True,0,13,https://www.allbirds.com/products/womens-runner-nz-corduroy-stony-cream
+shoes,10,Men's Canvas Piper - Blizzard (Bark Brown Sole),allbirds,shopify,45.0,mid_range,4.4,0.9833,50.0,True,0,13,https://www.allbirds.com/products/mens-canvas-pipers-blizzard-bark-brown
+accessories,43,Women's Breezer Insoles - Natural Grey,allbirds,shopify,7.0,budget,4.4,0.9813,53.3,True,0,13,https://www.allbirds.com/products/womens-breezer-insoles
+accessories,44,Women's Dasher Insoles - Natural Charcoal,allbirds,shopify,7.0,budget,4.4,0.9813,53.3,True,0,13,https://www.allbirds.com/products/womens-dasher-insoles
+accessories,490,Men's Featherbed Insole - Dasher NZ - Medium Grey,allbirds,shopify,20.0,budget,4.4,0.8334,0.0,True,0,14,https://www.allbirds.com/products/mens-featherbed-insole-dasher-nz
+accessories,500,Women's Featherbed Insole - Dasher NZ - Medium Grey,allbirds,shopify,20.0,budget,4.4,0.8328,0.0,True,0,13,https://www.allbirds.com/products/womens-featherbed-insole-dasher-nz
+accessories,994,NOBULL Boonie Hat,nobull,shopify,25.0,budget,4.7,0.7344,28.6,True,0,2,https://nobullproject.com/products/nobull-boonie-hat-bright-white
+accessories,1122,Be U Trucker Hat,nobull,shopify,20.0,budget,4.7,0.712,28.6,True,0,1,https://nobullproject.com/products/be-u-trucker-hat-black
+accessories,1124,NOBULL Performance Hat,nobull,shopify,28.0,budget,4.7,0.7109,20.0,True,0,2,https://nobullproject.com/products/nobull-performance-hat-bright-white
+accessories,1127,247 Boxers - Black,represent,shopify,40.0,budget,4.8,0.7076,0.0,True,0,4,https://representclo.com/products/247-fw25-boxers-black
+accessories,1178,No Show Sock,nobull,shopify,12.0,budget,4.7,0.7007,0.0,True,0,4,https://nobullproject.com/products/no-show-sock-white
+accessories,1179,Low Sock,nobull,shopify,12.0,budget,4.7,0.7007,0.0,True,0,4,https://nobullproject.com/products/low-sock-white
+mens shorts,45,American Defender Short Velcro 3.0 (Patriot),born_primitive,shopify,36.0,budget,4.7,0.9796,40.0,True,0,10,https://bornprimitive.com/products/american-defender-short-velcro-3-0-patriot
+mens shorts,48,American Defender Short Tie 3.0 (Woodland),born_primitive,shopify,36.0,budget,4.7,0.9764,40.0,True,0,10,https://bornprimitive.com/products/american-defender-short-tie-3_0-woodland
+mens shorts,160,"Delta Short 9"" (Paloma Grey)",born_primitive,shopify,36.0,budget,4.7,0.8996,40.0,True,0,7,https://bornprimitive.com/products/delta-short-9-paloma-grey
+mens shorts,163,"Traverse Short 9"" (Gunmetal)",born_primitive,shopify,36.0,budget,4.7,0.8996,40.0,True,0,7,https://bornprimitive.com/products/traverse-short-9-gunmetal
+mens shorts,220,Men's Endurance Short w/ Compression (White),born_primitive,shopify,42.0,budget,4.7,0.8764,40.0,True,0,6,https://bornprimitive.com/products/mens-endurance-short-w-compression-white
+mens shorts,227,Men's Cloud Short (Fig),born_primitive,shopify,36.0,budget,4.7,0.8756,40.0,True,0,6,https://bornprimitive.com/products/mens-cloud-short-fig
+mens shorts,278,Men's Lounge Short 2.0 (Stone),born_primitive,shopify,33.0,budget,4.7,0.8733,40.0,True,0,6,https://bornprimitive.com/products/mens-lounge-short-2-stone
+mens shorts,310,Training Short (Thin Red Line),born_primitive,shopify,33.0,budget,4.7,0.8725,40.0,True,0,6,https://bornprimitive.com/products/training-short-thin-red-line
+mens shorts,556,Peak Short (Fig),born_primitive,shopify,40.0,budget,4.7,0.8156,20.0,True,0,6,https://bornprimitive.com/products/peak-short-fig
+mens shorts,689,"Versatile Short w/ Compression 7"" (Adrenaline)",born_primitive,shopify,56.0,mid_range,4.4,0.7906,20.0,True,0,6,https://bornprimitive.com/products/versatile-short-w-compression-7-adrenaline
+womens tactical bottoms,49,Women's Op Assault Pant (Coyote Brown),born_primitive,shopify,145.0,premium,4.8,0.9643,30.6,True,0,24,https://bornprimitive.com/products/womens-op-assault-pant-coyote-brown
+womens tactical bottoms,563,FLEX Recon Mid-Rise Skinny Jean (Dark Wash),born_primitive,shopify,30.0,budget,4.7,0.8137,66.7,False,0,18,https://bornprimitive.com/products/flex-recon-mid-rise-skinny-jean-dark-wash
+womens tactical bottoms,1006,Range Legging (Black),born_primitive,shopify,78.0,mid_range,4.4,0.7328,0.0,True,0,6,https://bornprimitive.com/products/range-legging-black
+womens tops,50,Your Staple Tank (Navy),born_primitive,shopify,24.75,budget,4.7,0.9628,45.0,True,0,9,https://bornprimitive.com/products/your-staple-tank-navy
+womens tops,55,Essential Tee Bundle | Black & White Classic-fit PYCA Pro®,cuts_clothing,shopify,62.0,mid_range,4.4,0.9578,40.4,True,0,36,https://cutsclothing.com/products/essential-tee-kit
+womens tops,56,Classic Tee Bundle | Black & White Classic-fit PYCA Pro®,cuts_clothing,shopify,55.0,mid_range,4.4,0.9572,40.2,True,0,36,https://cutsclothing.com/products/classic-tee-kit
+womens tops,61,Better Than Basic Bundle | Black & White Slim-Fit Tomboy-Cotton™,cuts_clothing,shopify,65.0,mid_range,4.4,0.9559,39.8,True,0,36,https://cutsclothing.com/products/better-than-basic-kit
+womens tops,81,Daydream Long Sleeve (Black),born_primitive,shopify,31.2,budget,4.7,0.9493,40.0,True,0,9,https://bornprimitive.com/products/daydream-long-sleeve-black
+womens tops,142,Captivate Muscle Tee (Heather Grey),born_primitive,shopify,20.25,budget,4.7,0.9034,55.0,True,0,6,https://bornprimitive.com/products/captivate-muscle-tee-heather-grey
+womens tops,151,Women's Waffle Crewneck Pullover (Lava),born_primitive,shopify,26.0,budget,4.7,0.9025,60.0,True,0,6,https://bornprimitive.com/products/womens-waffle-crewneck-pullover-lava
+womens tops,155,Summit Crop Top (Electric Punch),born_primitive,shopify,16.8,budget,4.7,0.9018,65.0,True,0,6,https://bornprimitive.com/products/summit-crop-top-electric-punch
+womens tops,190,Training Crop Tee (White),born_primitive,shopify,19.25,budget,4.7,0.8876,45.0,True,0,6,https://bornprimitive.com/products/training-crop-tee-white
+womens tops,191,Floral Calligraphy Staple Tank (Sky Blue),born_primitive,shopify,24.75,budget,4.7,0.8876,45.0,True,0,6,https://bornprimitive.com/products/floral-calligraphy-staple-sky-blue
+footwear,51,Women's Allday 365 (Ripstop),nobull,shopify,99.0,premium,4.7,0.962,34.0,True,0,13,https://nobullproject.com/products/womens-pine-allday-365
+footwear,52,Women's Allday Knit,nobull,shopify,99.0,premium,4.7,0.962,34.0,True,0,13,https://nobullproject.com/products/womens-green-heather-allday-knit
+footwear,53,Women's Outwork,nobull,shopify,99.0,premium,4.7,0.9608,33.6,True,0,13,https://nobullproject.com/products/womens-navy-gum-outwork
+footwear,95,Men's Journey,nobull,shopify,119.0,premium,4.7,0.9221,20.1,True,0,19,https://nobullproject.com/products/mens-white-journey
+footwear,97,Women's Journey,nobull,shopify,119.0,premium,4.7,0.9185,20.1,True,0,13,https://nobullproject.com/products/womens-night-navy-journey
+footwear,368,247 Arc-2 Trainer - Flat White,represent,shopify,190.0,premium,4.8,0.8668,0.0,True,0,18,https://representclo.com/products/247-arc-2-trainer-flat-white
+footwear,370,247 Arc-1 Runner - Flat White,represent,shopify,230.0,premium,4.8,0.8664,0.0,True,0,18,https://representclo.com/products/247-arc-1-runner-flat-white
+footwear,381,HTN Low Distressed - Light Grey,represent,shopify,280.0,premium,4.8,0.8649,0.0,True,0,15,https://representclo.com/products/htn-low-distressed-light-grey
+footwear,384,Represent 247 X Puma All-Pro Nitro 2 - Vapor Grey Puma Black,represent,shopify,140.0,premium,4.8,0.8644,0.0,True,0,13,https://representclo.com/products/represent-247-x-puma-all-pro-nitro-2-vapor-grey-puma-black
+footwear,385,247 Arc-1 Runner Winter - Steel,represent,shopify,265.0,premium,4.8,0.8643,0.0,True,0,15,https://representclo.com/products/247-arc-1-runner-winter-steel
+womens jeans,54,FLEX Stretchy Mid-Rise Boot Cut Jean (Black),born_primitive,shopify,54.0,mid_range,4.4,0.9587,40.0,True,0,18,https://bornprimitive.com/products/flex-stretchy-mid-rise-boot-cut-jean-black
+womens jeans,357,FLEX Stretchy High-Rise Skinny Jean (White),born_primitive,shopify,90.0,premium,4.8,0.8703,0.0,True,0,18,https://bornprimitive.com/products/flex-stretchy-high-rise-skinny-jean-white
+womens jeans,362,FLEX Stretchy Mid-Rise Skinny Jean (White),born_primitive,shopify,90.0,premium,4.8,0.8687,0.0,True,0,18,https://bornprimitive.com/products/flex-stretchy-mid-rise-skinny-jean-white
+mens tops,57,Cabin Fleece (Black),born_primitive,shopify,23.0,budget,4.7,0.957,69.3,True,0,8,https://bornprimitive.com/products/fleece-pullover-black
+mens tops,59,Men's Timber Jacket (Gunmetal),born_primitive,shopify,23.0,budget,4.7,0.9562,74.4,True,0,8,https://bornprimitive.com/products/the-mens-timber-jacket-gunmetal
+mens tops,63,Grid Fleece Hoodie (Cool Grey),born_primitive,shopify,23.0,budget,4.7,0.9554,69.3,True,0,8,https://bornprimitive.com/products/grid-fleece-hoodie-cool-grey
+mens tops,121,Cool Down Jacket (BP Navy),born_primitive,shopify,32.0,budget,4.7,0.9065,60.0,True,0,6,https://bornprimitive.com/products/cool-down-jacket-bp-navy
+mens tops,123,Base Camp Quilted Vest (Elephant),born_primitive,shopify,32.0,budget,4.7,0.9057,60.0,True,0,6,https://bornprimitive.com/products/base-camp-quilted-vest-elephant
+mens tops,145,BP Flag Tee (White/Red),born_primitive,shopify,15.36,budget,4.7,0.9027,52.0,True,0,6,https://bornprimitive.com/products/bp-flag-tee-white-red
+mens tops,147,Athleisure Pocket Tank (Heather Grey),born_primitive,shopify,21.0,budget,4.7,0.9026,50.0,True,0,6,https://bornprimitive.com/products/athleisure-pocket-tank-heather-grey
+mens tops,176,Athleisure Hoodie (Heather Grey),born_primitive,shopify,34.8,budget,4.7,0.8972,40.0,True,0,7,https://bornprimitive.com/products/athleisure-hoodie-heather-grey
+mens tops,211,Athleisure Tee w/ Flag (Black),born_primitive,shopify,28.8,budget,4.7,0.8773,40.0,True,0,6,https://bornprimitive.com/products/athleisure-tee-w-flag-black
+mens tops,236,Men's Endurance Shirt (Paloma Grey),born_primitive,shopify,33.0,budget,4.7,0.8749,40.0,True,0,6,https://bornprimitive.com/products/mens-endurance-shirt-paloma-grey
+womens leggings,58,Inspire Legging (Gunmetal),born_primitive,shopify,46.8,mid_range,4.4,0.9567,40.0,True,0,12,https://bornprimitive.com/products/inspire-legging-gun-metal
+womens leggings,65,Fleece Lined Legging (Deep Green),born_primitive,shopify,51.0,mid_range,4.4,0.9543,40.0,True,0,12,https://bornprimitive.com/products/fleece-lined-legging-deep-green
+womens leggings,77,Yoga Pant Straight Leg (Blue Depths),born_primitive,shopify,46.8,mid_range,4.4,0.9527,40.0,True,0,12,https://bornprimitive.com/products/yoga-pant-straight-leg-blue-depths
+womens leggings,369,Limitless Legging (BP Navy),born_primitive,shopify,48.0,mid_range,4.4,0.8667,20.0,True,0,9,https://bornprimitive.com/products/limitless-legging-bp-navy
+womens leggings,433,Synergy Legging (Pebble),born_primitive,shopify,46.8,mid_range,4.4,0.8499,40.0,True,0,6,https://bornprimitive.com/products/synergy-legging-pebble
+womens leggings,473,Synergy 7/8 Legging w/ Pockets 2.0 (Black),born_primitive,shopify,60.0,mid_range,4.4,0.8378,0.0,True,0,18,https://bornprimitive.com/products/synergy-7-8-legging-w-pockets-2-0-black
+womens leggings,477,Synergy Full Length Legging w/ Pockets 2.0 (Black),born_primitive,shopify,60.0,mid_range,4.4,0.837,0.0,True,0,18,https://bornprimitive.com/products/synergy-full-length-legging-w-pockets-2-0-black
+womens leggings,479,Synergy 7/8 Legging 2.0 (Black),born_primitive,shopify,60.0,mid_range,4.4,0.8362,0.0,True,0,18,https://bornprimitive.com/products/synergy-7-8-legging-2-0-black
+womens leggings,480,Synergy Full Length Legging 2.0 (Black),born_primitive,shopify,60.0,mid_range,4.4,0.8362,0.0,True,0,18,https://bornprimitive.com/products/synergy-full-length-legging-2-0-black
+womens leggings,489,Your Go To Legging 2.0 (BP Navy),born_primitive,shopify,60.0,mid_range,4.4,0.8334,0.0,True,0,12,https://bornprimitive.com/products/your-go-to-legging-2-0-bp-navy
+unisex top,60,Woodsman Stretchy Flannel (Rancho),born_primitive,shopify,33.0,budget,4.7,0.9561,49.2,True,0,8,https://bornprimitive.com/products/woodsman-stretchy-flannel-rancho
+unisex top,90,Unmatched Unisex Hoodie (Navy),born_primitive,shopify,42.0,budget,4.7,0.9236,40.0,True,0,8,https://bornprimitive.com/products/unmatched-unisex-hoodie-navy
+unisex top,559,Sun Shirt w/ Velcro 2.0 (Black Multicam),born_primitive,shopify,89.0,premium,4.8,0.8143,0.0,True,0,8,https://bornprimitive.com/products/sun-shirt-w-velcro-2-0-black-multicam
+unisex top,727,Sun Shirt 2.0 (Mossy Oak® Original Bottomland® 2025),born_primitive,shopify,69.0,mid_range,4.4,0.7841,0.0,True,0,8,https://bornprimitive.com/products/sun-shirt-2-0-mossy-oak®-original-bottomland®
+unisex top,728,Hooded Woodsman Stretchy Flannel (Dusk),born_primitive,shopify,70.0,mid_range,4.4,0.7841,0.0,True,0,8,https://bornprimitive.com/products/hooded-woodsman-stretchy-flannel-dusk
+unisex top,739,BDF Unmatched Unisex Hoodie (Pumice),born_primitive,shopify,70.0,mid_range,4.4,0.7809,0.0,True,0,8,https://bornprimitive.com/products/unmatched-unisex-hoodie-best-defense-foundation-pumice
+unisex top,885,Woodsman Stretchy Corduroy (Gravel),born_primitive,shopify,21.0,budget,4.7,0.7586,70.0,False,0,8,https://bornprimitive.com/products/woodsman-stretchy-corduroy-gravel
+unisex top,1325,Woodsman Stretchy Denim (Vintage Wash),born_primitive,shopify,56.0,mid_range,4.4,0.6442,20.0,False,0,8,https://bornprimitive.com/products/woodsman-stretchy-denim-vintage-wash
+mens shoes,62,Men's Savage 1 (Navy/Maroon),born_primitive,shopify,83.4,mid_range,4.4,0.9557,40.0,True,0,15,https://bornprimitive.com/products/mens-savage-1-navy-maroon
+mens shoes,365,Men's Patriot 1 Mid-Assault Boot (Desert Tan),born_primitive,shopify,199.0,premium,4.8,0.8673,0.0,True,0,15,https://bornprimitive.com/products/mens-patriot-1-desert-tan
+mens shoes,366,Men's Savage 1 High Top (Cloud/Black),born_primitive,shopify,149.0,premium,4.8,0.8671,0.0,True,0,15,https://bornprimitive.com/products/mens-savage-1-high-top-cloud-black
+mens shoes,367,Men's Savage 1 Classic (White/Gum),born_primitive,shopify,145.0,premium,4.8,0.8671,0.0,True,0,15,https://bornprimitive.com/products/mens-savage-1-classic-white-gum
+womens shoes,64,Women's Savage 1 (Black/Viola),born_primitive,shopify,83.4,mid_range,4.4,0.9545,40.0,True,0,13,https://bornprimitive.com/products/womens-savage-1-black-viola
+womens shoes,374,Women's Savage 1 Classic (White/Gum),born_primitive,shopify,145.0,premium,4.8,0.8659,0.0,True,0,13,https://bornprimitive.com/products/womens-savage-1-classic-white-gum
+womens shoes,375,Women's Savage 1 High Top (Ultra Pink),born_primitive,shopify,149.0,premium,4.8,0.8659,0.0,True,0,13,https://bornprimitive.com/products/womens-savage-1-high-top-ultra-pink
+apparel,67,Men's Jogger,nobull,shopify,55.0,mid_range,4.7,0.9535,49.5,True,0,8,https://nobullproject.com/products/mens-jogger-black
+apparel,83,Women's Deltapeak® Micro Textured Tee,nobull,shopify,24.0,budget,4.7,0.9298,50.0,True,0,7,https://nobullproject.com/products/womens-deltapeak-micro-textured-tee-black
+apparel,84,Women's Deltapeak® Micro Textured Tank,nobull,shopify,21.0,budget,4.7,0.929,50.0,True,0,7,https://nobullproject.com/products/womens-deltapeak-micro-textured-tank-black
+apparel,126,"Women's High-Rise Short 6""",nobull,shopify,29.0,budget,4.7,0.9049,50.0,True,0,6,https://nobullproject.com/products/womens-high-rise-short-6-dark-army
+apparel,127,"Men's Light Lined Short 7""",nobull,shopify,36.0,budget,4.7,0.9048,50.0,True,0,6,https://nobullproject.com/products/mens-light-lined-short-7-vapor
+apparel,128,"Women's High-Rise Tight 21""",nobull,shopify,39.0,budget,4.7,0.9048,50.0,True,0,6,https://nobullproject.com/products/womens-high-rise-tight-21-midnight-heather
+apparel,129,"Women's High-Rise Tight 25""",nobull,shopify,39.0,budget,4.7,0.9048,50.0,True,0,6,https://nobullproject.com/products/womens-high-rise-tight-25-midnight-heather
+apparel,136,"Men's Lightweight Knit Short 9""",nobull,shopify,29.0,budget,4.7,0.9041,50.0,True,0,6,https://nobullproject.com/products/mens-lightweight-knit-short-9-black
+apparel,137,"Women's High-Rise Short 2""",nobull,shopify,29.0,budget,4.7,0.9041,50.0,True,0,6,https://nobullproject.com/products/womens-high-rise-short-2-night-navy
+apparel,138,"Men's Textured Knit Short 7""",nobull,shopify,29.0,budget,4.7,0.9041,50.0,True,0,6,https://nobullproject.com/products/mens-textured-knit-short-7-vapor
+outerwear,68,SET X PARKE HORSESHOE JEANS - RHUBARB,set_active,shopify,133.0,premium,4.8,0.9534,30.0,True,0,10,https://setactive.co/products/set-x-parke-horseshoe-jeans-rhubarb
+outerwear,780,SET X PARKE COTTON V-NECK SWEATER - CREAM,set_active,shopify,122.5,premium,4.8,0.7735,30.0,True,0,3,https://setactive.co/products/set-x-parke-cotton-v-neck-sweater-cream
+outerwear,781,SET X PARKE COTTON CREWNECK - CREAM,set_active,shopify,122.5,premium,4.8,0.7727,30.0,True,0,3,https://setactive.co/products/set-x-parke-cotton-crewneck-cream
+outerwear,799,Initial Nylon Track Jacket - Coffee,represent,shopify,195.0,premium,4.8,0.7636,0.0,True,0,6,https://representclo.com/products/initial-nylon-track-jacket-coffee
+outerwear,846,Faux Shearling Jacket - Cafe,represent,shopify,380.0,premium,4.8,0.7617,0.0,True,0,6,https://representclo.com/products/faux-shearling-jacket-cafe
+outerwear,853,247 Full Zip Fleece - Umber,represent,shopify,200.0,premium,4.8,0.7611,0.0,True,0,6,https://representclo.com/products/247-full-zip-fleece-umber
+outerwear,859,Hooded Bomber - Beige,represent,shopify,445.0,premium,4.8,0.761,0.0,True,0,6,https://representclo.com/products/hooded-bomber-beige
+outerwear,872,Represent X Puma Jacket - Night Pine,represent,shopify,275.0,premium,4.8,0.7604,0.0,True,0,6,https://representclo.com/products/represent-x-puma-jacket-night-pine
+outerwear,873,247 Taped Jacket - Chrome,represent,shopify,275.0,premium,4.8,0.7604,0.0,True,0,6,https://representclo.com/products/247-taped-jacket-chrome
+outerwear,875,Smart Bomber - Nero,represent,shopify,345.0,premium,4.8,0.7604,0.0,True,0,6,https://representclo.com/products/smart-bomber-nero
+mens graphic tops,85,Valor Tee (Thin Gold Line),born_primitive,shopify,14.4,budget,4.7,0.9283,55.0,True,0,7,https://bornprimitive.com/products/valor-tee-thin-gold-line
+mens graphic tops,164,Freedom Paid In Full Tee (Tactical Green),born_primitive,shopify,19.2,budget,4.7,0.899,40.0,True,0,7,https://bornprimitive.com/products/freedom-paid-in-full-tee-tactical-green
+mens graphic tops,165,Live Free Tee (White),born_primitive,shopify,19.2,budget,4.7,0.899,40.0,True,0,7,https://bornprimitive.com/products/live-free-tee-white
+mens graphic tops,166,Property of Born Primitive Tee (Tactical Green),born_primitive,shopify,19.2,budget,4.7,0.899,40.0,True,0,7,https://bornprimitive.com/products/property-of-born-primitive-tee-tactical-green
+mens graphic tops,167,Pearl Harbor Commemorative Tee (Heather Navy),born_primitive,shopify,19.2,budget,4.7,0.8982,40.0,True,0,7,https://bornprimitive.com/products/pearl-harbor-commemorative-tee
+mens graphic tops,168,Modern Savage T-Shirt (Midnight Navy),born_primitive,shopify,19.2,budget,4.7,0.8982,40.0,True,0,7,https://bornprimitive.com/products/modern-savage-t-shirt-midnight-navy
+mens graphic tops,169,Death Fears the Strong Tee (Black),born_primitive,shopify,19.2,budget,4.7,0.8974,40.0,True,0,7,https://bornprimitive.com/products/death-fears-the-strong-tee-black
+mens graphic tops,170,No Weight Classes In The Jungle T-Shirt (Heavy Metal),born_primitive,shopify,19.2,budget,4.7,0.8974,40.0,True,0,7,https://bornprimitive.com/products/no-weight-classes-in-the-jungle-t-shirt-heavy-metal
+mens graphic tops,171,Hungriest Man Eats Tee (Black),born_primitive,shopify,19.2,budget,4.7,0.8974,40.0,True,0,7,https://bornprimitive.com/products/hungriest-man-eats-tee-black
+mens graphic tops,172,Brand Tee (Thin Red Line),born_primitive,shopify,19.2,budget,4.7,0.8974,40.0,True,0,7,https://bornprimitive.com/products/brand-tee-thin-red-line-1
+womens shorts,86,Women's Cheeky Freedom Jean Short,born_primitive,shopify,20.0,budget,4.7,0.9282,60.0,True,0,7,https://bornprimitive.com/products/womens-cheeky-freedom-jean-shorts
+womens shorts,148,Cadence Short (Deep Plum),born_primitive,shopify,20.25,budget,4.7,0.9026,55.0,True,0,6,https://bornprimitive.com/products/cadence-short-deep-plum
+womens shorts,159,FLEX Stretchy Jean Short (Vintage American Flag),born_primitive,shopify,33.0,budget,4.7,0.8997,40.0,True,0,7,https://bornprimitive.com/products/flex-stretchy-jean-short-american-flag
+womens shorts,219,Interval Short (Citadel),born_primitive,shopify,31.2,budget,4.7,0.8765,40.0,True,0,6,https://bornprimitive.com/products/interval-short-citadel
+womens shorts,235,Tempo Biker Short (Oatmeal),born_primitive,shopify,27.0,budget,4.7,0.8749,40.0,True,0,6,https://bornprimitive.com/products/tempo-biker-short-oatmeal
+womens shorts,237,Free Flow Short (Thin Red Line),born_primitive,shopify,27.0,budget,4.7,0.8749,40.0,True,0,6,https://bornprimitive.com/products/free-flow-short-thin-red-line
+womens shorts,240,Double Take Booty Short (Fig),born_primitive,shopify,27.0,budget,4.7,0.8749,40.0,True,0,6,https://bornprimitive.com/products/double-take-booty-short-fig
+womens shorts,241,Women's Unmatched Short (BP Navy),born_primitive,shopify,30.0,budget,4.7,0.8749,40.0,True,0,6,https://bornprimitive.com/products/womens-unmatched-short-bp-navy
+womens shorts,258,Women's Cloud Short (OD Green),born_primitive,shopify,30.0,budget,4.7,0.8741,40.0,True,0,6,https://bornprimitive.com/products/womens-cloud-short-od-green
+womens shorts,1013,FLEX Stretchy Mom Jean Short (White),born_primitive,shopify,55.0,mid_range,4.4,0.7314,0.0,True,0,6,https://bornprimitive.com/products/flex-stretchy-mom-jean-short-white
+discountable,98,Synergy Full Length Legging w/ Pockets 2.0 Set (Olive),born_primitive,shopify,95.2,premium,4.8,0.9156,15.0,True,0,36,https://bornprimitive.com/products/synergy-full-length-legging-w-pockets-2-0-set-olive
+discountable,99,Training Hoodie Set (Gunmetal),born_primitive,shopify,102.0,premium,4.8,0.9156,15.0,True,0,108,https://bornprimitive.com/products/training-hoodie-set-gunmetal
+discountable,100,Lounge Lux Short Set (Java),born_primitive,shopify,97.75,premium,4.8,0.9156,15.0,True,0,36,https://bornprimitive.com/products/lounge-lux-short-set-java
+discountable,101,Women's Revive Cloud Short Set (Paloma Grey),born_primitive,shopify,102.0,premium,4.8,0.9156,15.0,True,0,36,https://bornprimitive.com/products/womens-revive-cloud-short-set-heather-grey
+discountable,102,Limitless Legging Set 2.0 (Black),born_primitive,shopify,97.75,premium,4.8,0.9156,15.0,True,0,54,https://bornprimitive.com/products/limitless-legging-set-2-0-black
+discountable,103,Limitless Legging Set (Black),born_primitive,shopify,97.75,premium,4.8,0.9156,15.0,True,0,54,https://bornprimitive.com/products/black-limitless-legging-set
+discountable,104,Training Full Zip Hoodie Set (Gunmetal),born_primitive,shopify,106.25,premium,4.8,0.9155,15.0,True,0,108,https://bornprimitive.com/products/training-full-zip-hoodie-set-gunmetal
+discountable,106,Women's Cloud Jogger Set (Fuchsia),born_primitive,shopify,127.5,premium,4.8,0.9153,15.0,True,0,36,https://bornprimitive.com/products/womens-cloud-jogger-set-fuchsia
+discountable,107,Women’s Cloud Jogger Set (BP Navy),born_primitive,shopify,127.5,premium,4.8,0.9153,15.0,True,0,36,https://bornprimitive.com/products/women-s-cloud-jogger-set-bp-navy
+discountable,108,Women’s Cloud Short Set (BP Navy),born_primitive,shopify,102.0,premium,4.8,0.9148,15.0,True,0,36,https://bornprimitive.com/products/women-s-cloud-short-set-bp-navy
+bottoms,105,Men's Unmatched Crew Set (BP Navy),born_primitive,shopify,114.75,premium,4.8,0.9154,15.0,True,0,36,https://bornprimitive.com/products/mens-unmatched-crew-set-bp-navy
+bottoms,364,Icon Pant | Black Classic-Fit Enduratech™,cuts_clothing,shopify,124.0,premium,4.8,0.8679,0.0,True,0,12,https://cutsclothing.com/products/icon-pant-black
+bottoms,371,AO 5-Pocket Pant | Iron Navy Slim-Fit Versaknit®,cuts_clothing,shopify,124.0,premium,4.8,0.8663,0.0,True,0,12,https://cutsclothing.com/products/ao-5-pocket-pant-iron-navy
+bottoms,372,AO 5-Pocket Pant | Santal Slim-Fit Versaknit®,cuts_clothing,shopify,124.0,premium,4.8,0.8663,0.0,True,0,12,https://cutsclothing.com/products/ao-5-pocket-pant-santal
+bottoms,377,AO 5-Pocket Pant | Black Slim-Fit Versaknit®,cuts_clothing,shopify,124.0,premium,4.8,0.8655,0.0,True,0,12,https://cutsclothing.com/products/ao-5-pocket-pant-black
+bottoms,379,Icon Pant | Slate Classic-Fit Enduratech™,cuts_clothing,shopify,124.0,premium,4.8,0.8655,0.0,True,0,12,https://cutsclothing.com/products/icon-pant-slate
+bottoms,380,AO 5-Pocket Pant | Deep Olive Slim-Fit Versaknit®,cuts_clothing,shopify,124.0,premium,4.8,0.8655,0.0,True,0,12,https://cutsclothing.com/products/ao-5-pocket-pant-deep-olive
+bottoms,383,Icon Pant | Steel Classic-Fit Enduratech™,cuts_clothing,shopify,124.0,premium,4.8,0.8647,0.0,True,0,12,https://cutsclothing.com/products/icon-pant-steel
+bottoms,397,Icon Pant | Saddle Classic-Fit Enduratech™,cuts_clothing,shopify,124.0,premium,4.8,0.8631,0.0,True,0,12,https://cutsclothing.com/products/icon-pant-saddle
+bottoms,448,SoHo Trouser | Heather Tobacco Classic-fit,cuts_clothing,shopify,89.0,premium,4.8,0.8477,28.2,True,0,6,https://cutsclothing.com/products/soho-trouser-heather-tobacco
+womens outdoor tops,112,Women's Tundra Jacket (Black),born_primitive,shopify,92.0,premium,4.8,0.9147,59.8,True,0,6,https://bornprimitive.com/products/womens-tundra-jacket-black
+womens outdoor tops,122,Women's Quiver Full Zip Hoodie 2.0 (OD Green),born_primitive,shopify,36.0,budget,4.7,0.9064,59.6,True,0,6,https://bornprimitive.com/products/womens-quiver-full-zip-hoodie-2-0-od-green
+womens outdoor tops,134,Women's Quiver Half Zip Hoodie 2.0 (Coyote Brown),born_primitive,shopify,40.0,budget,4.7,0.9046,49.4,True,0,6,https://bornprimitive.com/products/womens-quiver-half-zip-hoodie-2-0-coyote-brown
+womens outdoor tops,194,Women's Tundra Jacket Light 2.0 (OD Green),born_primitive,shopify,113.0,premium,4.8,0.885,40.2,True,0,6,https://bornprimitive.com/products/womens-tundra-jacket-light-2-0-od-green
+womens outdoor tops,195,Women's Tundra Jacket 2.0 (OD Green),born_primitive,shopify,137.0,premium,4.8,0.8848,40.2,True,0,6,https://bornprimitive.com/products/womens-tundra-jacket-2-0-od-green
+womens outdoor tops,204,Women's Tundra Jacket Light (Black),born_primitive,shopify,68.0,mid_range,4.4,0.8829,59.8,True,0,6,https://bornprimitive.com/products/womens-tundra-jacket-light-black
+womens outdoor tops,206,Women's Quiver Half Zip Hoodie (Black),born_primitive,shopify,45.0,mid_range,4.4,0.8813,49.4,True,0,6,https://bornprimitive.com/products/womens-quiver-half-zip-hoodie-black
+womens outdoor tops,207,Women's Ridgeline Merino Half Zip Hoodie 165 (Coyote Brown),born_primitive,shopify,50.0,mid_range,4.4,0.88,49.5,True,0,6,https://bornprimitive.com/products/womens-ridgeline-merino-half-zip-hoodie-165-coyote-brown
+womens outdoor tops,431,Women's Ridgeline Half Zip Hoodie (Black),born_primitive,shopify,65.0,mid_range,4.4,0.8501,40.4,True,0,6,https://bornprimitive.com/products/womens-ridgeline-half-zip-hoodie-black
+unknown,116,GOAT Bundle,goat_tape,shopify,19.99,budget,5.0,0.9134,28.0,True,0,8,https://www.goattape.com/products/gt-bundle
+unknown,1247,Spicy Seasoning &#8211; Large Bottle,danosseasoning,woocommerce,14.99,budget,4.7,0.6717,25.0,True,0,0,https://danosseasoning.com/product/spicy-seasoning-large/
+unknown,1264,SEA-soning Seasoning &#8211; Medium Bottle,danosseasoning,woocommerce,9.99,budget,4.7,0.666,23.1,True,0,0,https://danosseasoning.com/product/sea-soning-seasoning-medium/
+unknown,1265,Crunchy &#8211; Medium Bottle,danosseasoning,woocommerce,9.99,budget,4.7,0.666,23.1,True,0,0,https://danosseasoning.com/product/crunchy-seasoning-medium/
+unknown,1266,Chipotle Seasoning &#8211; Medium Bottle,danosseasoning,woocommerce,9.99,budget,4.7,0.666,23.1,True,0,0,https://danosseasoning.com/product/chipotle-seasoning-medium/
+unknown,1267,Original Seasoning &#8211; Medium Bottle,danosseasoning,woocommerce,9.99,budget,4.7,0.666,23.1,True,0,0,https://danosseasoning.com/product/original-seasoning-medium/
+unknown,1268,Spicy Seasoning &#8211; Medium Bottle,danosseasoning,woocommerce,9.99,budget,4.7,0.666,23.1,True,0,0,https://danosseasoning.com/product/spicy-seasoning-medium/
+unknown,1270,Tac-O Seasoning &#8211; Medium Bottle,danosseasoning,woocommerce,9.99,budget,4.7,0.666,23.1,True,0,0,https://danosseasoning.com/product/tac-o-seasoning-medium/
+unknown,1342,Preem-O Seasoning &#8211; Small Size &#8211; 2 Pack,danosseasoning,woocommerce,11.98,budget,4.7,0.6396,14.3,True,0,0,https://danosseasoning.com/product/preem-o-seasoning-small-size-2-pack/
+unknown,1344,Tac-O Seasoning &#8211; Small Size &#8211; 2 Pack,danosseasoning,woocommerce,11.98,budget,4.7,0.6396,14.3,True,0,0,https://danosseasoning.com/product/tac-o-seasoning-small-size-2-pack/
+womens tactical tops,118,Women's Op Top (Ranger Green),born_primitive,shopify,30.0,budget,4.7,0.9073,66.7,True,0,6,https://bornprimitive.com/products/women-s-op-top-ranger-green
+womens tactical tops,119,Women's Op Top Pro (Ranger Green),born_primitive,shopify,40.0,budget,4.7,0.9072,60.0,True,0,6,https://bornprimitive.com/products/womens-op-top-pro-ranger-green
+womens tactical tops,120,Women's Long Sleeve Op Top (Ranger Green),born_primitive,shopify,40.0,budget,4.7,0.9072,63.6,True,0,6,https://bornprimitive.com/products/women-s-long-sleeve-op-top-ranger-green
+womens tactical tops,124,Women's Range Shirt (Ranger Green),born_primitive,shopify,20.0,budget,4.7,0.905,58.3,True,0,6,https://bornprimitive.com/products/women-s-range-shirt-ranger-green
+womens tactical tops,203,Women's Long Sleeve Op Top Pro (Ranger Green),born_primitive,shopify,50.0,mid_range,4.4,0.8831,58.3,True,0,6,https://bornprimitive.com/products/womens-long-sleeve-op-top-pro-ranger-green
+womens base layer tops,135,Women's Ridgeline Base Layer Top (Wolf Grey),born_primitive,shopify,40.0,budget,4.7,0.9046,49.4,True,0,6,https://bornprimitive.com/products/womens-ridgeline-base-layer-top-wolf-grey
+womens base layer tops,153,Women's Ridgeline Merino Thermal Top 165 (Coyote Brown),born_primitive,shopify,40.0,budget,4.7,0.9022,49.4,True,0,6,https://bornprimitive.com/products/womens-ridgeline-merino-thermal-top-165-coyote-brown
+womens base layer tops,208,Women's Ridgeline Merino Thermal Top 240 (Coyote Brown),born_primitive,shopify,45.0,mid_range,4.4,0.8789,49.4,True,0,6,https://bornprimitive.com/products/womens-ridgeline-merino-thermal-top-240-coyote-brown
+womens base layer tops,215,Women's Ridgeline Heavy Base Layer Top (Wolf Grey),born_primitive,shopify,50.0,mid_range,4.4,0.8768,49.5,True,0,6,https://bornprimitive.com/products/womens-ridgeline-heavy-base-layer-top-wolf-grey
+womens swim top,140,Inlet Bikini Top (Flower Child),born_primitive,shopify,14.0,budget,4.7,0.9035,65.0,True,0,6,https://bornprimitive.com/products/inlet-bikini-top-flower-child
+womens swim top,157,Primitive Bikini Top (Water Lillies Navy),born_primitive,shopify,14.0,budget,4.7,0.9011,65.0,True,0,6,https://bornprimitive.com/products/primitive-bikini-top-water-lillies-navy
+womens swim top,222,Deep End Bikini Top (Black Ribbed),born_primitive,shopify,24.0,budget,4.7,0.8758,40.0,True,0,6,https://bornprimitive.com/products/deep-end-bikini-top-black-ribbed
+womens swim top,230,Sea Level Crinkle Bikini Top (Raspberry Sorbet),born_primitive,shopify,24.0,budget,4.7,0.875,40.0,True,0,6,https://bornprimitive.com/products/sea-level-crinkle-bikini-top-raspberry-sorbet
+womens swim top,245,Laguna Bikini Top (Airbrush),born_primitive,shopify,24.0,budget,4.7,0.8742,40.0,True,0,6,https://bornprimitive.com/products/laguna-bikini-top-airbrush
+womens swim top,246,Triangle Bikini Top (Black),born_primitive,shopify,24.0,budget,4.7,0.8742,40.0,True,0,6,https://bornprimitive.com/products/triangle-bikini-top-black
+womens swim top,304,Bandeau Bikini Top (Patriotic Plaid),born_primitive,shopify,24.0,budget,4.7,0.8726,40.0,True,0,6,https://bornprimitive.com/products/bandeau-bikini-top-patriotic-plaid
+womens swim top,1217,Island Bikini Top (Black),born_primitive,shopify,24.0,budget,4.7,0.6734,40.0,False,0,6,https://bornprimitive.com/products/island-bikini-top-black
+womens swim top,1218,Solstice Bikini Top (Black),born_primitive,shopify,24.0,budget,4.7,0.6734,40.0,False,0,6,https://bornprimitive.com/products/solstice-bikini-top-black
+womens swim bottom,141,Making Waves Bikini Bottom (Patriotic Plaid),born_primitive,shopify,14.0,budget,4.7,0.9035,65.0,True,0,6,https://bornprimitive.com/products/making-waves-bikini-bottom-patriotic-plaid
+womens swim bottom,143,Sandbar Bikini Bottom (Summer Fields),born_primitive,shopify,20.0,budget,4.7,0.9034,50.0,True,0,6,https://bornprimitive.com/products/sandbar-bikini-bottom-summer-fields
+womens swim bottom,229,Solstice Bikini Bottom (Aquarius),born_primitive,shopify,24.0,budget,4.7,0.875,40.0,True,0,6,https://bornprimitive.com/products/solstice-bikini-bottom-aquarius
+womens swim bottom,231,High Tide Bikini Bottom (Dream Blue),born_primitive,shopify,24.0,budget,4.7,0.875,40.0,True,0,6,https://bornprimitive.com/products/high-tide-bikini-bottom-dream-blue
+womens swim bottom,244,Solstice Crinkle Bikini Bottom (Raspberry Sorbet),born_primitive,shopify,24.0,budget,4.7,0.8742,40.0,True,0,6,https://bornprimitive.com/products/solstice-crinkle-bikini-bottom-raspberry-sorbet
+womens swim bottom,905,Tidal Bikini Bottom (America),born_primitive,shopify,40.0,budget,4.7,0.7556,0.0,True,0,6,https://bornprimitive.com/products/tidal-bikini-bottom-america
+womens swim bottom,906,Harbor Bikini Bottom (Black),born_primitive,shopify,40.0,budget,4.7,0.7556,0.0,True,0,6,https://bornprimitive.com/products/harbor-bikini-bottom-black
+womens swim bottom,917,Sun Seeker Cheeky Thong (Black),born_primitive,shopify,40.0,budget,4.7,0.7548,0.0,True,0,6,https://bornprimitive.com/products/sun-seeker-cheeky-thong-black
+womens swim bottom,933,Marina Bikini Bottom (Black),born_primitive,shopify,40.0,budget,4.7,0.754,0.0,True,0,6,https://bornprimitive.com/products/marina-bikini-bottom-black
+womens swim bottom,1142,Heatwave Bikini Bottom (Iridescent Iris),born_primitive,shopify,14.0,budget,4.7,0.7043,65.0,False,0,6,https://bornprimitive.com/products/heatwave-bikini-bottoms-iridescent-iris
+activewear bottom,146,BREATHE SHORTS - CANOE,set_active,shopify,24.8,budget,4.7,0.9026,60.0,True,0,6,https://setactive.co/products/breathe-shorts-canoe
+activewear bottom,149,BREATHE STRIKE MINI SKIRT - REF,set_active,shopify,31.0,budget,4.7,0.9025,50.0,True,0,6,https://setactive.co/products/breathe-strike-mini-skirt-ref
+activewear bottom,150,BREATHE HIGH-RISE LEGGINGS - SNAPPER,set_active,shopify,29.6,budget,4.7,0.9025,60.0,True,0,6,https://setactive.co/products/breathe-high-rise-leggings-snapper
+activewear bottom,152,SPORTBODY® SPORTY DUO STRIPE SHORTS - LAKE,set_active,shopify,33.5,budget,4.7,0.9025,50.0,True,0,6,https://setactive.co/products/sportbody-sporty-duo-stripe-shorts-lake
+activewear bottom,214,SPORTBODY® (BLOOPERS) SPORTY PIPE LEGGINGS - LOTUS,set_active,shopify,24.0,budget,4.7,0.877,60.0,True,0,5,https://setactive.co/products/sportbody-bloopers-sporty-pipe-leggings-lotus
+activewear bottom,221,SCULPTFLEX® POWER SHORTS - GENESIS,set_active,shopify,23.6,budget,4.7,0.8762,60.0,True,0,5,https://setactive.co/products/sculptflex-power-shorts-genesis
+activewear bottom,545,BREATHE PARKE SHORTS - RHUBARB,set_active,shopify,43.4,mid_range,4.4,0.8192,30.0,True,0,6,https://setactive.co/products/breathe-parke-shorts-rhubarb
+activewear bottom,547,BREATHE PARKE STIRRUP LEGGINGS - ONYX,set_active,shopify,53.2,mid_range,4.4,0.8191,30.0,True,0,6,https://setactive.co/products/breathe-parke-stirrup-leggings-onyx
+activewear bottom,551,SPORTBODY® SPORTY MID-RISE LEGGINGS - BEETLE,set_active,shopify,54.6,mid_range,4.4,0.8174,30.0,True,0,6,https://setactive.co/products/sportbody-sporty-mid-rise-leggings-beetle
+activewear bottom,1070,FORMCLOUD® CLOUD PIPE SHORTS - ANALOG,set_active,shopify,60.0,mid_range,4.4,0.729,0.0,True,0,6,https://setactive.co/products/formcloud-cloud-pipe-shorts-analog
+womens graphic tops,154,BP Flag Staple Tank (White),born_primitive,shopify,15.36,budget,4.7,0.9019,52.0,True,0,6,https://bornprimitive.com/products/bp-flag-staple-tank-white
+womens graphic tops,247,BP Flag Crop Tee (Black/Pink Woodland),born_primitive,shopify,19.2,budget,4.7,0.8742,40.0,True,0,6,https://bornprimitive.com/products/bp-flag-crop-tee-black-pink-woodland
+womens graphic tops,324,No Excuses Muscle Tee (Tan),born_primitive,shopify,19.2,budget,4.7,0.8718,40.0,True,0,6,https://bornprimitive.com/products/no-excuses-muscle-tee-tan
+womens graphic tops,453,Don't Give Up The Ship Elevate Crop (Heather Navy),born_primitive,shopify,19.2,budget,4.7,0.847,40.0,True,0,5,https://bornprimitive.com/products/dont-give-up-the-ship-elevate-crop-heather-navy
+womens graphic tops,455,20th Anniversary 9/11 Crop Tee (Tunnel to Towers-Navy),born_primitive,shopify,19.2,budget,4.7,0.8462,40.0,True,0,5,https://bornprimitive.com/products/20th-anniversary-9-11-crop-tee-tunnel-to-towers-navy20th-anniversary-9-11-crop-tee-tunnel-to-towers-navy
+womens graphic tops,457,Home of the Brave Crop Tee (White),born_primitive,shopify,19.2,budget,4.7,0.8454,40.0,True,0,5,https://bornprimitive.com/products/home-of-the-brave-crop-tee-white
+womens graphic tops,945,We The People Crop Tee (Tan),born_primitive,shopify,32.0,budget,4.7,0.7525,0.0,True,0,6,https://bornprimitive.com/products/we-the-people-crop-tee-tan
+womens graphic tops,946,Worth Defending Crop Tee (Black),born_primitive,shopify,32.0,budget,4.7,0.7525,0.0,True,0,6,https://bornprimitive.com/products/worth-defending-crop-tee-black-1
+womens graphic tops,1168,Live Free Cropped T-Shirt Hoodie (Black),born_primitive,shopify,38.0,budget,4.7,0.7028,0.0,True,0,4,https://bornprimitive.com/products/live-free-cropped-t-shirt-hoodie-black
+womens graphic tops,1177,Property of Born Primitive Crop Tee (Black),born_primitive,shopify,32.0,budget,4.7,0.7013,0.0,True,0,4,https://bornprimitive.com/products/property-of-born-primitive-crop-tee-black
+sports bras,156,Meshed Up Cropped Sports Bra (Break Free),born_primitive,shopify,25.0,budget,4.7,0.9018,54.5,True,0,6,https://bornprimitive.com/products/meshed-up-cropped-sports-bra-break-free
+sports bras,234,Reset Sports Bra (BP Navy),born_primitive,shopify,31.2,budget,4.7,0.8749,40.0,True,0,6,https://bornprimitive.com/products/reset-sports-bra-bp-navy
+sports bras,250,Limitless Sports Bra (Oatmeal),born_primitive,shopify,33.0,budget,4.7,0.8741,40.0,True,0,6,https://bornprimitive.com/products/limitless-sports-bra-oatmeal
+sports bras,252,Out of Line Sports Bra (Citadel),born_primitive,shopify,31.2,budget,4.7,0.8741,40.0,True,0,6,https://bornprimitive.com/products/out-of-line-sports-bra-citadel
+sports bras,253,Evolve Sports Bra (White),born_primitive,shopify,33.0,budget,4.7,0.8741,40.0,True,0,6,https://bornprimitive.com/products/evolve-sports-bra-white
+sports bras,254,Radiance Sports Bra (Outback),born_primitive,shopify,33.0,budget,4.7,0.8741,40.0,True,0,6,https://bornprimitive.com/products/radiance-sports-bra-outback
+sports bras,255,Branded Vitality Sports Bra (Fig),born_primitive,shopify,31.2,budget,4.7,0.8741,40.0,True,0,6,https://bornprimitive.com/products/branded-vitality-sports-bra-fig
+sports bras,256,Lotus Sports Bra (Viola),born_primitive,shopify,31.2,budget,4.7,0.8741,40.0,True,0,6,https://bornprimitive.com/products/lotus-sports-bra-viola
+sports bras,260,Break the Limits Sports Bra (Army Green),born_primitive,shopify,33.0,budget,4.7,0.8741,40.0,True,0,6,https://bornprimitive.com/products/break-the-limits-sports-bra-army-green
+sports bras,268,Untamed Sports Bra (BP Navy),born_primitive,shopify,33.0,budget,4.7,0.8733,40.0,True,0,6,https://bornprimitive.com/products/untamed-sports-bra-bp-navy
+womens base layer bottoms,158,Women's Ridgeline Base Layer Bottom (Wolf Grey),born_primitive,shopify,35.0,budget,4.7,0.9011,49.3,True,0,6,https://bornprimitive.com/products/womens-ridgeline-base-layer-bottom-wolf-grey
+womens base layer bottoms,212,Women's Ridgeline Heavy Base Layer Bottom (Wolf Grey),born_primitive,shopify,45.0,mid_range,4.4,0.8773,49.4,True,0,6,https://bornprimitive.com/products/womens-ridgeline-heavy-base-layer-wolf-grey
+womens base layer bottoms,801,Women's Ridgeline Merino Full Zip Bottom 240 (Black),born_primitive,shopify,114.0,premium,4.8,0.7636,0.0,True,0,6,https://bornprimitive.com/products/womens-ridgeline-merino-full-zip-bottom-240-black
+womens base layer bottoms,808,Women's Ridgeline Merino Full Zip Bottom 165 (Black),born_primitive,shopify,99.0,premium,4.8,0.763,0.0,True,0,6,https://bornprimitive.com/products/womens-ridgeline-merino-full-zip-bottom-165-black
+mens swim bottom,161,"Island Short 8"" (Chambray)",born_primitive,shopify,34.8,budget,4.7,0.8996,40.0,True,0,7,https://bornprimitive.com/products/island-short-8-chambray
+mens swim bottom,162,"Island Short 5"" (Tactical Old Glory)",born_primitive,shopify,34.8,budget,4.7,0.8996,40.0,True,0,7,https://bornprimitive.com/products/island-short-5-tactical-old-glory
+mens swim bottom,226,Deep Dive Swim Short (Jungle Boogie),born_primitive,shopify,39.0,budget,4.7,0.8756,40.0,True,0,6,https://bornprimitive.com/products/deep-dive-swim-short-jungle-boogie
+one piece,185,Waterfall One Piece Swimsuit (Flame),born_primitive,shopify,35.75,budget,4.7,0.889,45.0,True,0,6,https://bornprimitive.com/products/waterfall-one-piece-swimsuit-flame
+one piece,188,Playa One Piece Swimsuit (Electric),born_primitive,shopify,35.75,budget,4.7,0.8882,45.0,True,0,6,https://bornprimitive.com/products/playa-one-piece-swimsuit-electric
+one piece,189,Isle One Piece Swimsuit (Fluorescent Festival),born_primitive,shopify,35.75,budget,4.7,0.8882,45.0,True,0,6,https://bornprimitive.com/products/isle-one-piece-swimsuit-fluorescent-festival
+one piece,192,Oasis One Piece Swimsuit (Rainbow Dust),born_primitive,shopify,35.75,budget,4.7,0.8874,45.0,True,0,6,https://bornprimitive.com/products/oasis-one-piece-swimsuit-rainbow-dust
+one piece,193,Cruisin' One Piece Swimsuit (70's Waves),born_primitive,shopify,35.75,budget,4.7,0.8874,45.0,True,0,6,https://bornprimitive.com/products/cruisin-one-piece-swimsuit-70s-waves
+bulk,186,Super Stretchy Wholesale,goat_tape,shopify,112.0,premium,5.0,0.8888,0.0,True,0,32,https://www.goattape.com/products/super-stretchy-wholesale
+bulk,526,Scary Sticky Wholesale,goat_tape,shopify,164.0,premium,5.0,0.8311,0.0,True,0,8,https://www.goattape.com/products/scary-sticky-br-white-black-bulk
+bulk,1202,Thumb Strips Wholesale,goat_tape,shopify,132.0,premium,5.0,0.6778,0.0,True,0,2,https://www.goattape.com/products/thumb-strips-wholesale
+maternity tops,187,Maternity Staple Tank (Slate),born_primitive,shopify,24.75,budget,4.7,0.8884,45.0,True,0,6,https://bornprimitive.com/products/maternity-staple-tank-slate
+maternity tops,238,Maternity Athleisure Short Sleeve V-Neck (Blue Depths),born_primitive,shopify,27.0,budget,4.7,0.8749,40.0,True,0,6,https://bornprimitive.com/products/maternity-athleisure-short-sleeve-v-neck-blue-depths
+maternity tops,262,Maternity Drop Shot Tank (White),born_primitive,shopify,34.8,budget,4.7,0.874,40.0,True,0,6,https://bornprimitive.com/products/maternity-dropshot-tank-white
+maternity tops,347,Maternity Zip Neck Athleisure Long Sleeve (Evergreen),born_primitive,shopify,36.0,budget,4.7,0.8716,40.0,True,0,6,https://bornprimitive.com/products/maternity-zip-neck-athleisure-long-sleeve-evergreen
+mens outdoor tops,202,Men's Barrier Jacket (Wolf Grey),born_primitive,shopify,209.4,premium,4.8,0.8834,40.0,True,0,6,https://bornprimitive.com/products/mens-barrier-jacket-wolf-grey
+mens outdoor tops,205,Men's FLEX Stretchy Pioneer Jacket 2.0 (Vintage Dark Wash),born_primitive,shopify,44.0,mid_range,4.4,0.8816,60.0,True,0,6,https://bornprimitive.com/products/mens-flex-stretchy-pioneer-jacket-2-0-vintage-dark-wash
+mens outdoor tops,210,Men's Ridgeline Half Zip Hoodie (Black),born_primitive,shopify,44.0,mid_range,4.4,0.8784,59.6,True,0,6,https://bornprimitive.com/products/mens-ridgeline-half-zip-hoodie-black
+mens outdoor tops,543,Ridgeline Merino Thermal Top 165 (Coyote Brown),born_primitive,shopify,55.0,mid_range,4.4,0.8194,30.4,True,0,6,https://bornprimitive.com/products/ridgeline-merino-thermal-top-165-coyote-brown
+mens outdoor tops,546,Ridgeline Merino Thermal Top 240 (Coyote Brown),born_primitive,shopify,62.0,mid_range,4.4,0.8191,30.3,True,0,6,https://bornprimitive.com/products/ridgeline-merino-thermal-top-240-coyote-brown
+mens outdoor tops,548,Ridgeline Merino Half Zip Hoodie 165 (Coyote Brown),born_primitive,shopify,69.0,mid_range,4.4,0.819,30.3,True,0,6,https://bornprimitive.com/products/ridgeline-merino-half-zip-hoodie-165-coyote-brown
+mens outdoor tops,775,Late Night Tee (Tactical Green),born_primitive,shopify,32.0,budget,4.7,0.7773,0.0,True,0,7,https://bornprimitive.com/products/late-night-tee-tactical-green
+mens outdoor tops,776,Alpine King Tee (Black),born_primitive,shopify,32.0,budget,4.7,0.7773,0.0,True,0,7,https://bornprimitive.com/products/alpine-king-tee-black
+mens outdoor tops,785,Quiver Full Zip Hoodie 2.0 (OD Green),born_primitive,shopify,89.0,premium,4.8,0.7647,0.0,True,0,6,https://bornprimitive.com/products/quiver-full-zip-hoodie-2-0-od-green
+mens outdoor tops,788,Men's Tundra Vest (Black),born_primitive,shopify,129.0,premium,4.8,0.7643,0.0,True,0,6,https://bornprimitive.com/products/mens-tundra-vest-black
+sweats bottom,209,LIGHTWEIGHT SWEATS CLASSIC VINTAGE SWEAT SHORTS - ONYX,set_active,shopify,24.0,budget,4.7,0.8786,60.0,True,0,5,https://setactive.co/products/lightweight-sweats-classic-sweat-shorts-onyx
+sweats bottom,998,MIDWEIGHT SWEATS STAPLE STRAIGHT LEG SWEATPANTS - FOG HEATHER GREY,set_active,shopify,90.0,premium,4.8,0.7335,0.0,True,0,5,https://setactive.co/products/midweight-sweats-staple-straight-leg-sweatpants-fog-heather-grey
+sweats bottom,1000,MIDWEIGHT SWEATS STAPLE LAYERED SWEATS - SYNC,set_active,shopify,90.0,premium,4.8,0.7335,0.0,True,0,5,https://setactive.co/products/midweight-sweats-staple-layered-sweats-sync
+sweats bottom,1001,MIDWEIGHT SWEATS STAPLE OLD SCHOOL SWEATPANTS - FOG HEATHER GREY,set_active,shopify,90.0,premium,4.8,0.7335,0.0,True,0,5,https://setactive.co/products/midweight-sweats-staple-old-school-sweatpants-fog-heather-grey
+sweats bottom,1198,LIGHTWEIGHT SWEATS CLASSIC SWEATPANTS - ONYX,set_active,shopify,34.0,budget,4.7,0.6801,60.0,False,0,5,https://setactive.co/products/lightweight-sweats-classic-sweatpants-onyx
+womens booty shorts,223,New Heights Original Booty Short (Garden Therapy),born_primitive,shopify,27.0,budget,4.7,0.8757,40.0,True,0,6,https://bornprimitive.com/products/new-heights-booty-short-garden-therapy
+womens booty shorts,224,All or Nothing Short (Army Green),born_primitive,shopify,27.0,budget,4.7,0.8757,40.0,True,0,6,https://bornprimitive.com/products/all-or-nothing-short-army-green
+womens booty shorts,233,Eccentric Short (Adrenaline),born_primitive,shopify,27.0,budget,4.7,0.8749,40.0,True,0,6,https://bornprimitive.com/products/eccentric-short-adrenaline
+womens booty shorts,239,Your Go To Booty Short (Zest),born_primitive,shopify,27.0,budget,4.7,0.8749,40.0,True,0,6,https://bornprimitive.com/products/your-go-to-booty-short-zest
+womens booty shorts,242,New Heights Booty Short (Army Green),born_primitive,shopify,27.0,budget,4.7,0.8749,40.0,True,0,6,https://bornprimitive.com/products/new-heights-booty-short-army-green
+womens booty shorts,257,Synergy Short (Cobblestone),born_primitive,shopify,27.0,budget,4.7,0.8741,40.0,True,0,6,https://bornprimitive.com/products/synergy-short-cobblestone
+womens booty shorts,259,Limitless Short (Glow),born_primitive,shopify,27.0,budget,4.7,0.8741,40.0,True,0,6,https://bornprimitive.com/products/limitless-short-glow
+womens booty shorts,272,Double Take Original Booty Short (Thin Red Line),born_primitive,shopify,27.0,budget,4.7,0.8733,40.0,True,0,6,https://bornprimitive.com/products/double-take-booty-short-thin-red-line
+womens booty shorts,1011,Synergy Short w/ Pockets 2.0 (Kaleidoscope),born_primitive,shopify,45.0,mid_range,4.4,0.7315,0.0,True,0,6,https://bornprimitive.com/products/synergy-short-w-pockets-2-0-kaleidoscope
+womens booty shorts,1035,Synergy Short 2.0 (Black),born_primitive,shopify,45.0,mid_range,4.4,0.7299,0.0,True,0,6,https://bornprimitive.com/products/synergy-short-2-0-black
+maternity bottoms,232,Maternity Biker Short (Dark Brown),born_primitive,shopify,27.0,budget,4.7,0.8749,40.0,True,0,6,https://bornprimitive.com/products/maternity-biker-short-dark-brown
+maternity bottoms,429,Maternity Legging (Grey),born_primitive,shopify,46.8,mid_range,4.4,0.8515,40.0,True,0,6,https://bornprimitive.com/products/maternity-legging-grey
+maternity bottoms,445,Maternity Rest Day Athleisure Jogger (Heather Grey),born_primitive,shopify,48.0,mid_range,4.4,0.8483,40.0,True,0,6,https://bornprimitive.com/products/maternity-rest-day-athleisure-jogger-heather-grey
+maternity bottoms,1089,Maternity Legging w/ Pockets (Black),born_primitive,shopify,78.0,mid_range,4.4,0.7288,0.0,True,0,6,https://bornprimitive.com/products/maternity-legging-w-pockets-black
+maternity bottoms,1094,Maternity Short (Black),born_primitive,shopify,48.0,mid_range,4.4,0.7283,0.0,True,0,6,https://bornprimitive.com/products/maternity-short-black
+interval shirt,294,Interval Long Sleeve Shirt,ten_thousand,shopify,88.0,premium,4.8,0.8731,0.0,True,0,48,https://www.tenthousand.cc/products/interval-long-sleeve-shirt
+interval shirt,1334,Interval Tank,ten_thousand,shopify,68.0,mid_range,4.4,0.6413,0.0,False,0,27,https://www.tenthousand.cc/products/interval-tank
+interval shirt,1337,Interval Shirt,ten_thousand,shopify,78.0,mid_range,4.4,0.6412,0.0,False,0,120,https://www.tenthousand.cc/products/interval-shirt
+interval shirt,1358,Interval Muscle Tee,ten_thousand,shopify,58.0,mid_range,4.4,0.6386,0.0,False,0,18,https://www.tenthousand.cc/products/interval-muscle-tee
+interval shirt,1378,Session Long Sleeve Shirt,ten_thousand,shopify,78.0,mid_range,4.4,0.6348,0.0,False,0,12,https://www.tenthousand.cc/products/session-long-sleeve-shirt
+mens outdoor bottoms,297,Men's Terrain Pant (Desert Tan),born_primitive,shopify,99.0,premium,4.8,0.873,0.0,True,0,21,https://bornprimitive.com/products/mens-terrain-pant-desert-tan
+mens outdoor bottoms,306,Men's Frontier Pant Light 2.0 (OD Green),born_primitive,shopify,139.0,premium,4.8,0.8726,0.0,True,0,21,https://bornprimitive.com/products/mens-frontier-pant-light-2-0-od-green
+mens outdoor bottoms,314,Men's Frontier Pant 2.0 (OD Green),born_primitive,shopify,159.0,premium,4.8,0.8724,0.0,True,0,21,https://bornprimitive.com/products/mens-frontier-pant-2-0-od-green
+mens outdoor bottoms,540,Ridgeline Merino Full Zip Bottom 165 (Black),born_primitive,shopify,69.0,mid_range,4.4,0.8214,30.3,True,0,6,https://bornprimitive.com/products/ridgeline-merino-full-zip-bottom-165-black
+mens outdoor bottoms,542,Ridgeline Merino Full Zip Bottom 240 (Black),born_primitive,shopify,80.0,mid_range,4.4,0.8198,29.8,True,0,6,https://bornprimitive.com/products/ridgeline-merino-full-zip-bottom-240-black
+mens outdoor bottoms,1005,Quiver Grid Fleece Full Zip Thermal Bottom (Black),born_primitive,shopify,79.0,mid_range,4.4,0.7328,0.0,True,0,6,https://bornprimitive.com/products/quiver-grid-fleece-full-zip-thermal-bottom-black
+womens outdoor bottoms,303,Women's Frontier Pant Light 2.0 (Wolf Grey),born_primitive,shopify,139.0,premium,4.8,0.8726,0.0,True,0,24,https://bornprimitive.com/products/womens-frontier-pant-light-2-0-wolf-grey
+womens outdoor bottoms,348,Women's Terrain Pant (Wolf Grey),born_primitive,shopify,99.0,premium,4.8,0.8714,0.0,True,0,24,https://bornprimitive.com/products/womens-terrain-pant-wolf-grey
+womens outdoor bottoms,1239,Women's Frontier Pant 2.0 (Mossy Oak® Original Bottomland® 2025),born_primitive,shopify,159.0,premium,4.8,0.6724,0.0,False,0,24,https://bornprimitive.com/products/womens-frontier-pant-2-0-mossy-oak®-original-bottomland®
+tactical 5-pocket pant,315,5-Pocket Pant | Regular,ten_thousand,shopify,168.0,premium,4.8,0.8723,0.0,True,0,56,https://www.tenthousand.cc/products/tactical-5-pocket-pant
+tactical 5-pocket pant,316,5-Pocket Pant | Straight,ten_thousand,shopify,168.0,premium,4.8,0.8723,0.0,True,0,24,https://www.tenthousand.cc/products/tactical-5-pocket-pant-straight-fit
+tactical 5-pocket pant,564,5-Pocket Pant | Tall,ten_thousand,shopify,168.0,premium,4.8,0.8127,0.0,True,0,8,https://www.tenthousand.cc/products/tactical-5-pocket-pant-tall-fit
+tactical utility pant,317,Utility Pant | Regular,ten_thousand,shopify,178.0,premium,4.8,0.8722,0.0,True,0,45,https://www.tenthousand.cc/products/tactical-utility-pant
+tactical utility pant,373,Utility Pant | Straight,ten_thousand,shopify,178.0,premium,4.8,0.8662,0.0,True,0,10,https://www.tenthousand.cc/products/tactical-utility-pant-straight-fit
+tactical utility pant,962,Utility Pant | Tall,ten_thousand,shopify,178.0,premium,4.8,0.7382,0.0,True,0,5,https://www.tenthousand.cc/products/tactical-utility-pant-tall-fit
+mens tactical bottoms,318,FLEX Recon Boot Cut Jean (Dark Wash),born_primitive,shopify,90.0,premium,4.8,0.8719,0.0,True,0,18,https://bornprimitive.com/products/flex-recon-boot-cut-jean-dark-wash
+mens tactical bottoms,323,Op Assault Pant (OD Green),born_primitive,shopify,209.0,premium,4.8,0.8718,0.0,True,0,21,https://bornprimitive.com/products/op-assault-pant-od-green
+mens tactical bottoms,361,FLEX Recon Straight Leg Jean (Black),born_primitive,shopify,90.0,premium,4.8,0.8691,0.0,True,0,21,https://bornprimitive.com/products/flex-recon-straight-leg-jean-black
+mens tactical bottoms,786,Scout Short (Ranger Green),born_primitive,shopify,90.0,premium,4.8,0.7647,0.0,True,0,6,https://bornprimitive.com/products/scout-short-ranger-green
+womens bottoms,378,Essential Pant | Quartz Relaxed-fit,cuts_clothing,shopify,150.0,premium,4.8,0.8655,0.0,True,0,15,https://cutsclothing.com/products/essential-pant-2-quartz
+womens bottoms,382,Essential Pant | Overcast Relaxed-fit,cuts_clothing,shopify,150.0,premium,4.8,0.8647,0.0,True,0,15,https://cutsclothing.com/products/essential-pant-2-overcast
+womens bottoms,392,Essential Pant | Black Relaxed-fit,cuts_clothing,shopify,150.0,premium,4.8,0.8639,0.0,True,0,15,https://cutsclothing.com/products/essential-pant-2-black
+gift cards,423,Physical Gift Card,born_primitive,shopify,10.0,budget,4.7,0.8551,0.0,True,0,14,https://bornprimitive.com/products/physical-gift-card-1
+gift cards,424,Email Gift Card,born_primitive,shopify,10.0,budget,4.7,0.8539,0.0,True,0,12,https://bornprimitive.com/products/email-gift-card-1
+gift cards,528,Digital Gift Card,allbirds,shopify,15.0,budget,4.4,0.8301,0.0,True,0,11,https://www.allbirds.com/products/digital-gift-cards
+gift cards,592,Physical Gift Cards - Physical Gift Card,allbirds,shopify,25.0,budget,4.4,0.807,0.0,True,0,9,https://www.allbirds.com/products/physical-gift-cards
+gift cards,1114,SET ACTIVE E-GIFT CARD - ONLINE ONLY,set_active,shopify,50.0,mid_range,4.4,0.7267,0.0,True,0,6,https://setactive.co/products/rise-ai-giftcard
+gift cards,1181,Gift Card,cuts_clothing,shopify,50.0,mid_range,4.4,0.7003,0.0,True,0,5,https://cutsclothing.com/products/gift-card
+mens tactical tops,425,Op Top Pro (Woodland),born_primitive,shopify,60.0,mid_range,4.4,0.853,40.0,True,0,6,https://bornprimitive.com/products/op-top-pro-woodland
+mens tactical tops,426,Long Sleeve Op Top Pro (Woodland),born_primitive,shopify,72.0,mid_range,4.4,0.8529,40.0,True,0,6,https://bornprimitive.com/products/long-sleeve-op-top-pro-woodland
+mens tactical tops,434,Long Sleeve Op Top (Woodland),born_primitive,shopify,66.0,mid_range,4.4,0.8497,40.0,True,0,6,https://bornprimitive.com/products/long-sleeve-op-top-woodland
+mens tactical tops,438,Op Top (Desert Digital),born_primitive,shopify,54.0,mid_range,4.4,0.8491,40.0,True,0,6,https://bornprimitive.com/products/op-top-desert-digital
+mens tactical tops,736,Long Sleeve Range Shirt (Ranger Green),born_primitive,shopify,55.0,mid_range,4.4,0.7826,0.0,True,0,8,https://bornprimitive.com/products/long-sleeve-range-shirt-ranger-green
+mens tactical tops,1004,Work Shirt Pro (Black),born_primitive,shopify,70.0,mid_range,4.4,0.7329,0.0,True,0,6,https://bornprimitive.com/products/work-shirt-pro-black
+mens tactical tops,1024,Range Shirt (Mossy Oak® Original Bottomland® 2025),born_primitive,shopify,48.0,mid_range,4.4,0.7307,0.0,True,0,6,https://bornprimitive.com/products/range-shirt-mossy-oak®-original-bottomland®
+mens tactical tops,1058,Tactical Brand Range Shirt Flag (Brown),born_primitive,shopify,48.0,mid_range,4.4,0.7291,0.0,True,0,6,https://bornprimitive.com/products/tactical-brand-range-shirt-brown
+mens tactical tops,1095,Range Shirt Flag (Range Master Red),born_primitive,shopify,48.0,mid_range,4.4,0.7283,0.0,True,0,6,https://bornprimitive.com/products/range-shirt-flag-range-master-red
+mens tactical tops,1100,Long Sleeve Range Shirt Flag (Range Master Red),born_primitive,shopify,55.0,mid_range,4.4,0.7282,0.0,True,0,6,https://bornprimitive.com/products/long-sleeve-range-shirt-flag-range-master-red
+womens joggers,432,Women's Rest Day Athleisure Jogger (Maroon),born_primitive,shopify,48.0,mid_range,4.4,0.8499,40.0,True,0,6,https://bornprimitive.com/products/womens-rest-day-athleisure-jogger-maroon
+womens joggers,439,Weekender Jogger (Oatmeal),born_primitive,shopify,48.0,mid_range,4.4,0.8491,40.0,True,0,6,https://bornprimitive.com/products/weekender-jogger-oatmeal
+womens joggers,440,Women's Unmatched Jogger (Heather White),born_primitive,shopify,48.0,mid_range,4.4,0.8491,40.0,True,0,6,https://bornprimitive.com/products/womens-unmatched-jogger-heather-white
+womens joggers,485,Women's Cloud Jogger (Paloma Grey),born_primitive,shopify,80.0,mid_range,4.4,0.834,0.0,True,0,12,https://bornprimitive.com/products/womens-cloud-jogger-paloma-grey
+womens joggers,524,Women's Rest Day Jogger 2.0 (Black),born_primitive,shopify,80.0,mid_range,4.4,0.8316,0.0,True,0,12,https://bornprimitive.com/products/womens-rest-day-jogger-2-0-black
+womens joggers,1016,Women's Lounge Lux Jogger (Black),born_primitive,shopify,80.0,mid_range,4.4,0.7312,0.0,True,0,6,https://bornprimitive.com/products/womens-lounge-lux-jogger-black
+womens joggers,1051,Women's Unmatched Jogger 2.0 (Pumice),born_primitive,shopify,70.0,mid_range,4.4,0.7297,0.0,True,0,6,https://bornprimitive.com/products/womens-unmatched-jogger-2-0-pumice
+womens joggers,1296,Women's Performance Jogger (Gunmetal),born_primitive,shopify,50.4,mid_range,4.4,0.6515,40.0,False,0,6,https://bornprimitive.com/products/womens-performance-jogger-gunmetal
+womens joggers,1306,Women's Rest Day Low Rise Athleisure Jogger (Heather Grey),born_primitive,shopify,48.0,mid_range,4.4,0.6483,40.0,False,0,6,https://bornprimitive.com/products/womens-rest-day-low-rise-athleisure-jogger-heather-grey
+bundles,435,Essential Tee Bundle | Black Classic-fit PYCA Pro®,cuts_clothing,shopify,62.0,mid_range,4.4,0.8494,40.4,True,0,6,https://cutsclothing.com/products/essential-tee-kit-black-classic-fit-pyca-pro
+bundles,436,Essential Tee Bundle | White Classic-fit PYCA Pro®,cuts_clothing,shopify,62.0,mid_range,4.4,0.8494,40.4,True,0,6,https://cutsclothing.com/products/essential-tee-kit-white-classic-fit-pyca-pro
+bundles,443,Classic Tee Bundle | White Classic-fit PYCA Pro®,cuts_clothing,shopify,55.0,mid_range,4.4,0.8488,40.2,True,0,6,https://cutsclothing.com/products/classic-tee-kit-white-classic-fit-pyca-pro
+bundles,444,Classic Tee Bundle | Black Classic-fit PYCA Pro®,cuts_clothing,shopify,55.0,mid_range,4.4,0.8488,40.2,True,0,6,https://cutsclothing.com/products/classic-tee-kit-black-pyca-pro
+bundles,450,Better Than Basic Bundle | White Slim-Fit Tomboy-Cotton™,cuts_clothing,shopify,65.0,mid_range,4.4,0.8475,39.8,True,0,6,https://cutsclothing.com/products/better-than-basic-kit-white-slim-fit-pyca-pro
+bundles,451,Better Than Basic Bundle | Black Slim-Fit Tomboy-Cotton™,cuts_clothing,shopify,65.0,mid_range,4.4,0.8475,39.8,True,0,6,https://cutsclothing.com/products/better-than-basic-kit-black-slim-fit-pyca-pro-1
+bundles,1340,Baby Tee Bundle | White Slim-fit Tomboy-Cotton™,cuts_clothing,shopify,60.0,mid_range,4.4,0.6407,37.5,False,0,6,https://cutsclothing.com/products/baby-tee-kit-white-slim-fit-tomboy-cotton
+bundles,1894,AO Jogger 3-Pack,cuts_clothing,shopify,118.0,premium,4.8,0.58,66.7,False,0,1,https://cutsclothing.com/products/ao-jogger-bundle-3-pack
+bundles,1895,AO Jogger 2-Pack,cuts_clothing,shopify,118.0,premium,4.8,0.58,50.0,False,0,1,https://cutsclothing.com/products/ao-jogger-bundle-2-pack
+bundles,1896,AO Split Tee 6-Pack,cuts_clothing,shopify,160.0,premium,4.8,0.5796,50.6,False,0,1,https://cutsclothing.com/products/ao-split-hem-tee-bundle-6-pack
+mens joggers,437,Men's Unmatched Jogger (Military Green),born_primitive,shopify,48.0,mid_range,4.4,0.8491,40.0,True,0,6,https://bornprimitive.com/products/mens-unmatched-jogger-military-green
+mens joggers,441,Men's Cloud Jogger (Heather Midnight Blue),born_primitive,shopify,48.0,mid_range,4.4,0.8491,40.0,True,0,6,https://bornprimitive.com/products/mens-cloud-jogger-heather-midnight-blue
+mens joggers,525,Men's Rest Day Jogger 2.0 (Black),born_primitive,shopify,80.0,mid_range,4.4,0.8316,0.0,True,0,12,https://bornprimitive.com/products/mens-rest-day-jogger-2-0-black
+mens joggers,1103,Men's Unmatched Jogger 2.0 (Military Green),born_primitive,shopify,70.0,mid_range,4.4,0.7281,0.0,True,0,6,https://bornprimitive.com/products/mens-unmatched-jogger-2-0-military-green
+mens joggers,1307,Men's Rest Day Athleisure Jogger (Navy),born_primitive,shopify,48.0,mid_range,4.4,0.6483,40.0,False,0,6,https://bornprimitive.com/products/mens-rest-day-athleisure-jogger-navy-blue
+mens joggers,1761,Men's Recovery Jogger (Tactical Green),born_primitive,shopify,64.0,mid_range,4.4,0.5897,20.0,False,0,6,https://bornprimitive.com/products/mens-recovery-jogger-tactical-green
+activewear top,461,FORMCLOUD® CLOUD PARKE PIPE IT BRA - BAKED 1.0,set_active,shopify,42.0,budget,4.7,0.8432,30.0,True,0,6,https://setactive.co/products/formcloud-cloud-parke-pipe-it-bra-baked
+activewear top,864,SPORTBODY® SPORTY WARM UP - PEAK,set_active,shopify,89.0,premium,4.8,0.7607,0.0,True,0,6,https://setactive.co/products/sportbody-sporty-warm-up-peak
+activewear top,866,LUXFORM® LUX QUARTER ZIP - ONYX,set_active,shopify,89.0,premium,4.8,0.7607,0.0,True,0,6,https://setactive.co/products/luxform-lux-quarter-zip-onyx
+activewear top,1067,FORMCLOUD® CLOUD TRAINING CAMI - WORN,set_active,shopify,58.0,mid_range,4.4,0.729,0.0,True,0,6,https://setactive.co/products/formcloud-cloud-training-cami-worn
+activewear top,1068,SPORTBODY® SPORTY STITCH BRA - LO-FI,set_active,shopify,62.0,mid_range,4.4,0.729,0.0,True,0,6,https://setactive.co/products/sportbody-sporty-stitch-bra-lo-fi
+activewear top,1069,FORMCLOUD® CLOUD CROSSBACK SCOOP BRA - ANALOG,set_active,shopify,60.0,mid_range,4.4,0.729,0.0,True,0,6,https://setactive.co/products/formcloud-cloud-crossback-scoop-bra-analog
+activewear top,1072,SPORTBODY® SPORTY DUO LIFT BRA - MARLIN,set_active,shopify,60.0,mid_range,4.4,0.729,0.0,True,0,6,https://setactive.co/products/sportbody-sporty-duo-lift-bra-marlin
+activewear top,1074,LUXFORM® LUX SCOOP BRA - INDIGO,set_active,shopify,59.0,mid_range,4.4,0.729,0.0,True,0,6,https://setactive.co/products/luxform-lux-scoop-bra-indigo
+activewear top,1076,BREATHE HAMPTONS BRA - GRAIN,set_active,shopify,55.0,mid_range,4.4,0.729,0.0,True,0,6,https://setactive.co/products/breathe-hamptons-bra-grain
+activewear top,1078,BREATHE CONTRAST WRAP TANK - SAHARA,set_active,shopify,60.0,mid_range,4.4,0.729,0.0,True,0,6,https://setactive.co/products/breathe-contrast-wrap-tank-sahara
+denim,468,Denim Short - Bark,represent,shopify,190.0,premium,4.8,0.8404,0.0,True,0,9,https://representclo.com/products/denim-short-bark
+denim,469,Kick Flare Denim - Aged Black,represent,shopify,220.0,premium,4.8,0.8401,0.0,True,0,9,https://representclo.com/products/kick-flare-denim-aged-black
+denim,471,R3 Baggy Denim - Washed Olive,represent,shopify,200.0,premium,4.8,0.8387,0.0,True,0,9,https://representclo.com/products/r3-baggy-denim-washed-olive
+denim,472,R10T Tailored Denim Shorts - Blue 60,represent,shopify,175.0,premium,4.8,0.8382,0.0,True,0,9,https://representclo.com/products/r10t-tailored-denim-shorts-blue-60
+denim,476,Heaton Denim - Vintage Grey,represent,shopify,230.0,premium,4.8,0.8376,0.0,True,0,9,https://representclo.com/products/heaton-denim-vintage-grey
+denim,1271,Legacy Denim - Light Blue Vintage,represent,shopify,255.0,premium,4.8,0.6654,0.0,False,0,10,https://representclo.com/products/legacy-denim-light-blue-vintage
+denim,1357,R2 Straight Leg Denim - Bark,represent,shopify,220.0,premium,4.8,0.6393,0.0,False,0,9,https://representclo.com/products/r2-straight-leg-denim-bark
+denim,1961,Collared Denim Jacket - Washed Olive,represent,shopify,260.0,premium,4.8,0.5605,0.0,False,0,6,https://representclo.com/products/collared-denim-jacket-washed-olive
+denim,2017,Shotgun Chaps Denim - Grey,represent,shopify,255.0,premium,4.8,0.535,0.0,False,0,5,https://representclo.com/products/shotgun-chaps-denim-grey
+sweatshirts,475,Divine Fleece Hoodie | Currant Classic-fit,cuts_clothing,shopify,89.0,premium,4.8,0.8377,24.6,True,0,6,https://cutsclothing.com/products/divine-fleece-hoodie-currant
+sweatshirts,478,Divine Fleece Hoodie | Black Classic-fit,cuts_clothing,shopify,89.0,premium,4.8,0.8369,24.6,True,0,6,https://cutsclothing.com/products/divine-fleece-hoodie-black
+sweatshirts,481,Divine Fleece Hoodie | Parchment Classic-fit,cuts_clothing,shopify,89.0,premium,4.8,0.8361,24.6,True,0,6,https://cutsclothing.com/products/divine-fleece-hoodie-parchment
+sweatshirts,483,Divine Fleece Hoodie | Latte Classic-fit,cuts_clothing,shopify,89.0,premium,4.8,0.8345,24.6,True,0,6,https://cutsclothing.com/products/divine-fleece-hoodie-latte
+sweatshirts,484,Divine Fleece Hoodie | Cadet Blue Classic-fit,cuts_clothing,shopify,89.0,premium,4.8,0.8345,24.6,True,0,6,https://cutsclothing.com/products/divine-fleece-hoodie-black-cadet-blue
+sweatshirts,557,Divine Fleece Q-Zip | Parchment Classic-fit,cuts_clothing,shopify,89.0,premium,4.8,0.8143,17.6,True,0,6,https://cutsclothing.com/products/divine-fleece-q-zip-parchment
+sweatshirts,558,Divine Fleece Q-Zip | Black Classic-fit,cuts_clothing,shopify,89.0,premium,4.8,0.8143,17.6,True,0,6,https://cutsclothing.com/products/divine-fleece-q-zip-black
+sweatshirts,584,Divine Fleece Pullover | Cadet Blue Classic-fit,cuts_clothing,shopify,79.0,mid_range,4.4,0.8103,26.9,True,0,6,https://cutsclothing.com/products/divine-fleece-pullover-cadet-blue
+sweatshirts,585,Divine Fleece Pullover | Parchment Classic-fit,cuts_clothing,shopify,79.0,mid_range,4.4,0.8103,26.9,True,0,6,https://cutsclothing.com/products/divine-fleece-pullover-parchment
+sweatshirts,586,Divine Fleece Pullover | Hunter Classic-fit,cuts_clothing,shopify,79.0,mid_range,4.4,0.8103,26.9,True,0,6,https://cutsclothing.com/products/divine-fleece-pullover-hunter
+bundle,486,2 x Initial Oversized T-Shirt - Flat White & Black,represent,shopify,153.0,premium,4.8,0.8338,15.0,True,0,7,https://representclo.com/products/2-x-initial-oversized-t-shirt-flat-white-black
+bundle,487,2 x Initial T-Shirt - Flat White,represent,shopify,153.0,premium,4.8,0.8338,15.0,True,0,7,https://representclo.com/products/2-x-initial-t-shirt-flat-white
+bundle,488,2 x Initial Boxy T-Shirt - Flat White & Black,represent,shopify,153.0,premium,4.8,0.8338,15.0,True,0,7,https://representclo.com/products/2-x-initial-boxy-t-shirt-flat-white-black
+socks,530,Anytime No Show Sock - Blizzard/Sienna,allbirds,shopify,5.0,budget,4.4,0.826,64.3,True,0,4,https://www.allbirds.com/products/anytime-no-show-sock-blizzard-sienna
+socks,532,Anytime Ankle Sock - Blizzard (Ochre Sole),allbirds,shopify,7.0,budget,4.4,0.8259,56.2,True,0,4,https://www.allbirds.com/products/anytime-ankle-sock-heathered-blizzard-ochre
+socks,533,Anytime No Show Sock 3-Pack - Natural Black,allbirds,shopify,15.0,budget,4.4,0.8251,57.1,True,0,4,https://www.allbirds.com/products/anytime-no-show-sock-3-pack-natural-black
+socks,552,Anytime Ankle Sock 3-Pack - Natural Black,allbirds,shopify,20.0,budget,4.4,0.8172,47.4,True,0,4,https://www.allbirds.com/products/anytime-ankle-sock-3-pack-natural-black
+socks,553,Anytime Ankle Sock 3 Pack - Blizzard/Royal Blue/Thunder Green,allbirds,shopify,20.0,budget,4.4,0.8172,47.4,True,0,4,https://www.allbirds.com/products/anytime-ankle-sock-3-pack-blizzard-royal-blue-thunder-green
+socks,588,Anytime Crew Sock - Rugged Beige/Thunder Green Stripe,allbirds,shopify,10.0,budget,4.4,0.8091,44.4,True,0,4,https://www.allbirds.com/products/anytime-crew-sock-rugged-beige-thunder-green-stripe
+socks,1211,Anytime Crew Sock 3-Pack - Blizzard/Medium Grey/Natural Black,allbirds,shopify,45.0,mid_range,4.4,0.6747,0.0,True,0,4,https://www.allbirds.com/products/anytime-crew-sock-3-pack-blizzard-medium-grey-natural-black
+socks,1291,Performance Ankle Sock (White),born_primitive,shopify,14.0,budget,4.7,0.6527,0.0,True,0,2,https://bornprimitive.com/products/performance-ankle-sock-white
+socks,1292,Performance Half Crew Sock (Black),born_primitive,shopify,14.0,budget,4.7,0.6527,0.0,True,0,2,https://bornprimitive.com/products/performance-half-crew-sock-black
+socks,1293,Performance Crew Sock (Black),born_primitive,shopify,16.0,budget,4.7,0.6526,0.0,True,0,2,https://bornprimitive.com/products/performance-crew-sock-black
+merchandise,534,Dan-O’s Classic Logo Tee,danosseasoning,woocommerce,12.47,budget,4.7,0.8235,50.0,True,0,3,https://danosseasoning.com/product/dan-os-classic-logo-tee/
+merchandise,658,Dan-O’s Seasoning White Logo Athletic Tee,danosseasoning,woocommerce,12.47,budget,4.7,0.7979,50.0,True,0,2,https://danosseasoning.com/product/dan-os-seasoning-white-logo-athletic-tee/
+merchandise,950,Green Yum Yum Get Ya Sum Tee,danosseasoning,woocommerce,24.95,budget,4.7,0.7502,0.0,True,0,6,https://danosseasoning.com/product/green-yum-yum-get-ya-sum-tee/
+merchandise,1184,Black Dan-O’s Logo Tee,danosseasoning,woocommerce,24.95,budget,4.7,0.699,0.0,True,0,4,https://danosseasoning.com/product/black-dan-os-logo-tee/
+shirts,535,SoHo Interlock Polo | Clay Classic-Fit,cuts_clothing,shopify,50.0,mid_range,4.4,0.8229,39.0,True,0,5,https://cutsclothing.com/products/soho-interlock-polo-clay
+shirts,570,AO Henley Curve-Hem | Black Signature-fit PYCA Pro®,cuts_clothing,shopify,42.0,budget,4.7,0.8112,27.6,True,0,5,https://cutsclothing.com/products/black-henley-curve-hem
+shirts,571,AO Henley Curve-Hem | White Signature-fit PYCA Pro®,cuts_clothing,shopify,42.0,budget,4.7,0.8112,27.6,True,0,5,https://cutsclothing.com/products/white-henley-curve-hem
+shirts,572,AO Henley Curve-Hem | Clay Signature-fit PYCA Pro®,cuts_clothing,shopify,42.0,budget,4.7,0.8112,27.6,True,0,5,https://cutsclothing.com/products/ao-henley-curve-hem-clay
+shirts,573,AO Henley Curve-Hem | Castor Grey Signature-Fit PYCA Pro®,cuts_clothing,shopify,42.0,budget,4.7,0.8112,27.6,True,0,5,https://cutsclothing.com/products/ao-henley-curve-hem-tee-castor-grey
+shirts,574,AO Henley Curve-Hem | Metal Signature-Fit PYCA Pro®,cuts_clothing,shopify,42.0,budget,4.7,0.8112,27.6,True,0,5,https://cutsclothing.com/products/ao-henley-curve-hem-metal
+shirts,575,AO Henley Curve-Hem | Pure Cashmere Signature-Fit PYCA Pro®,cuts_clothing,shopify,42.0,budget,4.7,0.8112,27.6,True,0,5,https://cutsclothing.com/products/ao-henley-curve-hem-tee-pure-cashmere
+shirts,576,AO Henley Curve-Hem | Heather Grey Signature-fit PYCA Pro®,cuts_clothing,shopify,42.0,budget,4.7,0.8112,27.6,True,0,5,https://cutsclothing.com/products/heather-grey-henley-curve-hem
+shirts,577,AO Henley Curve-Hem | Sage Signature-fit PYCA Pro®,cuts_clothing,shopify,42.0,budget,4.7,0.8112,27.6,True,0,5,https://cutsclothing.com/products/sage-s-s-henley-curve-hem
+shirts,578,AO Henley Curve-Hem | North Atlantic Signature-Fit PYCA Pro®,cuts_clothing,shopify,42.0,budget,4.7,0.8112,27.6,True,0,5,https://cutsclothing.com/products/ao-henley-curve-hem-tee-north-altantic
+shirts  tops,566,AO Henley Curve-Hem | Nomad PYCA Pro® Signature-Fit,cuts_clothing,shopify,42.0,budget,4.7,0.812,27.6,True,0,5,https://cutsclothing.com/products/ao-henley-tee-nomad
+shirts  tops,567,AO Henley Curve-Hem | Mountain Mist PYCA Pro® Signature-Fit,cuts_clothing,shopify,42.0,budget,4.7,0.812,27.6,True,0,5,https://cutsclothing.com/products/ao-henley-tee-mountain-mist
+shirts  tops,568,Overtime Oversized Tee | Ocean Storm Relaxed-Fit,cuts_clothing,shopify,42.0,budget,4.7,0.812,27.6,True,0,5,https://cutsclothing.com/products/overtime-tee-ocean-storm
+shirts  tops,637,AO Polo | Ivory Signature-fit PYCA Pro®,cuts_clothing,shopify,48.0,mid_range,4.4,0.8042,33.3,True,0,5,https://cutsclothing.com/products/ao-polo-ivory
+shirts  tops,664,AO Forever Classic-Fit Tee | Nomad Classic-Fit PYCA Pro®,cuts_clothing,shopify,42.0,budget,4.7,0.795,22.2,True,0,5,https://cutsclothing.com/products/ao-forever-tee-nomad
+shirts  tops,671,AO Forever Classic-Fit Tee | Deep Cranberry Classic-Fit PYCA Pro®,cuts_clothing,shopify,42.0,budget,4.7,0.795,22.2,True,0,5,https://cutsclothing.com/products/ao-forever-tee-deep-cranberry
+shirts  tops,740,SoHo Short Sleeve Button Up | Sand Dune Signature-fit,cuts_clothing,shopify,63.0,mid_range,4.4,0.7808,25.0,True,0,5,https://cutsclothing.com/products/soho-short-sleeve-button-up-sand-dune
+shirts  tops,741,SoHo Long Sleeve Button Up | Sand Dune Signature-fit,cuts_clothing,shopify,74.0,mid_range,4.4,0.7807,24.5,True,0,5,https://cutsclothing.com/products/soho-long-sleeve-button-up-sand-dune
+shirts  tops,744,SoHo Short Sleeve Button Up | White Soho Signature-fit,cuts_clothing,shopify,63.0,mid_range,4.4,0.78,25.0,True,0,5,https://cutsclothing.com/products/soho-short-sleeve-button-up-white
+shirts  tops,745,SoHo Short Sleeve Button Up | Oxford Blue Signature-fit,cuts_clothing,shopify,63.0,mid_range,4.4,0.78,25.0,True,0,5,https://cutsclothing.com/products/soho-short-sleeve-button-up-oxford-blue
+ao button up,631,AO Button Up | Ocean Storm Signature-Fit PYCA Pro®,cuts_clothing,shopify,48.0,mid_range,4.4,0.8042,33.3,True,0,5,https://cutsclothing.com/products/ao-button-up-ocean-storm
+ao button up,1148,AO Button Up | White Signature-Fit PYCA Pro®,cuts_clothing,shopify,72.0,mid_range,4.4,0.7041,0.0,True,0,5,https://cutsclothing.com/products/ao-button-up-white
+ao button up,2098,AO Button Up | Sage Signature-Fit PYCA Pro®,cuts_clothing,shopify,72.0,mid_range,4.4,0.5041,0.0,False,0,5,https://cutsclothing.com/products/ao-button-up-sage
+button up,635,AO Button Up | Ivory Signature-Fit PYCA Pro®,cuts_clothing,shopify,48.0,mid_range,4.4,0.8042,33.3,True,0,5,https://cutsclothing.com/products/ao-button-up-ivory
+button up,636,AO Button Up | Castor Grey Signature-Fit PYCA Pro®,cuts_clothing,shopify,48.0,mid_range,4.4,0.8042,33.3,True,0,5,https://cutsclothing.com/products/ao-button-up-castor-grey
+button up,1154,AO Button Up | Black Signature-Fit PYCA Pro®,cuts_clothing,shopify,72.0,mid_range,4.4,0.7041,0.0,True,0,5,https://cutsclothing.com/products/ao-button-up-black
+blenders,654,nutribullet Flex,nutribullet,woocommerce,59.99,mid_range,4.4,0.8026,0.0,True,0,9,https://www.nutribullet.com/shop/blenders/nutribullet-flex/
+blenders,889,nutribullet Ultra,nutribullet,woocommerce,99.99,premium,4.8,0.7574,0.0,True,0,6,https://www.nutribullet.com/shop/blenders/nutribullet-ultra/
+blenders,891,nutribullet SmartSense,nutribullet,woocommerce,134.99,premium,4.8,0.757,0.0,True,0,6,https://www.nutribullet.com/shop/blenders/nutribullet-smartsense/
+blenders,948,nutribullet Flip,nutribullet,woocommerce,86.24,mid_range,4.4,0.7511,0.0,True,0,7,https://www.nutribullet.com/shop/blenders/nutribullet-flip/
+blenders,1010,nutribullet Ultra Plus,nutribullet,woocommerce,114.99,premium,4.8,0.7316,0.0,True,0,5,https://www.nutribullet.com/shop/blenders/nutribullet-ultra-plus/
+blenders,1115,nutribullet Pro 900,nutribullet,woocommerce,79.99,mid_range,4.4,0.7256,0.0,True,0,6,https://www.nutribullet.com/shop/blenders/nutribullet-pro/
+blenders,1130,nutribullet Blender,nutribullet,woocommerce,103.99,premium,4.8,0.7061,0.0,True,0,4,https://www.nutribullet.com/shop/blenders/nutribullet-blender/
+blenders,1182,nutribullet Portable Blender,nutribullet,woocommerce,54.99,mid_range,4.4,0.7002,0.0,True,0,5,https://www.nutribullet.com/shop/blenders/nutribullet-portable-blender/
+blenders,1185,magic bullet Blender,nutribullet,woocommerce,39.99,budget,4.7,0.6988,0.0,True,0,4,https://www.nutribullet.com/magic-bullet/blenders/magic-bullet-blender/
+blenders,1195,nutribullet Turbo,nutribullet,woocommerce,109.99,premium,4.8,0.6805,0.0,True,0,3,https://www.nutribullet.com/shop/blenders/nutribullet-turbo/
+t-shirts,690,Micro Owners Club T-Shirt - Cream Marl,represent,shopify,110.0,premium,4.8,0.7901,0.0,True,0,7,https://representclo.com/products/micro-owners-club-t-shirt-cream-marl
+t-shirts,695,Represent X Iron Maiden Number Of Beast T-Shirt - Sunfade Grey,represent,shopify,155.0,premium,4.8,0.7896,0.0,True,0,7,https://representclo.com/products/represent-x-iron-maiden-number-of-beast-t-shirt-sunfade-grey
+t-shirts,698,Represent Owners Club T-Shirt - Buttercream,represent,shopify,115.0,premium,4.8,0.7892,0.0,True,0,7,https://representclo.com/products/fw25-represent-owners-club-t-shirt-buttercream
+t-shirts,704,Represent X Iron Maiden Infinite Dreams T-Shirt - Aged Black,represent,shopify,155.0,premium,4.8,0.7888,0.0,True,0,7,https://representclo.com/products/represent-x-iron-maiden-infinite-dreams-t-shirt-aged-black
+t-shirts,707,GH T-Shirt - Vintage Grey,represent,shopify,130.0,premium,4.8,0.7883,0.0,True,0,7,https://representclo.com/products/gh-t-shirt-vintage-grey
+t-shirts,708,Angel Border T-Shirt - Stained Black,represent,shopify,140.0,premium,4.8,0.7882,0.0,True,0,7,https://representclo.com/products/angel-border-t-shirt-stained-black
+t-shirts,709,Archangel T-Shirt - Flat White,represent,shopify,140.0,premium,4.8,0.7882,0.0,True,0,7,https://representclo.com/products/archangel-t-shirt-flat-white
+t-shirts,710,Represent X Iron Maiden A Real Live One T-Shirt - Stained Brown,represent,shopify,155.0,premium,4.8,0.788,0.0,True,0,7,https://representclo.com/products/represent-x-iron-maiden-a-real-live-one-t-shirt-stained-brown
+t-shirts,711,Represent X Iron Maiden Steed T-Shirt - Stained Black,represent,shopify,155.0,premium,4.8,0.788,0.0,True,0,7,https://representclo.com/products/represent-x-iron-maiden-steed-t-shirt-stained-black
+t-shirts,712,Initial Boxy T-Shirt - Black,represent,shopify,90.0,premium,4.8,0.7879,0.0,True,0,7,https://representclo.com/products/initial-boxy-t-shirt-black
+sweaters,694,Initial Funnel Neck Quarter Zip Sweatshirt - Coffee,represent,shopify,145.0,premium,4.8,0.7897,0.0,True,0,7,https://representclo.com/products/initial-funnel-neck-quarter-zip-sweatshirt-coffee
+sweaters,696,Initial Overdye Realtree® Boxy Sweater - Overdyed Black,represent,shopify,195.0,premium,4.8,0.7892,0.0,True,0,7,https://representclo.com/products/initial-overdye-realtree-boxy-sweater-overdyed-black
+sweaters,702,Initial Boxy Sweater - Coffee,represent,shopify,140.0,premium,4.8,0.789,0.0,True,0,7,https://representclo.com/products/initial-boxy-sweater-coffee
+sweaters,703,Represent Owners Club Rugby Polo - Faded Black,represent,shopify,145.0,premium,4.8,0.7889,0.0,True,0,7,https://representclo.com/products/fw25-represent-owners-club-rugby-polo-faded-black
+sweaters,706,Represent Owners Club Sweater - Sprayed Ice Grey Marl,represent,shopify,175.0,premium,4.8,0.7886,0.0,True,0,7,https://representclo.com/products/fw25-represent-owners-club-sweater-sprayed-ice-grey-marl
+sweaters,716,Represent Owners Club Stamp Sweater - Ash Grey,represent,shopify,175.0,premium,4.8,0.7878,0.0,True,0,7,https://representclo.com/products/represent-owners-club-stamp-sweater-ash-grey
+sweaters,1119,EngLAnd Cropped Sweatshirt - Jet Black,represent,shopify,175.0,premium,4.8,0.7126,0.0,True,0,4,https://representclo.com/products/womens-england-cropped-sweatshirt-jet-black
+sweaters,1758,Team 247 Oversized Crew - Jet Black,represent,shopify,140.0,premium,4.8,0.5898,0.0,False,0,7,https://representclo.com/products/team-247-oversized-crew-jet-black
+sweaters,1771,Angel Border Sweater - Stained Black,represent,shopify,205.0,premium,4.8,0.5891,0.0,False,0,7,https://representclo.com/products/angel-border-sweater-stained-black
+sweaters,1778,Nothing Faster Quarter Zip Sweatshirt - Stained Black,represent,shopify,255.0,premium,4.8,0.5886,0.0,False,0,7,https://representclo.com/products/nothing-faster-quarter-zip-sweatshirt-stained-black
+hoodies,697,Micro Owners Club Hoodie - Cream Marl,represent,shopify,190.0,premium,4.8,0.7892,0.0,True,0,7,https://representclo.com/products/micro-owners-club-hoodie-cream-marl
+hoodies,701,Represent Owners Club Hoodie - Sprayed Ice Grey Marl,represent,shopify,200.0,premium,4.8,0.7891,0.0,True,0,7,https://representclo.com/products/fw25-represent-owners-club-hoodie-sprayed-ice-grey-marl
+hoodies,719,Represent Owners Club Stamp Hoodie - Flat White,represent,shopify,200.0,premium,4.8,0.7875,0.0,True,0,7,https://representclo.com/products/represent-owners-club-stamp-hoodie-flat-white
+hoodies,720,Represent Owners Club Script Hoodie - Dusty Blue,represent,shopify,200.0,premium,4.8,0.7875,0.0,True,0,7,https://representclo.com/products/represent-owners-club-script-hoodie-dusty-blue
+hoodies,722,Initial Oversized Hoodie - Ice Grey Marl,represent,shopify,155.0,premium,4.8,0.7872,0.0,True,0,7,https://representclo.com/products/initial-oversized-hoodie-ice-grey-marl
+hoodies,723,Out Of The Shadows Hoodie - Cream Marl,represent,shopify,250.0,premium,4.8,0.787,0.0,True,0,7,https://representclo.com/products/out-of-the-shadows-hoodie-cream-marl
+hoodies,738,Thoroughbred Hoodie - Vintage Black,represent,shopify,235.0,premium,4.8,0.7824,0.0,True,0,7,https://representclo.com/products/thoroughbred-hoodie-vintage-black
+hoodies,793,Represent X Puma Hoodie - Puma Black,represent,shopify,100.0,premium,4.8,0.7638,0.0,True,0,6,https://representclo.com/products/represent-x-puma-hoodie-puma-black
+hoodies,809,Dual Layer Script Hoodie - Candy,represent,shopify,250.0,premium,4.8,0.763,0.0,True,0,6,https://representclo.com/products/dual-layer-script-hoodie-candy
+hoodies,810,247 Oversized Hoodie - Jet Black,represent,shopify,185.0,premium,4.8,0.7629,0.0,True,0,6,https://representclo.com/products/247-oversized-hoodie-jet-black
+pants,705,Represent Owners Club Sweatpant - Sprayed Ice Grey Marl,represent,shopify,175.0,premium,4.8,0.7886,0.0,True,0,7,https://representclo.com/products/fw25-represent-owners-club-sweatpant-sprayed-ice-grey-marl
+pants,789,Team 247 Sweatpant - Black,represent,shopify,145.0,premium,4.8,0.7641,0.0,True,0,6,https://representclo.com/products/team-247-sweatpant-black
+pants,791,247 Pant - Black,represent,shopify,160.0,premium,4.8,0.764,0.0,True,0,6,https://representclo.com/products/247-pant-black
+pants,802,Dual Layer Script Sweatpants - Jet Black,represent,shopify,215.0,premium,4.8,0.7634,0.0,True,0,6,https://representclo.com/products/dual-layer-script-sweatpants-jet-black
+pants,817,Slack Pant - Jet Black,represent,shopify,270.0,premium,4.8,0.7628,0.0,True,0,6,https://representclo.com/products/slack-pant-jet-black
+pants,836,Patron Of The Club Sweatpant - Washed Grey,represent,shopify,195.0,premium,4.8,0.762,0.0,True,0,6,https://representclo.com/products/patron-of-the-club-sweatpant-washed-grey
+pants,869,Tech Cargo Pant - Jet Black,represent,shopify,255.0,premium,4.8,0.7606,0.0,True,0,6,https://representclo.com/products/tech-cargo-pant-jet-black
+pants,870,Piped Track Pant - Jet Black,represent,shopify,255.0,premium,4.8,0.7606,0.0,True,0,6,https://representclo.com/products/piped-track-pant-jet-black
+pants,874,247 Technical Cargo Pant - Terrain,represent,shopify,270.0,premium,4.8,0.7604,0.0,True,0,6,https://representclo.com/products/247-technical-cargo-pant-terrain
+pants,884,247 Zip Pant - Black,represent,shopify,180.0,premium,4.8,0.7589,0.0,True,0,6,https://representclo.com/products/247-zip-pant-black
+shorts,784,Represent X Puma Shorts - Galactic Grey,represent,shopify,80.0,mid_range,4.8,0.7648,0.0,True,0,6,https://representclo.com/products/represent-x-puma-shorts-galactic-grey
+shorts,787,Team 247 Half Tight - Black,represent,shopify,85.0,mid_range,4.8,0.7647,0.0,True,0,6,https://representclo.com/products/team-247-half-tight-black
+shorts,792,247 DNA Mesh Short - Jet Black,represent,shopify,90.0,premium,4.8,0.7639,0.0,True,0,6,https://representclo.com/products/247-dna-mesh-short-jet-black
+shorts,795,Represent Owners Club Script Mesh Shorts - Pink,represent,shopify,110.0,premium,4.8,0.7637,0.0,True,0,6,https://representclo.com/products/represent-owners-club-script-mesh-shorts-pink
+shorts,796,Team 247 Race Shorts - Jet Black,represent,shopify,110.0,premium,4.8,0.7637,0.0,True,0,6,https://representclo.com/products/team-247-race-shorts-jet-black
+shorts,806,247 Compound Legging Short - Black,represent,shopify,85.0,mid_range,4.8,0.7631,0.0,True,0,6,https://representclo.com/products/247-compound-legging-short-black
+shorts,812,247 Trail Short - Jet Black,represent,shopify,110.0,premium,4.8,0.7629,0.0,True,0,6,https://representclo.com/products/247-trail-short-jet-black
+shorts,813,Represent Owners Club Mesh Shorts - Racing Green,represent,shopify,110.0,premium,4.8,0.7629,0.0,True,0,6,https://representclo.com/products/represent-owners-club-mesh-shorts-racing-green
+shorts,818,Team 247 Fused Shorts - Black,represent,shopify,130.0,premium,4.8,0.7627,0.0,True,0,6,https://representclo.com/products/team-247-fused-shorts-black
+shorts,820,247 Los Angeles Short - Khaki,represent,shopify,130.0,premium,4.8,0.7627,0.0,True,0,6,https://representclo.com/products/247-los-angeles-26-short-khaki
+tops,797,247 Mid Impact Sports Bra - Black,represent,shopify,110.0,premium,4.8,0.7637,0.0,True,0,6,https://representclo.com/products/womens-247-training-mid-impact-sports-bra-black
+tops,821,247 Stride Seamless Bra - Black,represent,shopify,70.0,mid_range,4.8,0.7625,0.0,True,0,6,https://representclo.com/products/womens-247-stride-seamless-bra-black
+tops,824,247 Ease Seamless Loose Fit Tank - Black,represent,shopify,85.0,mid_range,4.8,0.7623,0.0,True,0,6,https://representclo.com/products/womens-247-ease-seamless-loose-fit-tank-black
+tops,849,247 Ease Seamless Perforated T-Shirt - Black,represent,shopify,95.0,premium,4.8,0.7614,0.0,True,0,6,https://representclo.com/products/womens-247-ease-seamless-perforated-t-shirt-black
+tops,1123,247 Glitch Cropped Training T-Shirt - Grey,represent,shopify,100.0,premium,4.8,0.7118,0.0,True,0,4,https://representclo.com/products/womens-247-glitch-cropped-training-t-shirt-grey
+tops,1125,247 Double Layer Training Vest - White,represent,shopify,85.0,mid_range,4.8,0.7103,0.0,True,0,4,https://representclo.com/products/womens-247-double-layer-training-vest-white
+tops,1126,247 Hydro Training T-Shirt - Dark Green,represent,shopify,115.0,premium,4.8,0.71,0.0,True,0,4,https://representclo.com/products/womens-247-hydro-training-t-shirt-dark-green
+tops,1825,247 Training Tank - Black,represent,shopify,95.0,premium,4.8,0.5878,0.0,False,0,7,https://representclo.com/products/womens-247-dna-training-tank-black
+tops,1870,247 Perforated Cropped Training T-Shirt - White,represent,shopify,110.0,premium,4.8,0.5869,0.0,False,0,7,https://representclo.com/products/womens-247-perforated-cropped-training-t-shirt-white
+tops,1932,247 Zip Front Performance Crop - Black,represent,shopify,90.0,premium,4.8,0.5639,0.0,False,0,6,https://representclo.com/products/womens-247-zip-front-performance-crop-black
+trousers,800,247 Training Legging - Black,represent,shopify,120.0,premium,4.8,0.7636,0.0,True,0,6,https://representclo.com/products/womens-247-training-legging-black
+trousers,1930,247 Motion Legging - Black,represent,shopify,85.0,mid_range,4.8,0.5647,0.0,False,0,6,https://representclo.com/products/womens-247-motion-legging-black
+trousers,1931,247 Sculpt Seamless Performance Legging - Black,represent,shopify,90.0,premium,4.8,0.5647,0.0,False,0,6,https://representclo.com/products/womens-247-sculpt-seamless-performance-legging-black
+knitwear,804,Mixed Knit Vest - Royal Blue,represent,shopify,160.0,premium,4.8,0.7632,0.0,True,0,6,https://representclo.com/products/mixed-knit-vest-royal-blue
+knitwear,840,Washed Knit Vest - Sunrise,represent,shopify,125.0,premium,4.8,0.7619,0.0,True,0,6,https://representclo.com/products/washed-knit-vest-sunrise
+knitwear,862,Open Gauge Knit Sweater - Forest Green,represent,shopify,235.0,premium,4.8,0.7608,0.0,True,0,6,https://representclo.com/products/open-gauge-knit-sweater-forest-green
+knitwear,863,Long Sleeve Mesh Knit Shirt - Jet Black,represent,shopify,230.0,premium,4.8,0.7608,0.0,True,0,6,https://representclo.com/products/long-sleeve-mesh-knit-shirt-jet-black
+knitwear,871,Marled Knit Jumper - Matcha,represent,shopify,255.0,premium,4.8,0.7606,0.0,True,0,6,https://representclo.com/products/marled-knit-jumper-matcha
+knitwear,1774,Knitted Polo - Aged White,represent,shopify,240.0,premium,4.8,0.5887,0.0,False,0,7,https://representclo.com/products/knitted-polo-aged-white
+knitwear,1793,Laurel Knit Sweater - Sun Fade Grey,represent,shopify,270.0,premium,4.8,0.5884,0.0,False,0,7,https://representclo.com/products/laurel-knit-sweater-sun-fade-grey
+knitwear,1805,Knitted Bomber Jacket - Jet Black,represent,shopify,300.0,premium,4.8,0.5881,0.0,False,0,7,https://representclo.com/products/knitted-bomber-jacket-jet-black
+knitwear,1828,Ombre Sweater - Light Grey,represent,shopify,260.0,premium,4.8,0.5877,0.0,False,0,7,https://representclo.com/products/ombre-sweater-light-grey
+knitwear,1831,Knitted Varsity Long Sleeve Jersey - Vintage Grey,represent,shopify,270.0,premium,4.8,0.5876,0.0,False,0,7,https://representclo.com/products/knitted-varsity-long-sleeve-jersey-vintage-grey
+headwear,895,JD Still Alive Hat | Black A-Frame,cuts_clothing,shopify,30.0,budget,4.7,0.7561,44.4,True,0,1,https://cutsclothing.com/products/jd-still-alive-hat
+headwear,1568,FTS Performance Hat | Clay,cuts_clothing,shopify,50.0,mid_range,4.4,0.6027,0.0,True,0,1,https://cutsclothing.com/products/fts-performance-hat-clay
+headwear,2146,American A-Frame Hat | Old Glory Red,cuts_clothing,shopify,40.0,budget,4.7,0.4244,0.0,False,0,1,https://cutsclothing.com/products/american-a-frame-old-glory-red
+headwear,2150,AO Perf Hat | Black,cuts_clothing,shopify,50.0,mid_range,4.4,0.3987,0.0,False,0,1,https://cutsclothing.com/products/black-ao-perf-hat
+womens underwear,942,BP Seamless Cheeky (Nude),born_primitive,shopify,10.0,budget,4.7,0.7527,0.0,True,0,6,https://bornprimitive.com/products/bp-seamless-cheeky-nude
+womens underwear,1984,BP Seamless Thong (Nude),born_primitive,shopify,10.0,budget,4.7,0.5527,0.0,False,0,6,https://bornprimitive.com/products/bp-seamless-thong-nude
+womens underwear,1985,BP Ultra Stretch Thong (Black),born_primitive,shopify,10.0,budget,4.7,0.5527,0.0,False,0,6,https://bornprimitive.com/products/bp-ultra-stretch-thong-black
+bottom,943,BP Seamless Cheeky 3-Pack (Nude),born_primitive,shopify,24.0,budget,4.7,0.7526,0.0,True,0,6,https://bornprimitive.com/products/bp-seamless-cheeky-2-pack-nude
+bottom,1276,BP Seamless Cheeky 2-Pack (Black/Nude),born_primitive,shopify,18.0,budget,4.7,0.6642,0.0,False,0,36,https://bornprimitive.com/products/bp-seamless-cheeky-2-pack
+bottom,1986,BP Seamless Thong 3-Pack (Nude),born_primitive,shopify,24.0,budget,4.7,0.5526,0.0,False,0,6,https://bornprimitive.com/products/bp-seamless-thong-3-pack-nude
+hats,957,Tactical Trucker Hat (Arid Multicam),born_primitive,shopify,18.0,budget,4.7,0.747,40.0,True,0,1,https://bornprimitive.com/products/tactical-trucker-hat-arid-multicam
+hats,958,Relax Hat (White/Floral),born_primitive,shopify,21.0,budget,4.7,0.7454,40.0,True,0,1,https://bornprimitive.com/products/relax-hat-white
+hats,959,Corduroy Patch Trucker Hat (Navy),born_primitive,shopify,18.0,budget,4.7,0.7454,40.0,True,0,1,https://bornprimitive.com/products/corduroy-patch-trucker-hat-navy
+hats,960,Corduroy Leather Patch Trucker Hat (Brown/Sand),born_primitive,shopify,21.0,budget,4.7,0.7446,40.0,True,0,1,https://bornprimitive.com/products/corduroy-leather-patch-trucker-hat-brown-sand
+hats,1298,FlexFit Delta Hat (Thin Red Line),born_primitive,shopify,30.0,budget,4.7,0.6509,0.0,True,0,2,https://bornprimitive.com/products/flexfit-delta-hat-thin-red-line
+hats,1299,Logo FlexFit Hat (Tactical Green),born_primitive,shopify,30.0,budget,4.7,0.6509,0.0,True,0,2,https://bornprimitive.com/products/logo-flexfit-hat-tactical-green
+hats,1300,Outdoor Leather Patch FLEX Trucker Hat (OD Green/Black),born_primitive,shopify,35.0,budget,4.7,0.6508,0.0,True,0,2,https://bornprimitive.com/products/outdoor-leather-patch-flex-trucker-hat-od-green-black
+hats,1304,Tactical FlexFit Hat (Multicam),born_primitive,shopify,30.0,budget,4.7,0.6485,0.0,True,0,2,https://bornprimitive.com/products/tactical-flexfit-hat-multicam
+hats,1462,BP Two-Tone Trucker Hat (Charcoal/Black),born_primitive,shopify,30.0,budget,4.7,0.6269,0.0,True,0,1,https://bornprimitive.com/products/bp-two-tone-trucker-hat-charcoal-black
+hats,1463,Quiver Beanie 2.0 (Mossy Oak® Original Bottomland®),born_primitive,shopify,35.0,budget,4.7,0.6268,0.0,True,0,1,https://bornprimitive.com/products/quiver-beanie-2-0-mossy-oak®-original-bottomland®-1
+bag and packs,961,Born Primitive Crew Fanny Pack (Black),born_primitive,shopify,30.0,budget,4.7,0.7445,40.0,True,0,1,https://bornprimitive.com/products/born-primitive-crew-fanny-pack-black
+bag and packs,1445,Running Belt (Black),born_primitive,shopify,35.0,budget,4.7,0.6276,0.0,True,0,1,https://bornprimitive.com/products/running-belt-black
+bag and packs,1464,Adventure Awaits Quilted Belt Bag (Black),born_primitive,shopify,40.0,budget,4.7,0.6268,0.0,True,0,1,https://bornprimitive.com/products/adventure-awaits-quilted-belt-bag-black
+bag and packs,1569,On The Go Sling Bag (Tan),born_primitive,shopify,55.0,mid_range,4.4,0.6026,0.0,True,0,1,https://bornprimitive.com/products/on-the-go-sling-bag-tan
+nylon top,965,NYLON DUET CINCHED WINDBREAKER - PEAK,set_active,shopify,120.0,premium,4.8,0.7372,0.0,True,0,5,https://setactive.co/products/nylon-duet-cinched-windbreaker-peak
+nylon top,975,NYLON TRACK SEAM ZIP UP - WASHED,set_active,shopify,125.0,premium,4.8,0.7363,0.0,True,0,5,https://setactive.co/products/nylon-track-seam-zip-up-washed
+nylon top,2014,NYLON TRACK CINCHED WINDBREAKER - MAST,set_active,shopify,132.0,premium,4.8,0.5354,0.0,False,0,5,https://setactive.co/products/nylon-track-cinched-windbreaker-mast
+sweats top,993,MIDWEIGHT SWEATS STAPLE VINTAGE CREWNECK - WORN,set_active,shopify,108.0,premium,4.8,0.7349,0.0,True,0,5,https://setactive.co/products/midweight-sweats-staple-vintage-crewneck-worn
+sweats top,1002,MIDWEIGHT SWEATS STAPLE STRIPE CREWNECK - ANALOG,set_active,shopify,108.0,premium,4.8,0.7333,0.0,True,0,5,https://setactive.co/products/midweight-sweats-staple-stripe-crewneck-analog
+sweats top,1200,LIGHTWEIGHT SWEATS CLASSIC ZIP HOODIE - ONYX,set_active,shopify,36.0,budget,4.7,0.6784,60.0,False,0,5,https://setactive.co/products/lightweight-sweats-classic-zip-hoodie-onyx
+sweats top,1904,SET X PARKE SAIL GRAPHIC MOCKNECK - OVERCAST,set_active,shopify,94.5,premium,4.8,0.5746,30.0,False,0,3,https://setactive.co/products/set-x-parke-sail-graphic-mockneck-overcast
+sweats top,2012,MIDWEIGHT SWEATS STAPLE VINTAGE QUARTER ZIP - TETHER,set_active,shopify,115.0,premium,4.8,0.5356,0.0,False,0,5,https://setactive.co/products/midweight-sweats-staple-vintage-quarter-zip-tether
+sweats top,2020,MIDWEIGHT SWEATS STAPLE PANELED CREWNECK - IRON HEATHER GREY/ZUMA,set_active,shopify,105.0,premium,4.8,0.5349,0.0,False,0,5,https://setactive.co/products/midweight-sweats-staple-panelled-crewneck-iron-heather-grey-zuma
+sweats top,2021,MIDWEIGHT SWEATS STAPLE SET FUNNEL ZIP - HAVEN,set_active,shopify,108.0,premium,4.8,0.5349,0.0,False,0,5,https://setactive.co/products/midweight-sweats-staple-set-sport-funnel-zip-haven
+sweats top,2115,MIDWEIGHT SWEATS STAPLE SET CREWNECK - ROSEBUD,set_active,shopify,98.0,premium,4.8,0.4838,0.0,False,0,3,https://setactive.co/products/midweight-sweats-staple-set-crewneck-rosebud
+sweats top,2116,MIDWEIGHT SWEATS REVERSE SET CREWNECK - SYNC,set_active,shopify,98.0,premium,4.8,0.483,0.0,False,0,3,https://setactive.co/products/midweight-sweats-reverse-set-crewneck-sync
+basic top,1098,CLASSIC COTTON DAILY STRIPE BOYFRIEND TEE - WASHED,set_active,shopify,54.0,mid_range,4.4,0.7283,0.0,True,0,6,https://setactive.co/products/classic-cotton-daily-stripe-boyfriend-tee-washed
+basic top,1158,CLASSIC COTTON DAILY STAPLE POCKET TEE - HAVEN,set_active,shopify,50.0,mid_range,4.4,0.7035,0.0,True,0,5,https://setactive.co/products/classic-cotton-daily-staple-pocket-tee-haven
+basic top,1159,CLASSIC COTTON DAILY BOYFRIEND TEE - FOG HEATHER GREY,set_active,shopify,45.0,mid_range,4.4,0.7035,0.0,True,0,5,https://setactive.co/products/classic-cotton-daily-boyfriend-tee-fog-heather-grey
+basic top,1175,HEAVY COTTON EASY STRIPE LONG SLEEVE - WASHED,set_active,shopify,57.0,mid_range,4.4,0.7018,0.0,True,0,5,https://setactive.co/products/heavy-cotton-easy-stripe-long-sleeve-washed
+basic top,1199,CLASSIC COTTON DAILY TEE - BLANC,set_active,shopify,20.0,budget,4.7,0.6794,60.0,False,0,5,https://setactive.co/products/classic-cotton-daily-tee-blanc
+basic top,1203,RIBBED MODAL BODY LONG SLEEVE - BLANC,set_active,shopify,22.0,budget,4.7,0.6778,60.0,False,0,5,https://setactive.co/products/ribbed-modal-body-sleeve-blanc
+basic top,1205,RIBBED MODAL BODY TANK - SPADES,set_active,shopify,19.2,budget,4.7,0.677,60.0,False,0,5,https://setactive.co/products/ribbed-modal-body-tank-spades
+basic top,1536,CLASSIC COTTON DAILY PARKE V-NECK LONG SLEEVE - SEASHELL,set_active,shopify,39.9,budget,4.7,0.6176,30.0,False,0,5,https://setactive.co/products/classic-cotton-daily-parke-v-neck-long-sleeve-seashell
+basic top,1537,STRIPE JERSEY STRIPE PARKE WRAP LONG SLEEVE - NEAPOLITAN,set_active,shopify,36.4,budget,4.7,0.6168,30.0,False,0,5,https://setactive.co/products/striped-jersey-stripe-wrap-long-sleeve-neapolitan
+basic top,1538,STRIPE JERSEY STRIPE PARKE OVERSIZED LONG SLEEVE - NEAPOLITAN,set_active,shopify,39.9,budget,4.7,0.6168,30.0,False,0,5,https://setactive.co/products/striped-jersey-stripe-oversized-long-sleeve-neapolitan
+basic bottoms,1171,HEAVY COTTON EASY BOXER PANTS - BLANC,set_active,shopify,68.0,mid_range,4.4,0.7025,0.0,True,0,5,https://setactive.co/products/heavy-cotton-easy-boxer-pants-blanc
+basic bottoms,1206,HEAVY COTTON EASY BOXER SHORTS - ONYX,set_active,shopify,23.2,budget,4.7,0.6762,60.0,False,0,5,https://setactive.co/products/heavy-cotton-easy-boxer-shorts-onyx
+basic bottoms,1752,HEAVY COTTON EASY PARKE PANTS - SEASHELL,set_active,shopify,47.6,mid_range,4.4,0.5927,30.0,False,0,5,https://setactive.co/products/heavy-cotton-easy-parke-pants-seashell
+basic bottoms,2034,HEAVY COTTON EASY STRIPE SHORTS - SEPIA,set_active,shopify,58.0,mid_range,4.4,0.529,0.0,False,0,6,https://setactive.co/products/heavy-cotton-easy-stripe-shorts-sepia
+basic bottoms,2104,HEAVY COTTON EASY SHORTS - SEPIA,set_active,shopify,58.0,mid_range,4.4,0.5034,0.0,False,0,5,https://setactive.co/products/heavy-cotton-easy-shorts-sepia
+basic bottoms,2109,STRIPE JERSEY STRIPE SHORTS - LYRIC,set_active,shopify,48.0,mid_range,4.4,0.5027,0.0,False,0,5,https://setactive.co/products/stripe-jersey-stripe-shorts-lyric
+combos,1197,"21 Bottle Combo &#8211; Adob-O, Original, Blackened Bloody Mary, Butter Dust, Butter Steak, Cajun, Cheesoning, Jalapeño Cheesoning, Ranch Cheesoning, Red Pepper Cheesoning, Chili Lime, Chipotle, Crunchy, Italian-O, Preem-O, SEA-soning, Sweet Caribbean, Sweet &#038; Tangy BBQ Seasoning Made With Tamarind, Spicy, Spicy BBQ, &#038; Tac-O",danosseasoning,woocommerce,134.85,premium,4.8,0.6802,25.6,True,0,0,https://danosseasoning.com/product/21-bottle-combo/
+combos,1316,"Small 3 Bottle Combo Box &#8211; Original, Chipotle, Crunchy",danosseasoning,woocommerce,17.97,budget,4.7,0.6458,16.4,True,0,0,https://danosseasoning.com/product/small-3-bottle-combo-box-original-chipotle-crunchy/
+combos,1317,"Small 3 Bottle Combo &#8211; Chili Lime, Original, &#038; Crunchy",danosseasoning,woocommerce,17.97,budget,4.7,0.6458,16.4,True,0,0,https://danosseasoning.com/product/small-3-bottle-combo-chili-lime-original-crunchy/
+combos,1318,"Small 3 Bottle Combo &#8211; Italian-O, Original, &#038; Cajun",danosseasoning,woocommerce,17.97,budget,4.7,0.6458,16.4,True,0,0,https://danosseasoning.com/product/small-3-bottle-combo-italian-o-original-cajun/
+combos,1319,"Small 3 Bottle Combo &#8211; Cajun, SEA-soning, &#038; Spicy",danosseasoning,woocommerce,17.97,budget,4.7,0.6458,16.4,True,0,0,https://danosseasoning.com/product/small-3-bottle-combo-cajun-sea-soning-spicy/
+combos,1320,"Small 3 Bottle Combo &#8211; Italian-O, Original, &#038; Cheesoning",danosseasoning,woocommerce,17.97,budget,4.7,0.6458,16.4,True,0,0,https://danosseasoning.com/product/small-3-bottle-combo-italian-o-original-cheesoning/
+combos,1321,"Small 3 Bottle Combo &#8211; Adob-O, Chipotle, &#038; Spicy",danosseasoning,woocommerce,17.97,budget,4.7,0.6458,16.4,True,0,0,https://danosseasoning.com/product/small-3-bottle-combo-adob-o-chipotle-spicy/
+combos,1322,Eric Wood’s Bundle,danosseasoning,woocommerce,35.94,budget,4.7,0.6456,16.4,True,0,0,https://danosseasoning.com/product/eric-woods-bundle/
+combos,1324,"Ultimate Flavor Pack &#8211; Small 4 Bottle Combo &#8211; Original, Cajun, Preem-O, &#038; SEA-soning",danosseasoning,woocommerce,23.96,budget,4.7,0.6443,15.9,True,0,0,https://danosseasoning.com/product/ultimate-flavor-pack-small-4-bottle-combo-original-cajun-preem-o-sea-soning/
+combos,1327,"Small 5 Bottle Combo &#8211; Original, Cheesoning, Chipotle, Crunchy, &#038; Spicy",danosseasoning,woocommerce,29.95,budget,4.7,0.6433,15.6,True,0,0,https://danosseasoning.com/product/small-5-bottle-combo/
+cheesonings,1269,Cheesoning Seasoning &#8211; Medium Bottle,danosseasoning,woocommerce,9.99,budget,4.7,0.666,23.1,True,0,0,https://danosseasoning.com/product/cheesoning-seasoning-medium/
+cheesonings,1323,"Cheese Block Bundle &#8211; Small 4 Bottle Combo &#8211; Cheesoning, Jalapeño Cheesoning, Ranch Cheesoning, &#038; Red Pepper Cheesoning",danosseasoning,woocommerce,23.96,budget,4.7,0.6443,15.9,True,0,0,https://danosseasoning.com/product/cheese-block-bundle/
+cheesonings,1343,Cheesoning Seasoning &#8211; Small Size &#8211; 2 Pack,danosseasoning,woocommerce,11.98,budget,4.7,0.6396,14.3,True,0,0,https://danosseasoning.com/product/cheesoning-seasoning-small-size-2-pack/
+cheesonings,1348,Red Pepper Cheesoning Seasoning &#8211; Small Size &#8211; 2 Pack,danosseasoning,woocommerce,11.98,budget,4.7,0.6396,14.3,True,0,0,https://danosseasoning.com/product/red-pepper-cheesoning-seasoning-small-size-2-pack/
+cheesonings,1353,Ranch Cheesoning Seasoning &#8211; Small Size &#8211; 2 Pack,danosseasoning,woocommerce,11.98,budget,4.7,0.6396,14.3,True,0,0,https://danosseasoning.com/product/ranch-cheesoning-seasoning-small-size-2-pack/
+cheesonings,1356,Jalapeño Cheesoning Seasoning &#8211; Small Size &#8211; 2 Pack,danosseasoning,woocommerce,11.98,budget,4.7,0.6396,14.3,True,0,0,https://danosseasoning.com/product/jalapeno-cheesoning-seasoning-small-size-2-pack/
+cheesonings,1363,Red Pepper Cheesoning Seasoning &#8211; Small Bottle,danosseasoning,woocommerce,6.49,budget,4.7,0.6369,13.4,True,0,0,https://danosseasoning.com/product/red-pepper-cheesoning-seasoning-small-bottle/
+cheesonings,1368,Jalapeño Cheesoning Seasoning &#8211; Small Bottle,danosseasoning,woocommerce,6.49,budget,4.7,0.6369,13.4,True,0,0,https://danosseasoning.com/product/jalapeno-cheesoning-seasoning-small/
+cheesonings,1373,Cheesoning Seasoning &#8211; Small Bottle,danosseasoning,woocommerce,6.49,budget,4.7,0.6369,13.4,True,0,0,https://danosseasoning.com/product/cheesoning-seasoning-small/
+cheesonings,1521,Cheesoning Seasoning &#8211; Online Exclusive Size Bottle,danosseasoning,woocommerce,5.99,budget,4.7,0.6198,7.7,True,0,0,https://danosseasoning.com/product/cheesoning-seasoning-online-exclusive-size-bottle/
+product,1309,Build Your Own Shoelaces Bundle,nobull,shopify,14.0,budget,4.7,0.6479,0.0,True,0,2,https://nobullproject.com/products/build-your-own-shoelaces-bundle
+product,1312,Build Your Own NOBULL Tee Bundle,nobull,shopify,67.0,mid_range,4.7,0.6473,0.0,True,0,2,https://nobullproject.com/products/build-your-own-nobull-tee-bundle
+product,1313,Pick Your Journey x Electrolytes Bundle,nobull,shopify,100.34,premium,4.7,0.647,0.0,True,0,2,https://nobullproject.com/products/pick-your-journey-x-electrolytes-bundle
+product,1315,Build Your NOBULL Outfit,nobull,shopify,209.0,premium,4.7,0.6458,0.0,True,0,2,https://nobullproject.com/products/build-your-outfit-nobull-layers
+product,1435,Women's Black Elements Hoodie x Sweatpant Bundle,nobull,shopify,124.8,premium,4.7,0.6283,0.0,True,0,1,https://nobullproject.com/products/womens-black-elements-hoodie-x-sweatpant-bundle
+product,1436,Men's Dark Army Elements Hoodie x Sweatpant Bundle,nobull,shopify,124.8,premium,4.7,0.6283,0.0,True,0,1,https://nobullproject.com/products/mens-dark-army-elements-hoodie-x-sweatpant-bundle
+product,1437,Women's Dark Army Elements Hoodie x Sweatpant Bundle,nobull,shopify,124.8,premium,4.7,0.6283,0.0,True,0,1,https://nobullproject.com/products/womens-dark-army-elements-hoodie-x-sweatpant-bundle
+product,1438,Men's Black Elements Hoodie x Sweatpant Bundle,nobull,shopify,124.8,premium,4.7,0.6283,0.0,True,0,1,https://nobullproject.com/products/mens-black-elements-hoodie-x-sweatpant-bundle
+product,1439,Women's Light Grey Elements Hoodie x Sweatpant Bundle,nobull,shopify,124.8,premium,4.7,0.6283,0.0,True,0,1,https://nobullproject.com/products/womens-light-grey-elements-hoodie-x-sweatpant-bundle
+product,1442,NOBULL x Public Rec Head To Toe Bundle,nobull,shopify,132.0,premium,4.7,0.6282,0.0,True,0,1,https://nobullproject.com/products/nobull-x-public-rec-head-to-toe-bundle
+flag,1310,Born Primitive Gym Flag (Thin Blue Line),born_primitive,shopify,25.0,budget,4.7,0.6478,0.0,True,0,2,https://bornprimitive.com/products/born-primitive-gym-flag-thin-blue-line
+flag,1518,Thin Red Line Flag,born_primitive,shopify,30.0,budget,4.7,0.6221,0.0,True,0,1,https://bornprimitive.com/products/thin-red-line-flag
+flag,1574,Born Primitive Banner (Navy),born_primitive,shopify,50.0,mid_range,4.4,0.5979,0.0,True,0,1,https://bornprimitive.com/products/born-primitive-banner-2-5-ft-x-6-ft
+baby,1330,Baby Food Bundle,nutribullet,woocommerce,99.99,premium,4.8,0.6428,13.0,True,0,0,https://www.nutribullet.com/shop/bundles/baby-bundle/
+baby,1560,nutribullet Baby Steam + Blend,nutribullet,woocommerce,114.99,premium,4.8,0.6036,0.0,True,0,0,https://www.nutribullet.com/shop/baby/nutribullet-baby-blender-steamer/
+baby,1907,nutribullet Baby Turbo Steamer,nutribullet,woocommerce,44.99,mid_range,4.4,0.5723,0.0,True,0,0,https://www.nutribullet.com/shop/baby/turbo-steamer/
+baby,1924,nutribullet Baby,nutribullet,woocommerce,69.99,mid_range,4.4,0.5721,0.0,True,0,0,https://www.nutribullet.com/shop/baby/nutribullet-baby-blender/
+nutrition,1461,Electrolytes,nobull,shopify,25.0,budget,4.7,0.627,0.0,True,0,1,https://nobullproject.com/products/electrolytes-fruit-punch
+nutrition,1468,Grass-Fed Whey Protein Isolate,nobull,shopify,60.0,mid_range,4.7,0.6266,0.0,True,0,1,https://nobullproject.com/products/grass-fed-whey-protein-isolate-chocolate
+nutrition,1469,Plant Protein,nobull,shopify,60.0,mid_range,4.7,0.6266,0.0,True,0,1,https://nobullproject.com/products/plant-protein-vanilla
+patch,1495,Born Primitive Tactical Velcro Patch (Coyote Brown),born_primitive,shopify,7.0,budget,4.7,0.6239,0.0,True,0,1,https://bornprimitive.com/products/born-primitive-tactical-velcro-patch-coyote-brown
+patch,1508,Born Primitive Logo Leather Patch,born_primitive,shopify,8.0,budget,4.7,0.6223,0.0,True,0,1,https://bornprimitive.com/products/born-primitive-logo-leather-patch
+patch,1509,Born Primitive Velcro Flag Patch (Leather-USA),born_primitive,shopify,7.0,budget,4.7,0.6223,0.0,True,0,1,https://bornprimitive.com/products/born-primitive-velcro-flag-patch-leather-usa
+patch,1510,Born Primitive American Original Velcro Patch,born_primitive,shopify,7.0,budget,4.7,0.6223,0.0,True,0,1,https://bornprimitive.com/products/born-primitive-american-original-velcro-patch
+patch,1512,Best Defense Foundation Leather Patch,born_primitive,shopify,10.0,budget,4.7,0.6223,0.0,True,0,1,https://bornprimitive.com/products/best-defense-foundation-leather-patch
+dip mixes,1575,French Onion Dip Mix Packet,danosseasoning,woocommerce,1.99,budget,4.7,0.5968,0.0,True,0,0,https://danosseasoning.com/product/french-onion-dip-mix-packet/
+dip mixes,1577,Mexi-Ranch Dip Mix Packet,danosseasoning,woocommerce,1.99,budget,4.7,0.5968,0.0,True,0,0,https://danosseasoning.com/product/mexi-ranch-dip-mix-packet/
+dip mixes,1580,Ranch Dip Mix Packet,danosseasoning,woocommerce,1.99,budget,4.7,0.5968,0.0,True,0,0,https://danosseasoning.com/product/ranch-dip-mix-packet/
+warranty,1581,nutribullet Immersion Blender 3 Year Extended Warranty,nutribullet,woocommerce,12.99,budget,4.7,0.5967,0.0,True,0,0,https://www.nutribullet.com/shop/warranty/nutribullet-immersion-blender-3-year-extended-warranty/
+warranty,1583,nutribullet Flex X McLaren &#8211; Extended warranty,nutribullet,woocommerce,14.99,budget,4.7,0.5967,0.0,True,0,0,https://www.nutribullet.com/shop/warranty/nutribullet-flex-x-mclaren-extended-warranty/
+warranty,1584,nutribullet Flex &#8211; Extended warranty,nutribullet,woocommerce,14.99,budget,4.7,0.5967,0.0,True,0,0,https://www.nutribullet.com/shop/warranty/nutribullet-flex-extended-warranty/
+warranty,1585,magic bullet Express 3 Year Extended Warranty,nutribullet,woocommerce,14.99,budget,4.7,0.5967,0.0,True,0,0,https://www.nutribullet.com/shop/warranty/magic-bullet-express-3-year-extended-warranty/
+warranty,1588,nutribullet x McLaren Portable Blender &#8211; Extended warranty,nutribullet,woocommerce,13.99,budget,4.7,0.5967,0.0,True,0,0,https://www.nutribullet.com/shop/warranty/nutribullet-x-mclaren-portable-blender-extended-warranty/
+warranty,1591,magic bullet Prep 3 Year Extended Warranty,nutribullet,woocommerce,12.49,budget,4.7,0.5967,0.0,True,0,0,https://www.nutribullet.com/shop/warranty/magic-bullet-prep-3-year-extended-warranty/
+warranty,1604,magic bullet Mini Juicer &#8211; Extended Warranty,nutribullet,woocommerce,14.99,budget,4.7,0.5967,0.0,True,0,0,https://www.nutribullet.com/shop/warranty/magic-bullet-mini-juicer-extended-warranty/
+warranty,1605,magic bullet Combo Blender &#8211; Extended Warranty,nutribullet,woocommerce,11.99,budget,4.7,0.5967,0.0,True,0,0,https://www.nutribullet.com/shop/warranty/magic-bullet-combo-blender-extended-warranty/
+warranty,1622,nutibullet Lite Immersion Blender &#8211; Extended warranty,nutribullet,woocommerce,12.99,budget,4.7,0.5967,0.0,True,0,0,https://www.nutribullet.com/shop/warranty/nutribullet-lite-immersion-blender-extended-warranty/
+warranty,1624,nutribullet Baby Turbo Steamer Express 3 Year Extended Warranty,nutribullet,woocommerce,7.49,budget,4.7,0.5967,0.0,True,0,0,https://www.nutribullet.com/shop/warranty/nutribullet-baby-turbo-steamer-express-3-year-extended-warranty/
+outlaws,1610,Blackened Bloody Mary &#8211; Medium Bottle,danosseasoning,woocommerce,11.49,budget,4.7,0.5967,0.0,True,0,0,https://danosseasoning.com/product/blackened-bloody-mary-medium-bottle/
+outlaws,1616,Butter Dust &#8211; Medium Bottle,danosseasoning,woocommerce,11.49,budget,4.7,0.5967,0.0,True,0,0,https://danosseasoning.com/product/butter-dust-medium-bottle/
+outlaws,1617,Butter Steak &#8211; Medium Bottle,danosseasoning,woocommerce,11.49,budget,4.7,0.5967,0.0,True,0,0,https://danosseasoning.com/product/butter-steak-medium-bottle/
+outlaws,1634,Sweet Caribbean<sup>&trade;</sup> Seasoning &#8211; Medium Bottle,danosseasoning,woocommerce,11.49,budget,4.7,0.5967,0.0,True,0,0,https://danosseasoning.com/product/sweet-caribbean-seasoning-medium-bottle/
+outlaws,1635,Spicy BBQ Seasoning &#8211; Medium Bottle,danosseasoning,woocommerce,11.49,budget,4.7,0.5967,0.0,True,0,0,https://danosseasoning.com/product/spicy-bbq-seasoning-medium-bottle/
+outlaws,1637,Sweet &#038; Tangy BBQ Seasoning Made With Tamarind &#8211; Medium Bottle,danosseasoning,woocommerce,11.49,budget,4.7,0.5967,0.0,True,0,0,https://danosseasoning.com/product/sweet-tangy-bbq-seasoning-made-with-tamarind-medium-bottle/
+supplements,1708,Ready-To-Blend Smoothies,nutribullet,woocommerce,22.49,budget,4.7,0.5966,0.0,True,0,0,https://www.nutribullet.com/shop/supplements/ready-to-blend-smoothies/
+supplements,1724,Fat Burn,nutribullet,woocommerce,26.99,budget,4.7,0.5965,0.0,True,0,0,https://www.nutribullet.com/shop/supplements/satisfying-fat-burn/
+supplements,1725,Immunity,nutribullet,woocommerce,26.99,budget,4.7,0.5965,0.0,True,0,0,https://www.nutribullet.com/shop/supplements/immunity/
+supplements,1726,Greens,nutribullet,woocommerce,26.99,budget,4.7,0.5965,0.0,True,0,0,https://www.nutribullet.com/shop/supplements/essential-greens/
+supplements,1727,Plant-Based Protein,nutribullet,woocommerce,26.99,budget,4.7,0.5965,0.0,True,0,0,https://www.nutribullet.com/shop/supplements/plant-based-protein/
+supplements,2152,Ready-To-Blend Smoothies – Subscription Banana Mocha | 5 Packets,nutribullet,woocommerce,22.49,budget,4.7,0.3966,0.0,False,0,0,https://www.nutribullet.com/shop/supplements/ready-to-blend-smoothies-subscription-banana-mocha-5-packets/
+supplements,2153,Fat Burn – Subscription Spiced Cocoa | 14 Stick Packs,nutribullet,woocommerce,17.99,budget,4.7,0.3966,0.0,False,0,0,https://www.nutribullet.com/shop/supplements/satisfying-fat-burn-subscription-spiced-cocoa-14-stick-packs/
+supplements,2155,Greens – Subscription Naturally Flavored | 14 Stick Packs,nutribullet,woocommerce,17.99,budget,4.7,0.3966,0.0,False,0,0,https://www.nutribullet.com/shop/supplements/essential-greens-subscription-naturally-flavored-14-stick-packs/
+supplements,2156,Immunity – Subscription Citrus Berry | 14 Stick Packs,nutribullet,woocommerce,17.99,budget,4.7,0.3966,0.0,False,0,0,https://www.nutribullet.com/shop/supplements/immunity-subscription-citrus-berry-14-stick-packs/
+supplements,2157,Ready-To-Blend Smoothies – Subscription Blueberry Almond | 5 Packets,nutribullet,woocommerce,22.49,budget,4.7,0.3966,0.0,False,0,0,https://www.nutribullet.com/shop/supplements/ready-to-blend-smoothies-subscription-blueberry-almond-5-packets/
+onesie,2050,SPORTBODY® SPORTY SQUARE SHORTYSUIT - LEGACY,set_active,shopify,78.0,mid_range,4.4,0.5288,0.0,False,0,6,https://setactive.co/products/sportbody-sporty-square-suit-legacy
+onesie,2060,SPORTBODY® SPORTY SQUARE SUIT - ORCA,set_active,shopify,78.0,mid_range,4.4,0.5288,0.0,False,0,6,https://setactive.co/products/sportbody-sporty-square-suit-orca
+onesie,2061,FORMCLOUD® CLOUD GYM SHORTYSUIT - WORN,set_active,shopify,78.0,mid_range,4.4,0.5288,0.0,False,0,6,https://setactive.co/products/formcloud-cloud-gym-shortysuit-worn
+onesie,2062,FORMCLOUD® CLOUD LA SHORTYSUIT - EVEREST,set_active,shopify,75.0,mid_range,4.4,0.5288,0.0,False,0,6,https://setactive.co/products/formcloud-cloud-la-shortysuit-everest
+onesie,2065,LUXFORM® LUX GOLES SHORTYSUIT - WASHED,set_active,shopify,85.0,mid_range,4.4,0.5287,0.0,False,0,6,https://setactive.co/products/luxform-lux-goles-shortysuit-washed

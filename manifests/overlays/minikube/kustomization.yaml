@@ -1,0 +1,22 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../../kfp-upstream/env/platform-agnostic
+images:
+  - name: gcr.io/ml-pipeline/minio
+    newName: minio/minio
+    newTag: "RELEASE.2019-08-14T20-37-41Z"
+  - name: gcr.io/ml-pipeline/mysql
+    newName: mysql
+    newTag: "8.0.26"
+  - name: gcr.io/ml-pipeline/workflow-controller
+    newName: quay.io/argoproj/workflow-controller
+    newTag: "v3.4.17"
+  - name: gcr.io/ml-pipeline/argoexec
+    newName: quay.io/argoproj/argoexec
+    newTag: "v3.4.17"
+patches:
+  - path: workflow-controller-args-patch.yaml
+    target:
+      kind: Deployment
+      name: workflow-controller

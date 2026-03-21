@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+*.parquet
+*.csv
+!data/top_k_products.csv
+!analytics/*.csv
+!analytics/*.json
+!analytics/*.jsonl
+*.env
+.env

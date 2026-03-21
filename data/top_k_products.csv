@@ -1,0 +1,51 @@
+﻿rank,title,shop_name,source,category_clean,price,price_tier,discount_pct,rating_filled,has_rating,nb_reviews,nb_variants,available,popularity_score,catalogue_richness,composite_score,product_url
+1,Men's Cruiser - Natural Black (Natural Black Sole),allbirds,shopify,shoes,52.0,mid_range,50.5,4.4,1,0,14,True,15.4,0.62,0.9839,https://www.allbirds.com/products/mens-cruiser-natural-black
+2,Women's Wool Cruiser Slip On Fluff - Natural White (Natural White Sole),allbirds,shopify,shoes,39.0,budget,62.9,4.4,1,0,13,True,14.3,0.59,0.9834,https://www.allbirds.com/products/womens-wool-cruiser-slip-on-fluff
+3,Men's Wool Runner NZ Fluff - Natural White (Natural White Sole),allbirds,shopify,shoes,39.0,budget,67.5,4.4,1,0,13,True,14.3,0.59,0.9834,https://www.allbirds.com/products/mens-wool-runner-nz-fluff
+4,Women's Wool Runner NZ Fluff - Natural White (Natural White Sole),allbirds,shopify,shoes,39.0,budget,67.5,4.4,1,0,13,True,14.3,0.59,0.9834,https://www.allbirds.com/products/womens-wool-runner-nz-fluff
+5,Men's Wool Cruiser Slip On Fluff - Natural White (Natural White Sole),allbirds,shopify,shoes,39.0,budget,62.9,4.4,1,0,13,True,14.3,0.59,0.9834,https://www.allbirds.com/products/mens-wool-cruiser-slip-on-fluff
+6,Women's Cruiser Corduroy - Dark Tan (Stony Cream Sole),allbirds,shopify,shoes,44.0,mid_range,60.0,4.4,1,0,13,True,14.3,0.59,0.9834,https://www.allbirds.com/products/womens-cruiser-corduroy-dark-tan
+7,Women's Cruiser Slip On Corduroy - Stony Cream (Stony Cream Sole),allbirds,shopify,shoes,42.0,budget,60.0,4.4,1,0,13,True,14.3,0.59,0.9834,https://www.allbirds.com/products/womens-cruiser-slip-on-corduroy-stony-cream
+8,Men's Cruiser Slip On Corduroy - Stony Cream (Stony Cream Sole),allbirds,shopify,shoes,42.0,budget,60.0,4.4,1,0,13,True,14.3,0.59,0.9834,https://www.allbirds.com/products/mens-cruiser-slip-on-corduroy-stony-cream
+9,Women's Runner NZ Corduroy - Stony Cream (Stony Cream Sole),allbirds,shopify,shoes,49.0,mid_range,59.2,4.4,1,0,13,True,14.3,0.59,0.9833,https://www.allbirds.com/products/womens-runner-nz-corduroy-stony-cream
+10,Men's Canvas Piper - Blizzard (Bark Brown Sole),allbirds,shopify,shoes,45.0,mid_range,50.0,4.4,1,0,13,True,14.3,0.59,0.9833,https://www.allbirds.com/products/mens-canvas-pipers-blizzard-bark-brown
+11,American Defender Short Velcro 3.0 (Patriot),born_primitive,shopify,mens shorts,36.0,budget,40.0,4.7,0,0,10,True,11.75,0.7,0.9796,https://bornprimitive.com/products/american-defender-short-velcro-3-0-patriot
+12,American Defender Short Tie 3.0 (Woodland),born_primitive,shopify,mens shorts,36.0,budget,40.0,4.7,0,0,10,True,11.75,0.54,0.9764,https://bornprimitive.com/products/american-defender-short-tie-3_0-woodland
+13,Women's Op Assault Pant (Coyote Brown),born_primitive,shopify,womens tactical bottoms,145.0,premium,30.6,4.8,0,0,24,True,24.0,1.0,0.9643,https://bornprimitive.com/products/womens-op-assault-pant-coyote-brown
+14,Your Staple Tank (Navy),born_primitive,shopify,womens tops,24.75,budget,45.0,4.7,0,0,9,True,10.575,0.35,0.9628,https://bornprimitive.com/products/your-staple-tank-navy
+15,Women's Allday 365 (Ripstop),nobull,shopify,footwear,99.0,premium,34.0,4.7,1,0,13,True,15.275,0.75,0.962,https://nobullproject.com/products/womens-pine-allday-365
+16,Women's Allday Knit,nobull,shopify,footwear,99.0,premium,34.0,4.7,1,0,13,True,15.275,0.75,0.962,https://nobullproject.com/products/womens-green-heather-allday-knit
+17,Women's Outwork,nobull,shopify,footwear,99.0,premium,33.6,4.7,1,0,13,True,15.275,0.75,0.9608,https://nobullproject.com/products/womens-navy-gum-outwork
+18,FLEX Stretchy Mid-Rise Boot Cut Jean (Black),born_primitive,shopify,womens jeans,54.0,mid_range,40.0,4.4,0,0,18,True,19.8,0.86,0.9587,https://bornprimitive.com/products/flex-stretchy-mid-rise-boot-cut-jean-black
+19,Essential Tee Bundle | Black & White Classic-fit PYCA Pro®,cuts_clothing,shopify,womens tops,62.0,mid_range,40.4,4.4,0,0,36,True,22.0,0.76,0.9578,https://cutsclothing.com/products/essential-tee-kit
+20,Classic Tee Bundle | Black & White Classic-fit PYCA Pro®,cuts_clothing,shopify,womens tops,55.0,mid_range,40.2,4.4,0,0,36,True,22.0,0.76,0.9572,https://cutsclothing.com/products/classic-tee-kit
+21,Cabin Fleece (Black),born_primitive,shopify,mens tops,23.0,budget,69.3,4.7,0,0,8,True,9.4,0.56,0.957,https://bornprimitive.com/products/fleece-pullover-black
+22,Inspire Legging (Gunmetal),born_primitive,shopify,womens leggings,46.8,mid_range,40.0,4.4,0,0,12,True,13.2,0.76,0.9567,https://bornprimitive.com/products/inspire-legging-gun-metal
+23,Men's Timber Jacket (Gunmetal),born_primitive,shopify,mens tops,23.0,budget,74.4,4.7,0,0,8,True,9.4,0.52,0.9562,https://bornprimitive.com/products/the-mens-timber-jacket-gunmetal
+24,Woodsman Stretchy Flannel (Rancho),born_primitive,shopify,unisex top,33.0,budget,49.2,4.7,0,0,8,True,9.4,0.64,0.9561,https://bornprimitive.com/products/woodsman-stretchy-flannel-rancho
+25,Better Than Basic Bundle | Black & White Slim-Fit Tomboy-Cotton™,cuts_clothing,shopify,womens tops,65.0,mid_range,39.8,4.4,0,0,36,True,22.0,0.76,0.9559,https://cutsclothing.com/products/better-than-basic-kit
+26,Men's Savage 1 (Navy/Maroon),born_primitive,shopify,mens shoes,83.4,mid_range,40.0,4.4,0,0,15,True,16.5,0.73,0.9557,https://bornprimitive.com/products/mens-savage-1-navy-maroon
+27,Men's Jogger,nobull,shopify,apparel,55.0,mid_range,49.5,4.7,1,0,8,True,9.4,0.48,0.9535,https://nobullproject.com/products/mens-jogger-black
+28,SET X PARKE HORSESHOE JEANS - RHUBARB,set_active,shopify,outerwear,133.0,premium,30.0,4.8,0,0,10,True,12.0,0.54,0.9534,https://setactive.co/products/set-x-parke-horseshoe-jeans-rhubarb
+29,Women's Deltapeak® Micro Textured Tee,nobull,shopify,apparel,24.0,budget,50.0,4.7,1,0,7,True,8.225,0.45,0.9298,https://nobullproject.com/products/womens-deltapeak-micro-textured-tee-black
+30,Women's Deltapeak® Micro Textured Tank,nobull,shopify,apparel,21.0,budget,50.0,4.7,1,0,7,True,8.225,0.41,0.929,https://nobullproject.com/products/womens-deltapeak-micro-textured-tank-black
+31,Men's Journey,nobull,shopify,footwear,119.0,premium,20.1,4.7,1,0,19,True,22.325,0.85,0.9221,https://nobullproject.com/products/mens-white-journey
+32,Women's Journey,nobull,shopify,footwear,119.0,premium,20.1,4.7,1,0,13,True,15.275,0.67,0.9185,https://nobullproject.com/products/womens-night-navy-journey
+33,GOAT Bundle,goat_tape,shopify,unknown,19.99,budget,28.0,5.0,1,0,8,True,10.0,0.48,0.9134,https://www.goattape.com/products/gt-bundle
+34,"Women's High-Rise Short 6""",nobull,shopify,apparel,29.0,budget,50.0,4.7,1,0,6,True,7.05,0.46,0.9049,https://nobullproject.com/products/womens-high-rise-short-6-dark-army
+35,"Men's Light Lined Short 7""",nobull,shopify,apparel,36.0,budget,50.0,4.7,1,0,6,True,7.05,0.46,0.9048,https://nobullproject.com/products/mens-light-lined-short-7-vapor
+36,BREATHE SHORTS - CANOE,set_active,shopify,activewear bottom,24.8,budget,60.0,4.7,0,0,6,True,7.05,0.34,0.9026,https://setactive.co/products/breathe-shorts-canoe
+37,BREATHE STRIKE MINI SKIRT - REF,set_active,shopify,activewear bottom,31.0,budget,50.0,4.7,0,0,6,True,7.05,0.34,0.9025,https://setactive.co/products/breathe-strike-mini-skirt-ref
+38,BREATHE HIGH-RISE LEGGINGS - SNAPPER,set_active,shopify,activewear bottom,29.6,budget,60.0,4.7,0,0,6,True,7.05,0.34,0.9025,https://setactive.co/products/breathe-high-rise-leggings-snapper
+39,SPORTBODY® SPORTY DUO STRIPE SHORTS - LAKE,set_active,shopify,activewear bottom,33.5,budget,50.0,4.7,0,0,6,True,7.05,0.34,0.9025,https://setactive.co/products/sportbody-sporty-duo-stripe-shorts-lake
+40,Super Stretchy Wholesale,goat_tape,shopify,bulk,112.0,premium,0.0,5.0,1,0,32,True,25.0,1.0,0.8888,https://www.goattape.com/products/super-stretchy-wholesale
+41,LIGHTWEIGHT SWEATS CLASSIC VINTAGE SWEAT SHORTS - ONYX,set_active,shopify,sweats bottom,24.0,budget,60.0,4.7,0,0,5,True,5.875,0.39,0.8786,https://setactive.co/products/lightweight-sweats-classic-sweat-shorts-onyx
+42,SPORTBODY® (BLOOPERS) SPORTY PIPE LEGGINGS - LOTUS,set_active,shopify,activewear bottom,24.0,budget,60.0,4.7,0,0,5,True,5.875,0.31,0.877,https://setactive.co/products/sportbody-bloopers-sporty-pipe-leggings-lotus
+43,SCULPTFLEX® POWER SHORTS - GENESIS,set_active,shopify,activewear bottom,23.6,budget,60.0,4.7,0,0,5,True,5.875,0.27,0.8762,https://setactive.co/products/sculptflex-power-shorts-genesis
+44,Foundation Short | 7-inch,ten_thousand,shopify,foundation short,88.0,premium,0.0,4.8,0,0,30,True,24.0,1.0,0.8731,https://www.tenthousand.cc/products/foundation-short
+45,Interval Long Sleeve Shirt,ten_thousand,shopify,interval shirt,88.0,premium,0.0,4.8,0,0,48,True,24.0,1.0,0.8731,https://www.tenthousand.cc/products/interval-long-sleeve-shirt
+46,Rep Short | 7-inch,ten_thousand,shopify,rep short,98.0,premium,0.0,4.8,0,0,54,True,24.0,1.0,0.873,https://www.tenthousand.cc/products/rep-short
+47,Session Short | 7-inch,ten_thousand,shopify,session short 20,98.0,premium,0.0,4.8,0,0,108,True,24.0,1.0,0.873,https://www.tenthousand.cc/products/session-short
+48,Interval Short | 5-inch,ten_thousand,shopify,interval short,98.0,premium,0.0,4.8,0,0,239,True,24.0,1.0,0.873,https://www.tenthousand.cc/products/interval-short-5-inch
+49,Interval Short | 7-inch,ten_thousand,shopify,interval short,98.0,premium,0.0,4.8,0,0,250,True,24.0,1.0,0.873,https://www.tenthousand.cc/products/interval-short
+50,Tactical Short | 7-inch,ten_thousand,shopify,tactical short,108.0,premium,0.0,4.8,0,0,117,True,24.0,1.0,0.8729,https://www.tenthousand.cc/products/tactical-short

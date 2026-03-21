@@ -1,0 +1,107 @@
+﻿title,shop_name,source,category_clean,price,price_tier,rating_filled,nb_reviews,composite_score,discount_pct,cluster_kmeans,cluster_dbscan,is_anomaly,pca_x,pca_y
+Women's Breezer Insoles - Natural Grey,allbirds,shopify,accessories,7.0,budget,4.4,0,0.952,53.3,3,-1,1,0.8434766587394641,-2.842553916074469
+Women's Dasher Insoles - Natural Charcoal,allbirds,shopify,accessories,7.0,budget,4.4,0,0.952,53.3,3,-1,1,0.8434766587394641,-2.842553916074469
+American Defender Short Velcro 3.0 (Patriot),born_primitive,shopify,mens shorts,36.0,budget,4.7,0,0.946,40.0,1,-1,1,1.3741212078218226,-1.2070652933573758
+American Defender Short Tie 3.0 (Woodland),born_primitive,shopify,mens shorts,36.0,budget,4.7,0,0.946,40.0,1,-1,1,0.882717602313403,-1.1311347401630656
+Women's Allday 365 (Ripstop),nobull,shopify,footwear,99.0,premium,4.7,0,0.928,34.0,2,-1,1,2.1636059351764785,-0.812319457928673
+Women's Allday Knit,nobull,shopify,footwear,99.0,premium,4.7,0,0.928,34.0,2,-1,1,2.1636059351764785,-0.812319457928673
+Women's Outwork,nobull,shopify,footwear,99.0,premium,4.7,0,0.9268,33.6,2,-1,1,2.1634396909535347,-0.8001443507273849
+Women's Op Assault Pant (Coyote Brown),born_primitive,shopify,womens tactical bottoms,145.0,premium,4.8,0,0.9258,30.6,2,-1,1,4.1393998596533645,-0.4740299138621029
+SET X PARKE HORSESHOE JEANS - RHUBARB,set_active,shopify,outerwear,133.0,premium,4.8,0,0.924,30.0,2,-1,1,1.2560056333427347,0.06185115771257009
+Woodsman Stretchy Flannel (Rancho),born_primitive,shopify,unisex top,33.0,budget,4.7,0,0.9236,49.2,1,-1,1,0.9034662778217297,-1.4035408401790965
+FLEX Stretchy Mid-Rise Boot Cut Jean (Black),born_primitive,shopify,womens jeans,54.0,mid_range,4.4,0,0.922,40.0,3,-1,1,2.8537477198996863,-2.5340805364457806
+Inspire Legging (Gunmetal),born_primitive,shopify,womens leggings,46.8,mid_range,4.4,0,0.922,40.0,3,-1,1,1.735839550101895,-2.325265304241783
+Training Pant (Gunmetal),born_primitive,shopify,mens pants,42.0,budget,4.7,0,0.916,30.0,2,-1,1,2.878494640845123,-1.2126103959505812
+Men's Journey,nobull,shopify,footwear,119.0,premium,4.7,0,0.8863,20.1,2,-1,1,3.373754687660536,-0.542042754979723
+Women's Journey,nobull,shopify,footwear,119.0,premium,4.7,0,0.8863,20.1,2,-1,1,1.9815669649516237,-0.24239246512173596
+GOAT Bundle,goat_tape,shopify,unknown,19.99,budget,5.0,0,0.884,28.0,1,-1,1,0.46220547035910725,0.33307219861155823
+Women's Tundra Jacket (Black),born_primitive,shopify,womens outdoor tops,92.0,premium,4.8,0,0.884,59.8,1,-1,1,0.6774118587826108,-0.9415166400930206
+Women's Tundra Jacket 2.0 (OD Green),born_primitive,shopify,womens outdoor tops,137.0,premium,4.8,0,0.8546,40.2,1,-1,1,0.8255054852308339,-0.09996372005861298
+Women's Tundra Jacket Light 2.0 (OD Green),born_primitive,shopify,womens outdoor tops,113.0,premium,4.8,0,0.8546,40.2,1,-1,1,0.7421777020988478,-0.23061580921662997
+Men's Barrier Jacket (Wolf Grey),born_primitive,shopify,mens outdoor tops,209.4,premium,4.8,0,0.854,40.0,1,-1,1,1.0767945089008533,0.30025763583538234
+Super Stretchy Wholesale,goat_tape,shopify,bulk,112.0,premium,5.0,0,0.85,0.0,2,-1,1,4.152957484454544,0.9836377079821433
+Ridgeline Tee 165 (Wolf Grey),born_primitive,shopify,mens base layer tops,48.0,mid_range,4.4,0,0.8432,30.4,3,-1,1,0.8436083194995708,-1.8358793699205909
+Limitless Legging (BP Navy),born_primitive,shopify,womens leggings,48.0,mid_range,4.4,0,0.837,20.0,3,-1,1,0.5709843037966775,-1.4910587187508784
+247 Arc-2 Trainer - Flat White,represent,shopify,footwear,190.0,premium,4.8,0,0.834,0.0,2,-1,1,3.1986517905047465,0.8986544261321081
+247 Arc-1 Runner - Flat White,represent,shopify,footwear,230.0,premium,4.8,0,0.834,0.0,2,-1,1,3.3375314290580564,1.1164079080621363
+Men's Patriot 1 Mid-Assault Boot (Desert Tan),born_primitive,shopify,mens shoes,199.0,premium,4.8,0,0.834,0.0,2,-1,1,2.8934292044400154,1.0428052153178635
+Free Returns + Package Protection,cuts_clothing,shopify,returnpackageprotection,1.98,budget,4.7,0,0.826,0.0,2,-1,1,2.4540344117254187,-0.5033273146861501
+Men's Outwork High-Top,nobull,shopify,footwear,170.0,premium,4.7,0,0.826,0.0,2,-1,1,3.173919750481761,0.40433998624153195
+Shipping Protection,ten_thousand,shopify,delivery guarantee,2.98,budget,4.7,0,0.826,0.0,2,-1,1,2.4575064026892517,-0.49788347763789936
+Physical Gift Card,born_primitive,shopify,gift cards,10.0,budget,4.7,0,0.826,0.0,2,-1,1,1.0896920565464456,-0.1600174517011924
+Men's Outwork Edge High-Top,nobull,shopify,footwear,170.0,premium,4.7,0,0.826,0.0,2,-1,1,2.587006274868352,0.5232060544927718
+Men's Drive Ripstop,nobull,shopify,footwear,150.0,premium,4.7,0,0.826,0.0,2,-1,1,3.022640576736174,0.3503751987126238
+Public Rec Men's Dealmaker Chino+ Short,nobull,shopify,apparel,88.0,premium,4.7,0,0.826,0.0,2,-1,1,1.2786679972564687,0.31951379149846837
+A—L Boxer,ten_thousand,shopify,al boxer,38.0,budget,4.7,0,0.826,0.0,2,-1,1,3.684753638636619,-0.47808404889535755
+Public Rec Men's Gamechanger 5-Pocket Short,nobull,shopify,apparel,88.0,premium,4.7,0,0.826,0.0,2,-1,1,1.4015188986335738,0.3005311531998908
+Men's Leather Golf Shoe,nobull,shopify,footwear,170.0,premium,4.7,0,0.826,0.0,2,-1,1,2.60067679050441,0.535182492871948
+Men's Drive 2,nobull,shopify,footwear,150.0,premium,4.7,0,0.826,0.0,2,-1,1,2.7906092896180223,0.40031691368895495
+Men's Ripstop Golf Shoe,nobull,shopify,footwear,150.0,premium,4.7,0,0.826,0.0,2,-1,1,2.7906092896180223,0.40031691368895495
+Email Gift Card,born_primitive,shopify,gift cards,10.0,budget,4.7,0,0.826,0.0,2,-1,1,0.6256294823101415,-0.060134021748529956
+Super Stretchy,goat_tape,shopify,crossfit,9.99,budget,5.0,0,0.825,0.0,2,-1,1,1.1482127052573634,1.0027400383303517
+2 x Initial Oversized T-Shirt - Flat White & Black,represent,shopify,bundle,153.0,premium,4.8,0,0.804,15.0,2,-1,1,0.982740789519768,0.722450674477394
+2 x Initial T-Shirt - Flat White,represent,shopify,bundle,153.0,premium,4.8,0,0.804,15.0,2,-1,1,0.982740789519768,0.722450674477394
+2 x Initial Boxy T-Shirt - Flat White & Black,represent,shopify,bundle,153.0,premium,4.8,0,0.804,15.0,2,-1,1,0.982740789519768,0.722450674477394
+Men's Featherbed Insole - Dasher NZ - Medium Grey,allbirds,shopify,accessories,20.0,budget,4.4,0,0.802,0.0,3,-1,1,1.3352642409182933,-1.2350789657307937
+Digital Gift Card,allbirds,shopify,gift cards,15.0,budget,4.4,0,0.802,0.0,3,-1,1,0.4028966645387172,-1.0813448066006133
+Dan-O’s Classic Logo Tee,danosseasoning,woocommerce,merchandise,12.47,budget,4.7,0,0.801,50.0,1,-1,1,-1.433295756204573,-1.119100709613406
+Scary Sticky Wholesale,goat_tape,shopify,bulk,164.0,premium,5.0,0,0.8,0.0,2,-1,1,1.441973398963009,1.8933661228260124
+AO Button Up | Capers Signature-Fit PYCA Pro®,cuts_clothing,shopify,shirts,48.0,mid_range,4.4,0,0.7769,33.3,3,-1,1,-0.9301503410842329,-1.6103170846684542
+Dan-O’s Seasoning White Logo Athletic Tee,danosseasoning,woocommerce,merchandise,12.47,budget,4.7,0,0.776,50.0,1,-1,1,-1.6653270433227252,-1.0691589946370748
+Recover Short | 7-inch,ten_thousand,shopify,recover shorts,39.0,budget,4.7,0,0.776,50.0,1,-1,1,3.7090061574684383,-1.9945286120081427
+FLEX Recon Mid-Rise Skinny Jean (Dark Wash),born_primitive,shopify,womens tactical bottoms,30.0,budget,4.7,0,0.776,66.7,1,-1,1,3.097785459488442,-2.4329678028449457
+SET X PARKE COTTON V-NECK SWEATER - CREAM,set_active,shopify,outerwear,122.5,premium,4.8,0,0.749,30.0,1,-1,1,-0.5483553271858752,0.37858323851472253
+SET X PARKE COTTON CREWNECK - CREAM,set_active,shopify,outerwear,122.5,premium,4.8,0,0.749,30.0,1,-1,1,-0.6712062285629801,0.3975658768133001
+R and R Waffle Lounge Pant (Stucco),born_primitive,shopify,womens pant,36.0,budget,4.7,0,0.746,40.0,2,-1,1,3.1075206033899336,-1.5876163748694476
+Pillow Puffer - Jet Black,represent,shopify,outerwear,540.0,premium,4.8,0,0.734,0.0,2,-1,1,1.9623084964953628,3.3554661607130494
+Overdrive Suede Jacket - Beige,represent,shopify,outerwear,1370.0,premium,4.8,0,0.734,0.0,2,-1,1,4.721210095099442,7.892833549059713
+NOBULL Boonie Hat,nobull,shopify,accessories,25.0,budget,4.7,0,0.7118,28.6,0,-1,1,-1.507866161096294,-0.36856211945214773
+Scary Sticky,goat_tape,shopify,combat sports,18.99,budget,5.0,0,0.7,0.0,2,-1,1,-0.02534254923932419,1.3128382752374548
+Custom Tape - Scary Sticky,goat_tape,shopify,custom tape,1071.0,premium,5.0,0,0.7,0.0,2,-1,1,2.521568552228426,7.210653033054878
+Be U Trucker Hat,nobull,shopify,accessories,20.0,budget,4.7,0,0.6868,28.6,1,-1,1,-1.2658537975251902,-0.4217701429113802
+NOBULL Performance Hat,nobull,shopify,accessories,28.0,budget,4.7,0,0.686,20.0,0,-1,1,-1.1324717348667748,-0.14741371837542996
+247 Boxers - Black,represent,shopify,accessories,40.0,budget,4.8,0,0.684,0.0,0,-1,1,-0.9808078662640037,0.8488462468106496
+Recycled Belt Bag - Auburn,allbirds,shopify,accessories,25.0,budget,4.4,0,0.6628,28.6,3,-1,1,-1.5358145571489326,-1.458764985026444
+Running Hat,nobull,shopify,accessories,28.0,budget,4.7,0,0.661,20.0,0,-1,1,-1.3645030219849268,-0.09747200339909877
+Recycled Shoe Bag - Thunder Green,allbirds,shopify,accessories,15.0,budget,4.4,0,0.652,25.0,3,-1,1,-1.6948815661708598,-1.3846447523987788
+Thumb Strips,goat_tape,shopify,thumb,9.99,budget,5.0,0,0.65,0.0,0,-1,1,-0.6613626385593969,1.3872678614909146
+Retail Display,goat_tape,shopify,retaildisplay,4.99,budget,5.0,0,0.65,0.0,0,-1,1,-1.6615298043953999,1.5119097826382815
+Thumb Strips Wholesale,goat_tape,shopify,bulk,132.0,premium,5.0,0,0.65,0.0,2,-1,1,-0.11489411968505774,2.032487781449406
+Recycled Tote Bag - Rugged Beige,allbirds,shopify,accessories,35.0,budget,4.4,0,0.6436,22.2,3,-1,1,-1.626605456454812,-1.1905422610247465
+Michael Zip Boot Suede - Brown,represent,shopify,footwear,410.0,premium,4.8,0,0.634,0.0,2,-1,1,3.257466593677411,2.2484027473944947
+Michael Zip Boot Cowhide - Flat White Black,represent,shopify,footwear,410.0,premium,4.8,0,0.634,0.0,2,-1,1,3.257466593677411,2.2484027473944947
+Waterproof Shell Jacket,ten_thousand,shopify,tactical waterproof shell jacket,278.0,premium,4.8,0,0.634,0.0,2,-1,1,4.118441502207553,1.2827988948852822
+Waterproof Hoodie,ten_thousand,shopify,tactical waterproof hoodie,198.0,premium,4.8,0,0.634,0.0,2,-1,1,3.840682225100933,0.847291931025226
+Michael Zip Boot Leather - Black,represent,shopify,footwear,410.0,premium,4.8,0,0.634,0.0,2,-1,1,3.257466593677411,2.2484027473944947
+Coaches Jacket,ten_thousand,shopify,c14 insulated coaches jacket,218.0,premium,4.8,0,0.634,0.0,2,-1,1,2.500075626636507,1.2603770132847034
+Women's Outwork Edge High-Top,nobull,shopify,footwear,170.0,premium,4.7,0,0.626,0.0,2,-1,1,1.6588811263957437,0.7229729143980965
+Public Rec Men's Gamechanger Rec Short,nobull,shopify,apparel,78.0,mid_range,4.7,0,0.626,0.0,2,-1,1,3.359570702953625,-0.160447137012667
+Build Your NOBULL Outfit,nobull,shopify,product,209.0,premium,4.7,0,0.626,0.0,0,-1,1,-1.0037571870686608,1.5226067006166724
+BP Seamless Cheeky 2-Pack (Black/Nude),born_primitive,shopify,bottom,18.0,budget,4.7,0,0.626,0.0,2,-1,1,3.369612016605754,-0.5489955132632167
+Kinesiology+,goat_tape,shopify,all-day support,9.99,budget,5.0,0,0.625,0.0,0,-1,1,-1.6394286814562629,1.5533844319769492
+Kinesiology+ Wholesale,goat_tape,shopify,all-day support,132.0,premium,5.0,0,0.625,0.0,0,-1,1,-1.2158110639590287,2.217586990234018
+Baby Food Bundle,nutribullet,woocommerce,baby,99.99,premium,4.8,0,0.623,13.0,0,-1,1,-1.8300020376358261,1.0015192464548932
+Woodsman Stretchy Denim (Vintage Wash),born_primitive,shopify,unisex top,56.0,mid_range,4.4,0,0.612,20.0,3,-1,1,0.8670618974136917,-1.4757758863010897
+"11 Bottle Premium Blends Combo – Adob-O, Original, Cajun, Chili Lime, Chipotle, Crunchy, Italian-O, Preem-O, SEA-soning, Spicy, &#038; Tac-O",danosseasoning,woocommerce,combos,65.89,mid_range,4.4,0,0.612,20.0,0,-1,1,-1.9890737411644872,-0.8697910791419484
+247 Duffle Gym Bag - Jet Black,represent,shopify,accessories,270.0,premium,4.8,0,0.609,0.0,2,-1,1,-0.1501677451903818,2.1391371087640785
+Distressed Leather Tote Bag - Brown,represent,shopify,accessories,515.0,premium,4.8,0,0.609,0.0,2,-1,1,0.08621553406311795,3.567790377078389
+NOBULL Nutrition Starter Pack,nobull,shopify,product,220.5,premium,4.7,0,0.601,0.0,0,-1,1,-0.5816060712172116,1.5402393501549987
+TT Resistance Bands,ten_thousand,shopify,resistance bands,84.0,mid_range,4.4,0,0.577,0.0,0,-1,1,-1.3428535522232883,-0.2670584342875395
+AO Jogger 3-Pack,cuts_clothing,shopify,bundles,118.0,premium,4.8,0,0.559,66.7,1,-1,1,-1.3872945557796956,-0.6046294185933855
+Cowhide Trucker Jacket - Multi,represent,shopify,outerwear,1930.0,premium,4.8,0,0.559,0.0,2,-1,1,7.146234573890173,10.852715629267209
+Rodeo Leather Jacket - Jet Black,represent,shopify,outerwear,1265.0,premium,4.8,0,0.559,0.0,2,-1,1,4.837360582941393,7.23256399218049
+Varsity Bomber - Jet Black,represent,shopify,outerwear,535.0,premium,4.8,0,0.559,0.0,2,-1,1,2.3028071793434837,3.258562946957474
+AO Elongated Tee 10-Pack,cuts_clothing,shopify,bundles,216.0,premium,4.8,0,0.559,60.0,1,-1,1,-1.049824032058396,0.1327996577567626
+AO SplitTee 10-Pack,cuts_clothing,shopify,bundles,216.0,premium,4.8,0,0.559,60.0,1,-1,1,-1.049824032058396,0.1327996577567626
+AO V-neck Tee 10-Pack,cuts_clothing,shopify,bundles,216.0,premium,4.8,0,0.559,60.0,1,-1,1,-1.049824032058396,0.1327996577567626
+SET X PARKE SAIL GRAPHIC MOCKNECK - OVERCAST,set_active,shopify,sweats top,94.5,premium,4.8,0,0.549,30.0,1,-1,1,-0.5227201727960873,0.20717316286512522
+Represent X Belstaff Enduro Jacket - Shadow,represent,shopify,outerwear,680.0,premium,4.8,0,0.534,0.0,2,-1,1,2.448387231431948,4.1176033474681475
+Relaxed Overcoat - Jet Black,represent,shopify,outerwear,550.0,premium,4.8,0,0.534,0.0,2,-1,1,2.2427302088878998,3.3719392545984004
+Raglan Varsity Jacket - Stone,represent,shopify,outerwear,495.0,premium,4.8,0,0.534,0.0,2,-1,1,0.9461125934831542,3.2433719616318104
+Overtime Tee 5-Pack,cuts_clothing,shopify,bundles,58.0,mid_range,4.4,0,0.527,82.1,1,-1,1,-1.7675563946550206,-2.850591035710746
+Overtime Tee 3-Pack,cuts_clothing,shopify,bundles,58.0,mid_range,4.4,0,0.527,82.1,1,-1,1,-1.7675563946550206,-2.850591035710746
+Hyperloop Hoodie 3-Pack,cuts_clothing,shopify,bundles,354.0,premium,4.8,0,0.409,0.0,0,-1,1,-0.59562591249106,2.7103152506086032
+HTN Canvas Bag - Tan,represent,shopify,accessories,335.0,premium,4.8,0,0.409,0.0,0,-1,1,-0.5387428394267775,2.587899708393262
+247 x 47 Logo Trucker Cap - Jet Black,represent,shopify,accessories,90.0,premium,4.8,0,0.409,0.0,0,-1,1,-0.5294243159260674,1.121281163481796
+Hyperloop Jogger 5-Pack,cuts_clothing,shopify,bundles,440.0,premium,4.8,0,0.409,0.0,2,-1,1,-0.297034689601443,3.178485236758164
+Leather Tote Bag - Textured Black,represent,shopify,accessories,405.0,premium,4.8,0,0.409,0.0,2,-1,1,-0.05000166920427487,2.9310030251736565

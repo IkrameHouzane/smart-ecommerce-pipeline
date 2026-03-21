@@ -1,0 +1,364 @@
+﻿# PIPELINE DEFINITION
+# Name: smart-ecommerce-intelligence-pipeline
+# Description: Pipeline ML eCommerce: preprocess -> features -> score -> train -> cluster -> association rules
+components:
+  comp-association-rules-op:
+    executorLabel: exec-association-rules-op
+  comp-cluster-dbscan-op:
+    executorLabel: exec-cluster-dbscan-op
+  comp-cluster-kmeans-op:
+    executorLabel: exec-cluster-kmeans-op
+  comp-features-op:
+    executorLabel: exec-features-op
+  comp-preprocess-op:
+    executorLabel: exec-preprocess-op
+  comp-score-op:
+    executorLabel: exec-score-op
+  comp-train-classifier-op:
+    executorLabel: exec-train-classifier-op
+  comp-train-xgboost-op:
+    executorLabel: exec-train-xgboost-op
+deploymentSpec:
+  executors:
+    exec-association-rules-op:
+      container:
+        args:
+        - --executor_input
+        - '{{$}}'
+        - --function_to_execute
+        - association_rules_op
+        command:
+        - sh
+        - -c
+        - "\nif ! [ -x \"$(command -v pip)\" ]; then\n    python3 -m ensurepip ||\
+          \ python3 -m ensurepip --user || apt-get install python3-pip\nfi\n\nPIP_DISABLE_PIP_VERSION_CHECK=1\
+          \ python3 -m pip install --quiet --no-warn-script-location 'kfp==2.16.0'\
+          \ '--no-deps' 'typing-extensions>=3.7.4,<5; python_version<\"3.9\"' && \"\
+          $0\" \"$@\"\n"
+        - sh
+        - -ec
+        - 'program_path=$(mktemp -d)
+
+
+          printf "%s" "$0" > "$program_path/ephemeral_component.py"
+
+          _KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         "$program_path/ephemeral_component.py"                         "$@"
+
+          '
+        - "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import\
+          \ *\n\ndef association_rules_op():\n    \"\"\"Apriori \u2014 r\xE8gles d'association.\"\
+          \"\"\n    import sys\n    sys.path.append(\"/app\")\n    from ml.association_rules\
+          \ import run_association_rules\n    run_association_rules(\n        input_path=\"\
+          /app/data/scored_products.parquet\",\n        output_dir=\"/app/analytics\"\
+          \n    )\n\n"
+        image: smart-ecommerce-pipeline:local
+        imagePullPolicy: Never
+    exec-cluster-dbscan-op:
+      container:
+        args:
+        - --executor_input
+        - '{{$}}'
+        - --function_to_execute
+        - cluster_dbscan_op
+        command:
+        - sh
+        - -c
+        - "\nif ! [ -x \"$(command -v pip)\" ]; then\n    python3 -m ensurepip ||\
+          \ python3 -m ensurepip --user || apt-get install python3-pip\nfi\n\nPIP_DISABLE_PIP_VERSION_CHECK=1\
+          \ python3 -m pip install --quiet --no-warn-script-location 'kfp==2.16.0'\
+          \ '--no-deps' 'typing-extensions>=3.7.4,<5; python_version<\"3.9\"' && \"\
+          $0\" \"$@\"\n"
+        - sh
+        - -ec
+        - 'program_path=$(mktemp -d)
+
+
+          printf "%s" "$0" > "$program_path/ephemeral_component.py"
+
+          _KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         "$program_path/ephemeral_component.py"                         "$@"
+
+          '
+        - "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import\
+          \ *\n\ndef cluster_dbscan_op():\n    \"\"\"DBSCAN \u2014 d\xE9tection d'anomalies.\"\
+          \"\"\n    import sys\n    sys.path.append(\"/app\")\n    print(\"DBSCAN\
+          \ run via cluster_kmeans_op\")\n\n"
+        image: smart-ecommerce-pipeline:local
+        imagePullPolicy: Never
+    exec-cluster-kmeans-op:
+      container:
+        args:
+        - --executor_input
+        - '{{$}}'
+        - --function_to_execute
+        - cluster_kmeans_op
+        command:
+        - sh
+        - -c
+        - "\nif ! [ -x \"$(command -v pip)\" ]; then\n    python3 -m ensurepip ||\
+          \ python3 -m ensurepip --user || apt-get install python3-pip\nfi\n\nPIP_DISABLE_PIP_VERSION_CHECK=1\
+          \ python3 -m pip install --quiet --no-warn-script-location 'kfp==2.16.0'\
+          \ '--no-deps' 'typing-extensions>=3.7.4,<5; python_version<\"3.9\"' && \"\
+          $0\" \"$@\"\n"
+        - sh
+        - -ec
+        - 'program_path=$(mktemp -d)
+
+
+          printf "%s" "$0" > "$program_path/ephemeral_component.py"
+
+          _KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         "$program_path/ephemeral_component.py"                         "$@"
+
+          '
+        - "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import\
+          \ *\n\ndef cluster_kmeans_op():\n    \"\"\"KMeans K=4 + PCA 2D.\"\"\"\n\
+          \    import sys\n    sys.path.append(\"/app\")\n    from ml.clustering import\
+          \ run_clustering\n    run_clustering(\n        input_path=\"/app/data/scored_products.parquet\"\
+          ,\n        output_dir=\"/app/analytics\"\n    )\n\n"
+        image: smart-ecommerce-pipeline:local
+        imagePullPolicy: Never
+    exec-features-op:
+      container:
+        args:
+        - --executor_input
+        - '{{$}}'
+        - --function_to_execute
+        - features_op
+        command:
+        - sh
+        - -c
+        - "\nif ! [ -x \"$(command -v pip)\" ]; then\n    python3 -m ensurepip ||\
+          \ python3 -m ensurepip --user || apt-get install python3-pip\nfi\n\nPIP_DISABLE_PIP_VERSION_CHECK=1\
+          \ python3 -m pip install --quiet --no-warn-script-location 'kfp==2.16.0'\
+          \ '--no-deps' 'typing-extensions>=3.7.4,<5; python_version<\"3.9\"' && \"\
+          $0\" \"$@\"\n"
+        - sh
+        - -ec
+        - 'program_path=$(mktemp -d)
+
+
+          printf "%s" "$0" > "$program_path/ephemeral_component.py"
+
+          _KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         "$program_path/ephemeral_component.py"                         "$@"
+
+          '
+        - "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import\
+          \ *\n\ndef features_op():\n    \"\"\"Feature engineering et normalisation.\"\
+          \"\"\n    import sys\n    sys.path.append(\"/app\")\n    from data_processing.features\
+          \ import engineer_features\n    engineer_features(\n        input_path=\"\
+          /app/data/clean_products.parquet\",\n        output_path=\"/app/data/featured_products.parquet\"\
+          \n    )\n\n"
+        image: smart-ecommerce-pipeline:local
+        imagePullPolicy: Never
+    exec-preprocess-op:
+      container:
+        args:
+        - --executor_input
+        - '{{$}}'
+        - --function_to_execute
+        - preprocess_op
+        command:
+        - sh
+        - -c
+        - "\nif ! [ -x \"$(command -v pip)\" ]; then\n    python3 -m ensurepip ||\
+          \ python3 -m ensurepip --user || apt-get install python3-pip\nfi\n\nPIP_DISABLE_PIP_VERSION_CHECK=1\
+          \ python3 -m pip install --quiet --no-warn-script-location 'kfp==2.16.0'\
+          \ '--no-deps' 'typing-extensions>=3.7.4,<5; python_version<\"3.9\"' && \"\
+          $0\" \"$@\"\n"
+        - sh
+        - -ec
+        - 'program_path=$(mktemp -d)
+
+
+          printf "%s" "$0" > "$program_path/ephemeral_component.py"
+
+          _KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         "$program_path/ephemeral_component.py"                         "$@"
+
+          '
+        - "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import\
+          \ *\n\ndef preprocess_op():\n    \"\"\"Nettoyage et validation des donn\xE9\
+          es brutes.\"\"\"\n    import sys\n    sys.path.append(\"/app\")\n    from\
+          \ data_processing.preprocess import preprocess\n    preprocess(\n      \
+          \  input_path=\"/app/data/FINAL_sport_fitness_products.csv\",\n        output_path=\"\
+          /app/data/clean_products.parquet\"\n    )\n\n"
+        image: smart-ecommerce-pipeline:local
+        imagePullPolicy: Never
+    exec-score-op:
+      container:
+        args:
+        - --executor_input
+        - '{{$}}'
+        - --function_to_execute
+        - score_op
+        command:
+        - sh
+        - -c
+        - "\nif ! [ -x \"$(command -v pip)\" ]; then\n    python3 -m ensurepip ||\
+          \ python3 -m ensurepip --user || apt-get install python3-pip\nfi\n\nPIP_DISABLE_PIP_VERSION_CHECK=1\
+          \ python3 -m pip install --quiet --no-warn-script-location 'kfp==2.16.0'\
+          \ '--no-deps' 'typing-extensions>=3.7.4,<5; python_version<\"3.9\"' && \"\
+          $0\" \"$@\"\n"
+        - sh
+        - -ec
+        - 'program_path=$(mktemp -d)
+
+
+          printf "%s" "$0" > "$program_path/ephemeral_component.py"
+
+          _KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         "$program_path/ephemeral_component.py"                         "$@"
+
+          '
+        - "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import\
+          \ *\n\ndef score_op():\n    \"\"\"Scoring Top-K et classement des shops.\"\
+          \"\"\n    import sys\n    sys.path.append(\"/app\")\n    from data_processing.scoring\
+          \ import scoring_topk\n    scoring_topk(\n        input_path=\"/app/data/featured_products.parquet\"\
+          ,\n        output_full=\"/app/data/scored_products.parquet\",\n        output_topk=\"\
+          /app/data/top_k_products.csv\"\n    )\n\n"
+        image: smart-ecommerce-pipeline:local
+        imagePullPolicy: Never
+    exec-train-classifier-op:
+      container:
+        args:
+        - --executor_input
+        - '{{$}}'
+        - --function_to_execute
+        - train_classifier_op
+        command:
+        - sh
+        - -c
+        - "\nif ! [ -x \"$(command -v pip)\" ]; then\n    python3 -m ensurepip ||\
+          \ python3 -m ensurepip --user || apt-get install python3-pip\nfi\n\nPIP_DISABLE_PIP_VERSION_CHECK=1\
+          \ python3 -m pip install --quiet --no-warn-script-location 'kfp==2.16.0'\
+          \ '--no-deps' 'typing-extensions>=3.7.4,<5; python_version<\"3.9\"' && \"\
+          $0\" \"$@\"\n"
+        - sh
+        - -ec
+        - 'program_path=$(mktemp -d)
+
+
+          printf "%s" "$0" > "$program_path/ephemeral_component.py"
+
+          _KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         "$program_path/ephemeral_component.py"                         "$@"
+
+          '
+        - "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import\
+          \ *\n\ndef train_classifier_op():\n    \"\"\"Random Forest + XGBoost \u2014\
+          \ classification price_tier.\"\"\"\n    import sys\n    sys.path.append(\"\
+          /app\")\n    from ml.classifier import run_classifier\n    run_classifier(\n\
+          \        input_path=\"/app/data/scored_products.parquet\",\n        output_dir=\"\
+          /app/analytics\"\n    )\n\n"
+        image: smart-ecommerce-pipeline:local
+        imagePullPolicy: Never
+    exec-train-xgboost-op:
+      container:
+        args:
+        - --executor_input
+        - '{{$}}'
+        - --function_to_execute
+        - train_xgboost_op
+        command:
+        - sh
+        - -c
+        - "\nif ! [ -x \"$(command -v pip)\" ]; then\n    python3 -m ensurepip ||\
+          \ python3 -m ensurepip --user || apt-get install python3-pip\nfi\n\nPIP_DISABLE_PIP_VERSION_CHECK=1\
+          \ python3 -m pip install --quiet --no-warn-script-location 'kfp==2.16.0'\
+          \ '--no-deps' 'typing-extensions>=3.7.4,<5; python_version<\"3.9\"' && \"\
+          $0\" \"$@\"\n"
+        - sh
+        - -ec
+        - 'program_path=$(mktemp -d)
+
+
+          printf "%s" "$0" > "$program_path/ephemeral_component.py"
+
+          _KFP_RUNTIME=true python3 -m kfp.dsl.executor_main                         --component_module_path                         "$program_path/ephemeral_component.py"                         "$@"
+
+          '
+        - "\nimport kfp\nfrom kfp import dsl\nfrom kfp.dsl import *\nfrom typing import\
+          \ *\n\ndef train_xgboost_op():\n    \"\"\"XGBoost seul \u2014 pour le noeud\
+          \ s\xE9par\xE9 dans le graphe.\"\"\"\n    import sys\n    sys.path.append(\"\
+          /app\")\n    # XGBoost est d\xE9j\xE0 inclus dans train_classifier_op\n\
+          \    # Ce composant existe pour correspondre au graphe des coll\xE8gues\n\
+          \    print(\"XGBoost run via train_classifier_op\")\n\n"
+        image: smart-ecommerce-pipeline:local
+        imagePullPolicy: Never
+pipelineInfo:
+  description: 'Pipeline ML eCommerce: preprocess -> features -> score -> train ->
+    cluster -> association rules'
+  name: smart-ecommerce-intelligence-pipeline
+root:
+  dag:
+    tasks:
+      association-rules-op:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-association-rules-op
+        dependentTasks:
+        - features-op
+        taskInfo:
+          name: association-rules-op
+      cluster-dbscan-op:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-cluster-dbscan-op
+        dependentTasks:
+        - features-op
+        taskInfo:
+          name: cluster-dbscan-op
+      cluster-kmeans-op:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-cluster-kmeans-op
+        dependentTasks:
+        - features-op
+        taskInfo:
+          name: cluster-kmeans-op
+      features-op:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-features-op
+        dependentTasks:
+        - preprocess-op
+        taskInfo:
+          name: features-op
+      preprocess-op:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-preprocess-op
+        taskInfo:
+          name: preprocess-op
+      score-op:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-score-op
+        dependentTasks:
+        - features-op
+        taskInfo:
+          name: score-op
+      train-classifier-op:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-train-classifier-op
+        dependentTasks:
+        - score-op
+        taskInfo:
+          name: train-classifier-op
+      train-xgboost-op:
+        cachingOptions:
+          enableCache: true
+        componentRef:
+          name: comp-train-xgboost-op
+        dependentTasks:
+        - score-op
+        taskInfo:
+          name: train-xgboost-op
+schemaVersion: 2.1.0
+sdkVersion: kfp-2.16.0
+
+
