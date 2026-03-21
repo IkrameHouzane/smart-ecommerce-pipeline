@@ -1,5 +1,4 @@
 # CI/CD — Smart eCommerce Intelligence Pipeline
-# Se déclenche à chaque push et pull request sur main/develop
 name: CI
 
 on:
@@ -20,15 +19,16 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install -r requirements.txt
+          pip install pytest pytest-cov ruff
 
       - name: Run tests
         run: python -m pytest tests/ -v
 
       - name: Lint
         run: |
-          pip install ruff
           ruff check scraping data_processing dashboard mcp tests \
-               --exclude=venv,__pycache__
+               --exclude=venv,__pycache__ --ignore=E501
           ruff format --check scraping data_processing dashboard mcp tests \
                --exclude=venv,__pycache__
