@@ -1,7 +1,8 @@
 """Page 7 — LLM Insights & Chatbot (Étape 5 de l'énoncé FST Tanger)
 
-Utilise Gemini Flash 2.0 (gratuit via Google AI Studio) — même architecture que les collègues.
-- GEMINI_API_KEY dans .env ou variable d'environnement
+Utilise OpenRouter (gratuit, sans quota) en priorité, Gemini Flash 2.0 en fallback.
+- OPENROUTER_API_KEY dans .env (prioritaire)
+- GEMINI_API_KEY dans .env (fallback)
 - Prompts structurés (pas de données brutes) — architecture responsable MCP (Étape 6)
 - Fonctionnalités : synthèses auto, analyse concurrentielle, chatbot BI, enrichissement produit
 """
@@ -13,7 +14,6 @@ import os
 
 try:
     from dotenv import load_dotenv
-
     load_dotenv()
 except ImportError:
     pass
@@ -74,7 +74,7 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 ANALYTICS = os.path.join(BASE, "..", "..", "analytics")
 DATA = os.path.join(BASE, "..", "..", "data")
 
-# ── Prompts structurés (identiques à l'architecture des collègues) ─────────────────
+# ── Prompts structurés ─────────────────────────────────────────────────────────
 EXECUTIVE_SUMMARY_PROMPT = """Tu es un analyste eCommerce senior. Basé sur les données analytiques structurées suivantes, rédige un résumé exécutif de 3 à 5 phrases pour un décideur. Sois précis et n'utilise que les faits fournis. Ne pas inventer des chiffres ou des catégories.
 Données :
 {data}
@@ -156,6 +156,32 @@ def build_context() -> dict:
     km = cls_stats["kmeans"]
     cd = km["clusters"]
     top_rule = rules.nlargest(1, "lift").iloc[0]
+
+    # ── Produits réels par segment de prix ────────────────────────────────────
+    # Injectés dans le contexte pour que le LLM réponde précisément aux
+    # questions "profil budget / mid / premium" avec de vrais noms de produits.
+    produits_par_tier = {}
+    if "price_tier" in scored.columns:
+        for tier in ["budget", "mid_range", "premium"]:
+            subset = (
+                scored[scored["price_tier"] == tier]
+                .nlargest(5, "composite_score")[
+                    ["title", "shop_name", "price", "composite_score",
+                     "discount_pct", "rating_filled"]
+                ]
+            )
+            produits_par_tier[tier] = [
+                {
+                    "titre": row["title"],
+                    "boutique": row["shop_name"],
+                    "prix": round(float(row["price"]), 2),
+                    "score": round(float(row["composite_score"]), 4),
+                    "remise_pct": round(float(row["discount_pct"]), 1),
+                    "note": round(float(row["rating_filled"]), 2),
+                }
+                for _, row in subset.iterrows()
+            ]
+
     return {
         "catalogue": {
             "n_produits": len(scored),
@@ -184,6 +210,7 @@ def build_context() -> dict:
             }
             for p in top5p
         ],
+        "produits_par_segment": produits_par_tier,
         "modeles_ml": {
             "random_forest_accuracy": round(rf_acc * 100, 1),
             "xgboost_accuracy": round(xgb_acc * 100, 1),
@@ -235,90 +262,132 @@ def log_usage(source: str, prompt_preview: str, response_preview: str):
         pass
 
 
-# ── Gemini API call ───────────────────────────────────────────────────────────
+# ── LLM API call — OpenRouter (prioritaire) + Gemini (fallback) ──────────────
 def call_gemini(prompt: str, source: str = "gemini") -> str:
-    """Call Gemini Flash. Returns clear error message if quota exceeded — no fake demo content."""
-    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("LLM_API_KEY")
-    if not api_key:
-        return "⚠️ Clé API manquante — ajoutez GEMINI_API_KEY dans votre fichier .env"
-    try:
-        from google import genai
-    except ImportError:
-        return "⚠️ Package manquant — exécutez : pip install google-genai"
+    """
+    Appelle le LLM via OpenRouter en priorité (sans quota, gratuit),
+    puis Gemini direct en fallback.
+    OpenRouter expose google/gemini-2.0-flash-lite-001 sans limite journalière.
+    """
+    or_key = os.environ.get("OPENROUTER_API_KEY")
+    gm_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("LLM_API_KEY")
 
-    models = ["gemini-2.0-flash-lite", "gemini-2.0-flash"]
-    client = genai.Client(api_key=api_key)
-    for model in models:
+    if not or_key and not gm_key:
+        return "⚠️ Clé API manquante — ajoutez OPENROUTER_API_KEY dans votre fichier .env"
+
+    # ── OpenRouter (prioritaire — pas de quota journalier) ────────────────────
+    if or_key:
+        import urllib.request
+        import json as _json
+
+        payload = _json.dumps({
+            "model": "google/gemini-2.0-flash-lite-001",
+            "messages": [{"role": "user", "content": prompt}],
+            "max_tokens": 800,
+        }).encode()
+
+        req = urllib.request.Request(
+            "https://openrouter.ai/api/v1/chat/completions",
+            data=payload,
+            headers={
+                "Authorization": f"Bearer {or_key}",
+                "Content-Type": "application/json",
+                "HTTP-Referer": "http://localhost:8501",
+                "X-Title": "Smart eCommerce Dashboard",
+            },
+            method="POST",
+        )
         try:
-            response = client.models.generate_content(model=model, contents=prompt)
-            out = getattr(response, "text", "") or str(response)
-            log_usage(source, prompt[:200], out)
-            return out
+            with urllib.request.urlopen(req, timeout=30) as r:
+                data = _json.loads(r.read())
+                out = data["choices"][0]["message"]["content"]
+                log_usage(source, prompt[:200], out)
+                return out
         except Exception as e:
-            err_str = str(e)
-            if (
-                "429" in err_str
-                or "RESOURCE_EXHAUSTED" in err_str
-                or "limit: 0" in err_str
-            ):
-                import time
+            log_usage(f"{source}_or_error", prompt[:200], str(e))
+            # Si OpenRouter échoue et pas de clé Gemini → retourne l'erreur
+            if not gm_key:
+                return f"⚠️ Erreur OpenRouter : {str(e)[:120]}"
+            # Sinon on tente Gemini en fallback (continue ci-dessous)
 
-                time.sleep(2)
-                continue
-            if "404" in err_str or "NOT_FOUND" in err_str:
-                continue
-            log_usage(f"{source}_error", prompt[:200], str(e))
-            return f"⚠️ Erreur Gemini : {str(e)[:120]}"
-    return "⏳ Quota momentanément atteint (15 req/min, free tier). Attendez 30 secondes et réessayez."
+    # ── Gemini direct (fallback) ──────────────────────────────────────────────
+    if gm_key:
+        try:
+            from google import genai
+        except ImportError:
+            return "⚠️ Package manquant — exécutez : pip install google-genai"
+
+        client = genai.Client(api_key=gm_key)
+        for model in ["gemini-2.0-flash-lite", "gemini-2.0-flash"]:
+            try:
+                response = client.models.generate_content(model=model, contents=prompt)
+                out = getattr(response, "text", "") or str(response)
+                log_usage(source, prompt[:200], out)
+                return out
+            except Exception as e:
+                err_str = str(e)
+                if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str or "limit: 0" in err_str:
+                    import time
+                    time.sleep(2)
+                    continue
+                if "404" in err_str or "NOT_FOUND" in err_str:
+                    continue
+                log_usage(f"{source}_gm_error", prompt[:200], str(e))
+                return f"⚠️ Erreur Gemini : {err_str[:120]}"
+
+    return "⏳ Tous les services sont momentanément indisponibles. Réessayez dans 30 secondes."
 
 
 # ── Page title ────────────────────────────────────────────────────────────────
 st.markdown(
     '<div class="pg-main">LLM Insights</div>'
     '<div class="pg-sub">Intelligence augmentée — synthèses auto, analyse concurrentielle, '
-    "recommandations stratégiques et chatbot BI · Gemini Flash 2.0 (gratuit)</div>"
+    "recommandations stratégiques et chatbot BI · OpenRouter / Gemini Flash 2.0</div>"
     '<div style="border-bottom:1px solid #1a1a28;margin:16px 0 28px 0"></div>',
     unsafe_allow_html=True,
 )
 
 # ── API key warning ───────────────────────────────────────────────────────────
-api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("LLM_API_KEY")
-if not api_key:
+or_key = os.environ.get("OPENROUTER_API_KEY")
+gm_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("LLM_API_KEY")
+
+if not or_key and not gm_key:
     st.markdown(
         """<div class="api-warn">
         <strong>⚠️ Clé API manquante</strong> — Créez un fichier <code>.env</code> dans
         <code>smart_ecommerce/</code> et ajoutez :<br><br>
-        <code>GEMINI_API_KEY=votre_clé_ici</code><br><br>
-        Clé <strong>gratuite</strong> sur
-        <a href="https://aistudio.google.com/apikey" style="color:#ff9090">aistudio.google.com/apikey</a>
-        — puis installez : <code>pip install google-genai python-dotenv</code>
+        <code>OPENROUTER_API_KEY=sk-or-v1-...</code><br><br>
+        Clé <strong>gratuite sans quota</strong> sur
+        <a href="https://openrouter.ai" style="color:#ff9090">openrouter.ai</a>
+        — puis installez : <code>pip install python-dotenv</code>
     </div>""",
+        unsafe_allow_html=True,
+    )
+elif or_key:
+    st.markdown(
+        ins(
+            "Statut LLM",
+            "✅ <strong>OpenRouter connecté</strong> — modèle <code>google/gemini-2.0-flash-lite-001</code> · "
+            "Pas de quota journalier · Gemini Flash 2.0 en fallback si disponible.",
+            "#a8e6cf",
+        ),
         unsafe_allow_html=True,
     )
 
 # ── KPIs ──────────────────────────────────────────────────────────────────────
 if DATA_OK:
     c1, c2, c3, c4 = st.columns(4)
-    c1.markdown(
-        kpi(f"{len(scored):,}", "Produits dans le contexte", "#e8d5a3"),
-        unsafe_allow_html=True,
-    )
-    c2.markdown(
-        kpi(f"{len(shops)}", "Boutiques analysées", "#4ecdc4"), unsafe_allow_html=True
-    )
-    c3.markdown(
-        kpi(f"{len(rules):,}", "Règles Apriori", "#ffd93d"), unsafe_allow_html=True
-    )
-    c4.markdown(
-        kpi("Gemini Flash 2.0", "Modèle LLM", "#a8e6cf"), unsafe_allow_html=True
-    )
+    c1.markdown(kpi(f"{len(scored):,}", "Produits dans le contexte", "#e8d5a3"), unsafe_allow_html=True)
+    c2.markdown(kpi(f"{len(shops)}", "Boutiques analysées", "#4ecdc4"), unsafe_allow_html=True)
+    c3.markdown(kpi(f"{len(rules):,}", "Règles Apriori", "#ffd93d"), unsafe_allow_html=True)
+    c4.markdown(kpi("OpenRouter / Gemini", "Modèle LLM", "#a8e6cf"), unsafe_allow_html=True)
 
 st.markdown(
     ins(
         "Architecture LLM — Conforme à l'énoncé Étape 5",
         "Le LLM reçoit uniquement des <strong>métriques agrégées structurées</strong> (jamais de données brutes). "
         "Chaque appel est loggé dans <code>analytics/llm_usage_log.jsonl</code> — architecture responsable MCP (Étape 6). "
-        "Modèle : <strong>Gemini Flash 2.0</strong> gratuit via Google AI Studio. "
+        "Modèle principal : <strong>OpenRouter → Gemini Flash 2.0 gratuit</strong>. "
         "Prompts : Executive Summary · Chain-of-Thought · Product Comparison · Competitive Analysis.",
     ),
     unsafe_allow_html=True,
@@ -360,15 +429,9 @@ SYNTHESES = {
         lambda ctx: CHAIN_OF_THOUGHT_PROMPT.format(
             data=json.dumps(
                 {
-                    "top_categories": ctx.get("catalogue", {}).get(
-                        "top_categories", {}
-                    ),
-                    "best_shop": ctx.get("classement_boutiques", [{}])[0].get(
-                        "nom", ""
-                    ),
-                    "best_shop_avg_score": ctx.get("classement_boutiques", [{}])[0].get(
-                        "score_moyen", 0
-                    ),
+                    "top_categories": ctx.get("catalogue", {}).get("top_categories", {}),
+                    "best_shop": ctx.get("classement_boutiques", [{}])[0].get("nom", ""),
+                    "best_shop_avg_score": ctx.get("classement_boutiques", [{}])[0].get("score_moyen", 0),
                     "cluster_distribution": [
                         f"Cluster {c['cluster']}: {c['nb_produits']} produits, ~{c['prix_moyen']}€"
                         for c in ctx.get("segmentation_kmeans", {}).get("clusters", [])
@@ -397,7 +460,7 @@ if "synth_active" in st.session_state:
     key, build = SYNTHESES[active]
     cache_key = f"synth_cache_{key}"
     if cache_key not in st.session_state:
-        with st.spinner(f"Gemini génère — {active}..."):
+        with st.spinner(f"Génération en cours — {active}..."):
             st.session_state[cache_key] = call_gemini(build(CONTEXT), f"gemini_{key}")
     st.markdown(
         f"<div style=\"margin:12px 0 4px 0;font-family:'DM Mono',monospace;font-size:0.65rem;"
@@ -434,7 +497,6 @@ SUGGESTED = [
     "Stratégie marketing basée sur les clusters",
 ]
 
-# Questions suggérées — clic remplit ET envoie directement
 st.markdown(
     """<div style="font-family:'DM Mono',monospace;font-size:0.65rem;color:#3a3a5c;
 text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;">Questions suggérées — cliquer pour envoyer</div>""",
@@ -444,27 +506,19 @@ text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;">Questions sugg�
 qcols = st.columns(3)
 for i, q in enumerate(SUGGESTED):
     if qcols[i % 3].button(q, use_container_width=True, key=f"q_{i}"):
-        # Envoyer directement la question suggérée
-        if q not in [
-            m["content"] for m in st.session_state.chat_history if m["role"] == "user"
-        ]:
+        if q not in [m["content"] for m in st.session_state.chat_history if m["role"] == "user"]:
             st.session_state.chat_history.append({"role": "user", "content": q})
             history_str = "\n".join(
-                [
-                    f"{m['role'].capitalize()}: {m['content']}"
-                    for m in st.session_state.chat_history[-4:]
-                ]
+                [f"{m['role'].capitalize()}: {m['content']}" for m in st.session_state.chat_history[-4:]]
             )
             prompt = CHAT_PROMPT.format(
                 context=json.dumps(CONTEXT, indent=2, ensure_ascii=False)[:3000],
                 history=history_str,
                 query=q,
             )
-            with st.spinner(f"Gemini analyse — {q[:40]}..."):
+            with st.spinner(f"Analyse en cours — {q[:40]}..."):
                 response = call_gemini(prompt, "gemini_chat")
-            st.session_state.chat_history.append(
-                {"role": "assistant", "content": response}
-            )
+            st.session_state.chat_history.append({"role": "assistant", "content": response})
             st.session_state.chat_input_val = ""
             st.rerun()
 
@@ -481,60 +535,45 @@ if st.session_state.chat_history:
                 unsafe_allow_html=True,
             )
         else:
-            # Render markdown properly
             import re
-
             rendered = msg["content"]
-            # Headers
             rendered = re.sub(
                 r"^#### (.+)$",
-                r"<h5 style='color:#e8d5a3;font-family:Playfair Display,serif;margin:10px 0 4px'> \1</h5>",
-                rendered,
-                flags=re.MULTILINE,
+                r"<h5 style='color:#e8d5a3;font-family:Playfair Display,serif;margin:10px 0 4px'>\1</h5>",
+                rendered, flags=re.MULTILINE,
             )
             rendered = re.sub(
                 r"^### (.+)$",
-                r"<h4 style='color:#e8d5a3;font-family:Playfair Display,serif;margin:12px 0 6px'> \1</h4>",
-                rendered,
-                flags=re.MULTILINE,
+                r"<h4 style='color:#e8d5a3;font-family:Playfair Display,serif;margin:12px 0 6px'>\1</h4>",
+                rendered, flags=re.MULTILINE,
             )
             rendered = re.sub(
                 r"^## (.+)$",
-                r"<h3 style='color:#e8d5a3;font-family:Playfair Display,serif;margin:14px 0 6px'> \1</h3>",
-                rendered,
-                flags=re.MULTILINE,
+                r"<h3 style='color:#e8d5a3;font-family:Playfair Display,serif;margin:14px 0 6px'>\1</h3>",
+                rendered, flags=re.MULTILINE,
             )
-            # Bold and italic
             rendered = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", rendered)
-            rendered = re.sub(
-                r"\*(.+?)\*", r"<em style='color:#c8c8d8'>\1</em>", rendered
-            )
-            # Numbered lists
+            rendered = re.sub(r"\*(.+?)\*", r"<em style='color:#c8c8d8'>\1</em>", rendered)
             rendered = re.sub(
                 r"^(\d+)\. (.+)$",
                 r"<div style='margin:4px 0'><span style='color:#4ecdc4;font-weight:500'>\1.</span> \2</div>",
-                rendered,
-                flags=re.MULTILINE,
+                rendered, flags=re.MULTILINE,
             )
-            # Bullet lists
             rendered = re.sub(
                 r"^[\*\-] (.+)$",
                 r"<div style='margin:2px 0 2px 12px'>· \1</div>",
-                rendered,
-                flags=re.MULTILINE,
+                rendered, flags=re.MULTILINE,
             )
-            # Line breaks
             rendered = rendered.replace(chr(10), "<br>")
-            # Clean double breaks after block elements
             rendered = re.sub(r"(</h[2-5]>)<br>", r"\1", rendered)
             rendered = re.sub(r"(</div>)<br>", r"\1", rendered)
             st.markdown(
-                f'<div class="chat-lbl-a">LLM · Gemini Flash</div>'
+                f'<div class="chat-lbl-a">LLM · OpenRouter / Gemini Flash</div>'
                 f'<div class="chat-ai">{rendered}</div>',
                 unsafe_allow_html=True,
             )
 
-# Zone de saisie — se vide après envoi via session state
+# Zone de saisie
 st.markdown('<div style="margin-top:12px;"></div>', unsafe_allow_html=True)
 user_input = st.text_input(
     "Question",
@@ -557,20 +596,17 @@ if send and user_input.strip():
     q = user_input.strip()
     st.session_state.chat_history.append({"role": "user", "content": q})
     history_str = "\n".join(
-        [
-            f"{m['role'].capitalize()}: {m['content']}"
-            for m in st.session_state.chat_history[-4:]
-        ]
+        [f"{m['role'].capitalize()}: {m['content']}" for m in st.session_state.chat_history[-4:]]
     )
     prompt = CHAT_PROMPT.format(
         context=json.dumps(CONTEXT, indent=2, ensure_ascii=False)[:3000],
         history=history_str,
         query=q,
     )
-    with st.spinner("Gemini réfléchit..."):
+    with st.spinner("Analyse en cours..."):
         response = call_gemini(prompt, "gemini_chat")
     st.session_state.chat_history.append({"role": "assistant", "content": response})
-    st.session_state.chat_input_val = ""  # vider le champ
+    st.session_state.chat_input_val = ""
     st.rerun()
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -586,9 +622,7 @@ st.markdown(
 
 if DATA_OK:
     c1, c2 = st.columns([3, 1])
-    sel = c1.selectbox(
-        "Produit à enrichir", topk["title"].str[:80].tolist(), key="enrich_sel"
-    )
+    sel = c1.selectbox("Produit à enrichir", topk["title"].str[:80].tolist(), key="enrich_sel")
     go = c2.button("Enrichir →", use_container_width=True, key="enrich_go")
     if go and sel:
         row = topk[topk["title"].str[:80] == sel].iloc[0]
@@ -634,7 +668,7 @@ st.markdown(
 | **MCP Host** | `dashboard/app.py` | Dashboard Streamlit — orchestre tout |
 | **MCP Client** | `MCPClient` | Route les requêtes vers les bons serveurs |
 | **MCP Server — Analytics** | `AnalyticsReaderServer` | Read-only, whitelist 14 fichiers |
-| **MCP Server — LLM** | `SummaryGeneratorServer` | Gemini Flash — métriques agrégées uniquement |
+| **MCP Server — LLM** | `SummaryGeneratorServer` | OpenRouter/Gemini — métriques agrégées uniquement |
 | **Permissions** | `PERMISSIONS` dict | Pas de données brutes, pas d'exécution |
 | **Logs / Audit** | `_log_access()` | `mcp_access_log.jsonl` + `llm_usage_log.jsonl` |
 | **Isolation** | Whitelist stricte | LLM ne voit jamais les 2165 lignes brutes |
@@ -643,7 +677,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Vérifier que le fichier architecture.py existe
 mcp_file = os.path.join(BASE, "..", "..", "mcp", "architecture.py")
 if os.path.exists(mcp_file):
     st.markdown(
@@ -672,7 +705,7 @@ else:
 c1, c2 = st.columns(2)
 
 with c1:
-    with st.expander("▸ LLM Usage Log — appels Gemini"):
+    with st.expander("▸ LLM Usage Log — appels LLM"):
         log_path = os.path.join(ANALYTICS, "llm_usage_log.jsonl")
         if os.path.exists(log_path):
             records = []
@@ -684,16 +717,12 @@ with c1:
                         pass
             if records:
                 df_log = pd.DataFrame(records).tail(15)
-                # Rename for readability
                 rename = {
                     "source": "Source",
                     "prompt_preview": "Prompt (aperçu)",
                     "response_preview": "Réponse (aperçu)",
                 }
-                df_log = df_log.rename(
-                    columns={k: v for k, v in rename.items() if k in df_log.columns}
-                )
-                # Truncate long columns for display
+                df_log = df_log.rename(columns={k: v for k, v in rename.items() if k in df_log.columns})
                 for col in ["Prompt (aperçu)", "Réponse (aperçu)"]:
                     if col in df_log.columns:
                         df_log[col] = df_log[col].astype(str).str[:60] + "..."
@@ -715,9 +744,7 @@ with c2:
                     except Exception:
                         pass
             if records:
-                st.dataframe(
-                    pd.DataFrame(records).tail(15), use_container_width=True, height=240
-                )
+                st.dataframe(pd.DataFrame(records).tail(15), use_container_width=True, height=240)
             else:
                 st.info("Log vide — le MCPClient n'a pas encore été utilisé.")
         else:
@@ -727,7 +754,7 @@ st.markdown(
     """
 <div style="margin-top:32px;padding-top:16px;border-top:1px solid #1a1a28;
     font-family:'DM Mono',monospace;font-size:0.62rem;color:#2a2a3a;">
-    Étape 5 — LLM enrichissement · Gemini Flash 2.0 · Prompt Engineering · Chain of Thought ·
+    Étape 5 — LLM enrichissement · OpenRouter / Gemini Flash 2.0 · Prompt Engineering · Chain of Thought ·
     Étape 6 — MCP Architecture responsable · FST Tanger LSI 2 2025/2026
 </div>
 """,
